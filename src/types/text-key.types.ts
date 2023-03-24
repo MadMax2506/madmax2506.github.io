@@ -1,0 +1,1 @@
+export type TextKey = string;

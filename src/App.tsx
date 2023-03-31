@@ -6,25 +6,28 @@ import { NavigationAnchors } from 'components/Route/types';
 import { AboutMe } from 'pages/AboutMe/AboutMe';
 import { Projects } from 'pages/Projects/Projects';
 import { Contact } from 'pages/Contact/Contact';
+import { TranslationProvider } from 'context/TranslationContext/TranslationContext';
 
 export const App = () => {
   return (
     <CookiesProvider>
-      <ThemeProvider>
-        <Home />
+      <TranslationProvider>
+        <ThemeProvider>
+          <Home />
 
-        <Route anchor={NavigationAnchors.ABOUT_ME}>
-          <AboutMe />
-        </Route>
+          <Route anchor={NavigationAnchors.ABOUT_ME}>
+            <AboutMe />
+          </Route>
 
-        <Route anchor={NavigationAnchors.PROJECTS}>
-          <Projects />
-        </Route>
+          <Route anchor={NavigationAnchors.PROJECTS}>
+            <Projects />
+          </Route>
 
-        <Route anchor={NavigationAnchors.CONTACT}>
-          <Contact />
-        </Route>
-      </ThemeProvider>
+          <Route anchor={NavigationAnchors.CONTACT}>
+            <Contact />
+          </Route>
+        </ThemeProvider>
+      </TranslationProvider>
     </CookiesProvider>
   );
 };

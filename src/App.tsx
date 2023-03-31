@@ -1,15 +1,12 @@
 import { ThemeProvider } from 'context/ThemeContext/ThemeContext';
 import { CookiesProvider } from 'react-cookie';
-import { Routes } from 'routes/Routes';
-import { TranslationProvider } from 'context/TranslationContext/TranslationContext';
+import { Home } from 'pages/Home/Home';
 
 export const App = () => {
   return (
     <CookiesProvider>
       <ThemeProvider>
-        <TranslationProvider>
-          <Routes />
-        </TranslationProvider>
+        <Home />
       </ThemeProvider>
     </CookiesProvider>
   );

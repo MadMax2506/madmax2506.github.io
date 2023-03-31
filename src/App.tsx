@@ -5,7 +5,6 @@ import { Route } from 'components/Route/Route';
 import { NavigationAnchors } from 'components/Route/types';
 import { AboutMe } from 'pages/AboutMe/AboutMe';
 import { Projects } from 'pages/Projects/Projects';
-import { Frameworks } from 'pages/Frameworks/Frameworks';
 import { Contact } from 'pages/Contact/Contact';
 
 export const App = () => {
@@ -16,10 +15,6 @@ export const App = () => {
 
         <Route anchor={NavigationAnchors.ABOUT_ME}>
           <AboutMe />
-        </Route>
-
-        <Route anchor={NavigationAnchors.FRAMEWORKS}>
-          <Frameworks />
         </Route>
 
         <Route anchor={NavigationAnchors.PROJECTS}>

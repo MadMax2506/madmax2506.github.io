@@ -1,3 +1,5 @@
+import { FullPage } from 'components/FullPage';
+
 export const AboutMe = (): JSX.Element => {
-  return <>AboutMe</>;
+  return <FullPage>AboutMe</FullPage>;
 };

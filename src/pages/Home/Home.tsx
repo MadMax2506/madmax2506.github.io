@@ -1,9 +1,5 @@
-import { Box, Container } from '@mui/material';
+import { FullPage } from 'components/FullPage';
 
 export const Home = (): JSX.Element => {
-  return (
-    <Container component="main" maxWidth="lg">
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>Home</Box>
-    </Container>
-  );
+  return <FullPage>Home</FullPage>;
 };

@@ -1,5 +1,5 @@
-import { FullPage } from 'components/FullPage';
+import { FullPageContainer } from 'components/container/FullPageContainer';
 
 export const Home = (): JSX.Element => {
-  return <FullPage>Home</FullPage>;
+  return <FullPageContainer>Home</FullPageContainer>;
 };

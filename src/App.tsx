@@ -7,25 +7,28 @@ import { AboutMe } from 'pages/AboutMe/AboutMe';
 import { Projects } from 'pages/Projects/Projects';
 import { Contact } from 'pages/Contact/Contact';
 import { TranslationProvider } from 'context/TranslationContext/TranslationContext';
+import { Stack } from '@mui/material';
 
 export const App = () => {
   return (
     <CookiesProvider>
       <TranslationProvider>
         <ThemeProvider>
-          <Home />
+          <Stack alignItems="center">
+            <Home />
 
-          <Route anchor={NavigationAnchors.ABOUT_ME}>
-            <AboutMe />
-          </Route>
+            <Route anchor={NavigationAnchors.ABOUT_ME}>
+              <AboutMe />
+            </Route>
 
-          <Route anchor={NavigationAnchors.PROJECTS}>
-            <Projects />
-          </Route>
+            <Route anchor={NavigationAnchors.PROJECTS}>
+              <Projects />
+            </Route>
 
-          <Route anchor={NavigationAnchors.CONTACT}>
-            <Contact />
-          </Route>
+            <Route anchor={NavigationAnchors.CONTACT}>
+              <Contact />
+            </Route>
+          </Stack>
         </ThemeProvider>
       </TranslationProvider>
     </CookiesProvider>

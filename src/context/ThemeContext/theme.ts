@@ -1,6 +1,7 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, PaletteOptions } from '@mui/material/styles';
 import { Components } from '@mui/material/styles/components';
 import { Theme } from '@mui/material/styles/createTheme';
+import { blue, deepOrange, grey } from '@mui/material/colors';
 
 const components: Components<Omit<Theme, 'components'>> = {
   MuiButton: {
@@ -9,6 +10,26 @@ const components: Components<Omit<Theme, 'components'>> = {
       fullWidth: true,
     },
   },
+  MuiStack: {
+    defaultProps: {
+      width: '100%',
+    },
+  },
+  MuiDivider: {
+    defaultProps: {
+      sx: {
+        borderBottomWidth: 3,
+        borderRadius: 4,
+        backgroundColor: 'primary.main',
+      },
+      flexItem: true,
+    },
+  },
+};
+
+const palette: PaletteOptions = {
+  primary: deepOrange,
+  secondary: blue,
 };
 
 export const darkTheme = createTheme({
@@ -45,7 +66,14 @@ export const darkTheme = createTheme({
     },
   },
   palette: {
+    ...palette,
     mode: 'dark',
+    background: {
+      default: grey[900],
+    },
+    text: {
+      primary: 'white',
+    },
   },
 });
 
@@ -83,7 +111,14 @@ export const lightTheme = createTheme({
     },
   },
   palette: {
+    ...palette,
     mode: 'light',
+    background: {
+      default: 'white',
+    },
+    text: {
+      primary: grey[900],
+    },
   },
 });
 

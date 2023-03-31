@@ -1,5 +1,5 @@
-import { FullPage } from 'components/FullPage';
+import { SectionContainer } from 'components/container/SectionContainer/SectionContainer';
 
 export const AboutMe = (): JSX.Element => {
-  return <FullPage>AboutMe</FullPage>;
+  return <SectionContainer titleTextKey={'pages.about-me'}>AboutMe</SectionContainer>;
 };

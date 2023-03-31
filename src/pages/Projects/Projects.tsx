@@ -1,5 +1,5 @@
-import { FullPage } from 'components/FullPage';
+import { SectionContainer } from 'components/container/SectionContainer/SectionContainer';
 
 export const Projects = (): JSX.Element => {
-  return <FullPage>Projects</FullPage>;
+  return <SectionContainer titleTextKey="pages.projects">Projects</SectionContainer>;
 };

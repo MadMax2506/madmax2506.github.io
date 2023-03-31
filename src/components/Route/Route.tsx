@@ -12,5 +12,9 @@ type RouteProps = {
 export const Route = (props: PropsWithChildren<RouteProps>): JSX.Element => {
   const { anchor, children } = props;
 
-  return <Box id={anchor}>{children}</Box>;
+  return (
+    <Box width="100%" id={anchor}>
+      {children}
+    </Box>
+  );
 };

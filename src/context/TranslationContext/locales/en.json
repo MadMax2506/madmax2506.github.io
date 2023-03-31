@@ -1,5 +1,7 @@
 {
-  "menu": {
-    "home": "Home"
+  "pages": {
+    "about-me": "About me",
+    "contact": "Contact",
+    "projects": "Projects"
   }
 }

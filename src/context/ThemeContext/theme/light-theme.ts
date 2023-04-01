@@ -48,7 +48,11 @@ export const lightTheme = createTheme({
   highlighting: red[400],
   palette: {
     mode: 'light',
-    primary: grey,
+    primary: {
+      dark: grey[800],
+      main: grey[800],
+      light: grey[800],
+    },
     background: {
       default: '#ffffff',
       paper: '#ffffff',

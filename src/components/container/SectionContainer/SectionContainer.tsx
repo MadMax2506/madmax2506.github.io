@@ -17,7 +17,9 @@ export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
     <Stack sx={{ width: '70%', height: '100vh', alignItems: 'center', mx: 'auto', pt: 4 }}>
       <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', mb: 2 }}>
         <Divider />
-        <Typography variant="h3">{t(titleTextKey)}</Typography>
+        <Typography variant="h3" sx={{ textShadow: `1px 1px` }}>
+          {t(titleTextKey)}
+        </Typography>
         <Divider />
       </Box>
       {children}

@@ -8,12 +8,15 @@ import { Projects } from 'pages/Projects/Projects';
 import { Contact } from 'pages/Contact/Contact';
 import { TranslationProvider } from 'context/TranslationContext/TranslationContext';
 import { Stack } from '@mui/material';
+import { Navigation } from 'components/Navigation/Navigation';
 
 export const App = () => {
   return (
     <CookiesProvider>
       <TranslationProvider>
         <ThemeProvider>
+          <Navigation />
+
           <Stack alignItems="center">
             <Home />
 

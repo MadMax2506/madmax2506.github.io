@@ -1,7 +1,8 @@
 import { createContext, PropsWithChildren, useContext, useEffect, useMemo, useState } from 'react';
 import { CssBaseline, PaletteMode, ScopedCssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material';
-import { darkTheme, lightTheme } from 'context/ThemeContext/theme';
 import { useCookies } from 'react-cookie';
+import { darkTheme } from 'context/ThemeContext/theme/dark-theme';
+import { lightTheme } from 'context/ThemeContext/theme/light-theme';
 
 const defaultMode = (): PaletteMode => (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 

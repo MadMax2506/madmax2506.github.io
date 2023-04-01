@@ -12,8 +12,6 @@ export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
     <Typography
       key={textKey}
       onClick={navigate}
-      component="span"
-      color="primary"
       sx={{
         position: 'relative',
         '&:before': {
@@ -24,7 +22,7 @@ export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
           bottom: '-3px',
           left: '50%',
           transform: 'translate(-50%,0%)',
-          backgroundColor: 'primary.main',
+          backgroundColor: 'text.primary',
           visibility: 'hidden',
           transition: 'all 0.3s ease-in-out',
         },

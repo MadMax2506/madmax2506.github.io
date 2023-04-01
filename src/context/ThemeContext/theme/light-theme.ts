@@ -49,7 +49,7 @@ export const lightTheme = createTheme({
     ...palette,
     mode: 'light',
     background: {
-      default: 'white',
+      default: '#ffffff',
     },
     text: {
       primary: grey[900],

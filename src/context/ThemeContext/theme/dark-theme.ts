@@ -52,7 +52,7 @@ export const darkTheme = createTheme({
       default: grey[900],
     },
     text: {
-      primary: 'white',
+      primary: '#ffffff',
     },
   },
 });

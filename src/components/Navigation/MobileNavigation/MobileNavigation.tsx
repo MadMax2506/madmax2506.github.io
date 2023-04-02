@@ -1,5 +1,5 @@
 import { Box, Drawer, IconButton, Stack } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
+import { Close as CloseIcon, Menu as MenuIcon } from '@mui/icons-material';
 import { NavigationPage } from 'components/Navigation/types';
 import { useState } from 'react';
 import { Divider } from 'components/Divider';
@@ -34,6 +34,10 @@ export const MobileNavigation = (props: MobileNavigationProps): JSX.Element => {
       >
         <Stack spacing={2} alignItems="center" pt={2}>
           <PageTitle variant="h5" />
+
+          <IconButton size="large" sx={{ position: 'absolute', right: 20, top: -8 }} onClick={() => setOpen(false)}>
+            <CloseIcon />
+          </IconButton>
 
           <Divider width={'100%'} borderRadius={0} />
 

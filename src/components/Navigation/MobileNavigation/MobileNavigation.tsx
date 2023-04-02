@@ -18,7 +18,7 @@ export const MobileNavigation = (props: MobileNavigationProps): JSX.Element => {
 
   return (
     <>
-      <PageTitle variant="h5" />
+      <PageTitle variant="h5" flexShrink={0} />
 
       <Box sx={{ display: 'flex', flexGrow: 1, flexDirection: 'row-reverse' }}>
         <IconButton size="large" onClick={() => setOpen(true)}>

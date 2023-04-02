@@ -9,7 +9,13 @@ export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();
 
   const navigate = (anchor: NavigationAnchors) => {
-    document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
+    const elementY = document.getElementById(anchor)?.getBoundingClientRect()?.top || 0;
+    const scrollToY = elementY + window.scrollY;
+
+    window.scroll({
+      top: scrollToY,
+      behavior: 'smooth',
+    });
   };
 
   const pages: NavigationPage[] = [

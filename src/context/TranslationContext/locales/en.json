@@ -3,5 +3,9 @@
     "about-me": "About me",
     "contact": "Contact",
     "projects": "Projects"
+  },
+  "country": {
+    "de": "DE",
+    "en": "EN"
   }
 }

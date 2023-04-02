@@ -3,5 +3,9 @@
     "about-me": "Über mich",
     "contact": "Kontakt",
     "projects": "Projekte"
+  },
+  "country": {
+    "de": "DE",
+    "en": "EN"
   }
 }

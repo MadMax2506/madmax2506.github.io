@@ -2,7 +2,7 @@ import { NavigationPage } from 'components/Navigation/types';
 import { Typography } from '@mui/material';
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 
-type NavigationLinkProps = NavigationPage;
+type NavigationLinkProps = Omit<NavigationPage, 'icon'>;
 
 export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
   const { textKey, navigate } = props;

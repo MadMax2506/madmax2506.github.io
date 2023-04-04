@@ -14,15 +14,15 @@ export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
   const { t } = useTranslationContext();
 
   return (
-    <Stack sx={{ width: { xs: '100%', md: '70%' }, height: '100vh', alignItems: 'center', mx: 'auto', pt: 12 }}>
-      <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', mb: 2 }}>
+    <Stack sx={{ width: '100%', minHeight: '100vh', alignItems: 'center', mx: 'auto', pt: 12 }}>
+      <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', mb: 4 }}>
         <Divider flexItem px={2} />
         <Typography variant="h3" sx={{ textShadow: `1px 1px` }}>
           {t(titleTextKey)}
         </Typography>
         <Divider flexItem px={2} />
       </Box>
-      {children}
+      <Box px={8}>{children}</Box>
     </Stack>
   );
 };

@@ -9,6 +9,7 @@ import { Contact } from 'pages/Contact/Contact';
 import { TranslationProvider } from 'context/TranslationContext/TranslationContext';
 import { Stack } from '@mui/material';
 import { Navigation } from 'components/Navigation/Navigation';
+import { Experience } from 'pages/Experience/Experience';
 
 export const App = () => {
   return (
@@ -22,6 +23,10 @@ export const App = () => {
 
             <Route anchor={NavigationAnchors.ABOUT_ME}>
               <AboutMe />
+            </Route>
+
+            <Route anchor={NavigationAnchors.EXPERIENCE}>
+              <Experience />
             </Route>
 
             <Route anchor={NavigationAnchors.PROJECTS}>

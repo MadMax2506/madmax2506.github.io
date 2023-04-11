@@ -3,7 +3,12 @@ import { DesktopNavigation } from 'components/Navigation/DesktopNavigation/Deskt
 import { MobileNavigation } from 'components/Navigation/MobileNavigation/MobileNavigation';
 import { NavigationPage } from 'components/Navigation/types';
 import { NavigationAnchors } from 'components/Route/types';
-import { Contacts as ContactsIcon, FolderCopy as FolderCopyIcon, Person as PersonIcon } from '@mui/icons-material';
+import {
+  Contacts as ContactsIcon,
+  FolderCopy as FolderCopyIcon,
+  Person as PersonIcon,
+  Work as WorkIcon,
+} from '@mui/icons-material';
 
 export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();
@@ -23,6 +28,11 @@ export const Navigation = (): JSX.Element => {
       icon: PersonIcon,
       textKey: 'pages.about-me',
       navigate: () => navigate(NavigationAnchors.ABOUT_ME),
+    },
+    {
+      icon: WorkIcon,
+      textKey: 'pages.experience',
+      navigate: () => navigate(NavigationAnchors.EXPERIENCE),
     },
     {
       icon: FolderCopyIcon,

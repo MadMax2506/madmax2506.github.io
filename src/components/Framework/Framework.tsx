@@ -1,8 +1,10 @@
 import { Frameworks } from 'components/Framework/framework.types';
-import { Avatar, Card, CardContent, Stack, Typography } from '@mui/material';
+import { Avatar, Paper, Stack, Typography } from '@mui/material';
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 
 type FrameworkProps = { type: Frameworks };
+
+const AVATAR_SIZE = 25;
 
 export const Framework = (props: FrameworkProps): JSX.Element => {
   const { type } = props;
@@ -10,13 +12,11 @@ export const Framework = (props: FrameworkProps): JSX.Element => {
   const { t } = useTranslationContext();
 
   return (
-    <Card sx={{ maxWidth: 'min-content', borderRadius: 100, height: 80 }}>
-      <CardContent sx={{ px: 2, height: 80 }}>
-        <Stack direction="row" alignItems="center" spacing={1.2}>
-          <Avatar alt={type} src={`src/assets/frameworks/${type}.svg`} />
-          <Typography noWrap>{t(`frameworks.${type}`)}</Typography>
-        </Stack>
-      </CardContent>
-    </Card>
+    <Paper sx={{ maxWidth: 'min-content', borderRadius: 10, py: 1, px: 2 }}>
+      <Stack direction="row" alignItems="center" spacing={1.2}>
+        <Avatar alt={type} src={`src/assets/frameworks/${type}.svg`} sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }} />
+        <Typography noWrap>{t(`frameworks.${type}`)}</Typography>
+      </Stack>
+    </Paper>
   );
 };

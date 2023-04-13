@@ -1,5 +1,5 @@
 import { Grid, useTheme } from '@mui/material';
-import { Frameworks } from 'components/FrameworkCard/framework-card.types';
+import { Frameworks } from 'components/FrameworkCard/framework.types';
 import { FrameworkCard } from 'components/FrameworkCard/FrameworkCard';
 
 /**

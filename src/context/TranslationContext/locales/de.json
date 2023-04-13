@@ -22,5 +22,12 @@
     "mui": "Material UI",
     "ruby-on-rails": "Ruby on Rails",
     "rpi": "Raspberry Pi"
+  },
+  "social-media": {
+    "xing": "XING",
+    "linked-in": "LinkedIn",
+    "git-hub": "GitHub",
+    "mail": "Mail",
+    "instagram": "Instagram"
   }
 }

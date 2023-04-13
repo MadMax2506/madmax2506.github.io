@@ -1,4 +1,4 @@
-import { Frameworks } from 'components/FrameworkCard/framework-card.types';
+import { Frameworks } from 'components/FrameworkCard/framework.types';
 import { Avatar, Paper, Stack, Typography } from '@mui/material';
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 

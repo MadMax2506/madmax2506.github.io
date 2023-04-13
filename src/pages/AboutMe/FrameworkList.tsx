@@ -1,6 +1,6 @@
 import { Grid, useTheme } from '@mui/material';
-import { Framework } from 'components/Framework/Framework';
-import { Frameworks } from 'components/Framework/framework.types';
+import { Frameworks } from 'components/FrameworkCard/framework-card.types';
+import { FrameworkCard } from 'components/FrameworkCard/FrameworkCard';
 
 /**
  * Display all frameworks
@@ -19,7 +19,7 @@ export const FrameworkList = (): JSX.Element => {
     >
       {Object.values(Frameworks).map((value) => (
         <Grid key={value} item>
-          <Framework type={value} />
+          <FrameworkCard type={value} />
         </Grid>
       ))}
     </Grid>

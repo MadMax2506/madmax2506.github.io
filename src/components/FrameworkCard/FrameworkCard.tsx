@@ -1,4 +1,4 @@
-import { Frameworks } from 'components/Framework/framework.types';
+import { Frameworks } from 'components/FrameworkCard/framework-card.types';
 import { Avatar, Paper, Stack, Typography } from '@mui/material';
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 
@@ -6,7 +6,7 @@ type FrameworkProps = { type: Frameworks };
 
 const AVATAR_SIZE = 25;
 
-export const Framework = (props: FrameworkProps): JSX.Element => {
+export const FrameworkCard = (props: FrameworkProps): JSX.Element => {
   const { type } = props;
 
   const { t } = useTranslationContext();

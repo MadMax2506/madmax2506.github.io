@@ -1,4 +1,4 @@
-import { SectionContainer } from 'components/container/SectionContainer';
+import { SectionContainer } from 'components/Container/SectionContainer';
 import { Grid, Typography, useTheme } from '@mui/material';
 import { PersonalAvatar } from 'pages/AboutMe/PersonalAvatar';
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';

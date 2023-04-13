@@ -2,10 +2,25 @@
   "pages": {
     "about-me": "About me",
     "contact": "Contact",
+    "experience": "Experience",
     "projects": "Projects"
   },
   "country": {
     "de": "DE",
     "en": "EN"
+  },
+  "about-me": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\n          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n          takimata sanctus est Lorem ipsum dolor sit amet.",
+  "frameworks": {
+    "react": "React",
+    "python": "Python",
+    "nestjs": "NestJS",
+    "electron": "Electron",
+    "java": "Java",
+    "spring": "Spring Boot",
+    "vuejs": "Vue.js",
+    "arduino": "Arduino",
+    "mui": "Material UI",
+    "ruby-on-rails": "Ruby on Rails",
+    "rpi": "Raspberry Pi"
   }
 }

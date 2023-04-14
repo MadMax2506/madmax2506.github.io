@@ -9,6 +9,27 @@ export enum SocialMedia {
 }
 
 export type SocialMediaDetails = {
-  icon: SvgIconComponent;
+  /**
+   * Icon of the social media platform
+   */
+  icon?: SvgIconComponent;
+  /**
+   * Textkey for the translation of
+   */
   textKey: string;
-};
+} & (
+  | {
+      /**
+       * Reference to the online account
+       */
+      link: string;
+      mailTo?: never;
+    }
+  | {
+      link?: never;
+      /**
+       * E-Mail Address
+       */
+      mailTo: string;
+    }
+);

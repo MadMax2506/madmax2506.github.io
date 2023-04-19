@@ -1,28 +1,60 @@
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
-import { Avatar, Paper, Stack, Typography } from '@mui/material';
+import { Paper, Stack, Typography, useTheme } from '@mui/material';
 import { SocialMedia } from 'components/SocialMediaCard/social-media.types';
 import { getSocialMediaDetails } from 'components/SocialMediaCard/social-media.utils';
 
 type SocialMediaCardProps = {
   type: SocialMedia;
+  /**
+   * If true only the link of the social media reference is shown
+   * @default false
+   */
+  linkOnly?: boolean;
 };
 
-const AVATAR_SIZE = 20;
-
+/**
+ * Display a social media reference
+ */
 export const SocialMediaCard = (props: SocialMediaCardProps): JSX.Element => {
-  const { type } = props;
+  const { type, linkOnly = false } = props;
 
   const { t } = useTranslationContext();
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { link, textKey, mailTo, icon } = getSocialMediaDetails(type);
+  const {
+    highlighting: highlightingColor,
+    palette: {
+      text: { primary: primaryTextColor },
+    },
+  } = useTheme();
+
+  const { link, mailTo, icon: Icon } = getSocialMediaDetails(type);
 
   return (
-    <Paper sx={{ maxWidth: 'min-content', borderRadius: 10, py: 1, px: 2 }}>
-      <Stack direction="row" alignItems="center" spacing={1.2}>
-        <Avatar alt={type} sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }} />
-        <Typography noWrap>{t(`social-media.${type}`)}</Typography>
-      </Stack>
-    </Paper>
+    <a href={link ?? `mailto:${mailTo}`} style={{ textDecoration: 'none' }} target={link ? '_blank' : ''}>
+      {linkOnly ? (
+        <Typography
+          sx={{
+            'box-shadow': `inset 0 0 0 0 ${highlightingColor}`,
+            color: highlightingColor,
+            padding: '0 .25rem',
+            margin: '0 -.25rem',
+            transition: 'color .3s ease-in-out, box-shadow .3s ease-in-out',
+            '&:hover': {
+              color: primaryTextColor,
+              'box-shadow': `inset 220px 0 0 0 ${highlightingColor}`,
+            },
+          }}
+        >
+          {mailTo}
+        </Typography>
+      ) : (
+        <Paper sx={{ maxWidth: 'min-content', borderRadius: 10, py: 1, px: 2 }}>
+          <Stack direction="row" alignItems="center" spacing={1.2}>
+            {Icon && <Icon />}
+            <Typography noWrap>{t(`social-media.${type}`)}</Typography>
+          </Stack>
+        </Paper>
+      )}
+    </a>
   );
 };

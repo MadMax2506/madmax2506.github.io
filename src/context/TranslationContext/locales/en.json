@@ -10,6 +10,10 @@
     "en": "EN"
   },
   "about-me": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\n          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n          takimata sanctus est Lorem ipsum dolor sit amet.",
+  "contact": {
+    "part1": "Interest aroused?",
+    "part2": "Then write me an email"
+  },
   "frameworks": {
     "react": "React",
     "python": "Python",
@@ -28,6 +32,7 @@
     "linked-in": "LinkedIn",
     "git-hub": "GitHub",
     "mail": "Mail",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "telegram": "Telegram"
   }
 }

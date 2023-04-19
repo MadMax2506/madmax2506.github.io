@@ -1,5 +1,3 @@
-import { SvgIconComponent } from '@mui/icons-material';
-
 export enum SocialMedia {
   XING = 'xing',
   LINKED_IN = 'linked-in',
@@ -12,11 +10,7 @@ export type SocialMediaDetails = {
   /**
    * Icon of the social media platform
    */
-  icon?: SvgIconComponent;
-  /**
-   * Textkey for the translation of
-   */
-  textKey: string;
+  icon?: () => JSX.Element;
 } & (
   | {
       /**

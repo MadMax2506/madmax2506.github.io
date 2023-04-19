@@ -1,9 +1,10 @@
 export enum SocialMedia {
-  XING = 'xing',
-  LINKED_IN = 'linked-in',
   GIT_HUB = 'git-hub',
-  MAIL = 'mail',
+  LINKED_IN = 'linked-in',
+  XING = 'xing',
+  TELEGRAM = 'telegram',
   INSTAGRAM = 'instagram',
+  MAIL = 'mail',
 }
 
 export type SocialMediaDetails = {

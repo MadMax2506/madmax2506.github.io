@@ -4,6 +4,7 @@ import {
   Instagram as InstagramIcon,
   LinkedIn as LinkedInIcon,
   Mail as MailIcon,
+  Telegram as TelegramIcon,
 } from '@mui/icons-material';
 
 /**
@@ -26,6 +27,11 @@ export const getSocialMediaDetails = (type: SocialMedia): SocialMediaDetails => 
       return {
         icon: () => <LinkedInIcon />,
         link: 'https://www.linkedin.com/in/max-janorschke-5b6973225',
+      };
+    case SocialMedia.TELEGRAM:
+      return {
+        icon: () => <TelegramIcon />,
+        link: 'https://t.me/MadMax2506',
       };
     case SocialMedia.MAIL:
       return {

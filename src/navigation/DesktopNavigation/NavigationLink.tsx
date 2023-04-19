@@ -1,6 +1,6 @@
-import { NavigationPage } from 'components/Navigation/types';
 import { Typography } from '@mui/material';
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
+import { NavigationPage } from 'navigation/types';
 
 type NavigationLinkProps = Omit<NavigationPage, 'icon'>;
 

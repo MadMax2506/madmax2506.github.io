@@ -1,9 +1,9 @@
 import { Stack } from '@mui/material';
-import { NavigationPage } from 'components/Navigation/types';
-import { NavigationLink } from 'components/Navigation/DesktopNavigation/NavigationLink';
-import { LanguageSelect } from 'components/LanguageSelect/LanguageSelect';
-import { ThemeModeToggle } from 'components/ThemeModeToggle';
-import { PageTitle } from 'components/Navigation/PageTitle';
+import { PageTitle } from 'navigation/PageTitle';
+import { NavigationPage } from 'navigation/types';
+import { NavigationLink } from 'navigation/DesktopNavigation/NavigationLink';
+import { LanguageSelect } from 'navigation/LanguageSelect/LanguageSelect';
+import { ThemeModeToggle } from 'navigation/ThemeModeToggle';
 
 type DesktopNavigationProps = {
   pages: NavigationPage[];

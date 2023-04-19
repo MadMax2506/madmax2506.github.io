@@ -1,19 +1,20 @@
 import { AppBar, Toolbar, useTheme } from '@mui/material';
-import { DesktopNavigation } from 'components/Navigation/DesktopNavigation/DesktopNavigation';
-import { MobileNavigation } from 'components/Navigation/MobileNavigation/MobileNavigation';
-import { NavigationPage } from 'components/Navigation/types';
-import { NavigationAnchors } from 'components/Route/types';
+
+import { MonoNavigationAnchors } from 'components/Route/types';
 import {
   Contacts as ContactsIcon,
   FolderCopy as FolderCopyIcon,
   Person as PersonIcon,
   Work as WorkIcon,
 } from '@mui/icons-material';
+import { NavigationPage } from 'navigation/types';
+import { DesktopNavigation } from 'navigation/DesktopNavigation/DesktopNavigation';
+import { MobileNavigation } from 'navigation/MobileNavigation/MobileNavigation';
 
 export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();
 
-  const navigate = (anchor: NavigationAnchors) => {
+  const navigate = (anchor: MonoNavigationAnchors) => {
     const elementY = document.getElementById(anchor)?.getBoundingClientRect()?.top || 0;
     const scrollToY = elementY + window.scrollY;
 
@@ -27,22 +28,22 @@ export const Navigation = (): JSX.Element => {
     {
       icon: PersonIcon,
       textKey: 'pages.about-me',
-      navigate: () => navigate(NavigationAnchors.ABOUT_ME),
+      navigate: () => navigate(MonoNavigationAnchors.ABOUT_ME),
     },
     {
       icon: WorkIcon,
       textKey: 'pages.experience',
-      navigate: () => navigate(NavigationAnchors.EXPERIENCE),
+      navigate: () => navigate(MonoNavigationAnchors.EXPERIENCE),
     },
     {
       icon: FolderCopyIcon,
       textKey: 'pages.projects',
-      navigate: () => navigate(NavigationAnchors.PROJECTS),
+      navigate: () => navigate(MonoNavigationAnchors.PROJECTS),
     },
     {
       icon: ContactsIcon,
       textKey: 'pages.contact',
-      navigate: () => navigate(NavigationAnchors.CONTACT),
+      navigate: () => navigate(MonoNavigationAnchors.CONTACT),
     },
   ];
 

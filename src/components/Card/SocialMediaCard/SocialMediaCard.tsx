@@ -1,7 +1,7 @@
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 import { Paper, Stack, Typography, useTheme } from '@mui/material';
-import { SocialMedia } from 'components/SocialMediaCard/social-media.types';
-import { getSocialMediaDetails } from 'components/SocialMediaCard/social-media.utils';
+import { SocialMedia } from 'components/Card/SocialMediaCard/social-media.types';
+import { getSocialMediaDetails } from 'components/Card/SocialMediaCard/social-media.utils';
 
 type SocialMediaCardProps = {
   type: SocialMedia;

@@ -1,12 +1,12 @@
 import { Box, Drawer, IconButton, Stack } from '@mui/material';
 import { Close as CloseIcon, Menu as MenuIcon } from '@mui/icons-material';
-import { NavigationPage } from 'components/Navigation/types';
 import { useState } from 'react';
 import { Divider } from 'components/Divider';
-import { LanguageSelect } from 'components/LanguageSelect/LanguageSelect';
-import { ThemeModeToggle } from 'components/ThemeModeToggle';
-import { PageTitle } from 'components/Navigation/PageTitle';
-import { SidebarLinks } from 'components/Navigation/MobileNavigation/SidebarLinks';
+import { PageTitle } from 'navigation/PageTitle';
+import { NavigationPage } from 'navigation/types';
+import { SidebarLinks } from 'navigation/MobileNavigation/SidebarLinks';
+import { LanguageSelect } from 'navigation/LanguageSelect/LanguageSelect';
+import { ThemeModeToggle } from 'navigation/ThemeModeToggle';
 
 type MobileNavigationProps = {
   pages: NavigationPage[];

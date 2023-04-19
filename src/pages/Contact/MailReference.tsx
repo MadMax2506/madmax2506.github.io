@@ -1,6 +1,6 @@
 import { Avatar, Grid, Stack, Typography, useTheme } from '@mui/material';
-import { SocialMediaCard } from 'components/SocialMediaCard/SocialMediaCard';
-import { SocialMedia } from 'components/SocialMediaCard/social-media.types';
+import { SocialMediaCard } from 'components/Card/SocialMediaCard/SocialMediaCard';
+import { SocialMedia } from 'components/Card/SocialMediaCard/social-media.types';
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 
 export const MailReference = (): JSX.Element => {

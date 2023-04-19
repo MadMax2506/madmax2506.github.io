@@ -1,7 +1,7 @@
-import { NavigationPage } from 'components/Navigation/types';
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 import { Dispatch, SetStateAction } from 'react';
+import { NavigationPage } from 'navigation/types';
 
 type SidebarLinksProps = {
   pages: NavigationPage[];

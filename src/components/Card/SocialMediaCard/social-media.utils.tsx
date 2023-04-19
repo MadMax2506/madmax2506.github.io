@@ -1,4 +1,4 @@
-import { SocialMedia, SocialMediaDetails } from 'components/SocialMediaCard/social-media.types';
+import { SocialMedia, SocialMediaDetails } from 'components/Card/SocialMediaCard/social-media.types';
 import {
   GitHub as GitHubIcon,
   Instagram as InstagramIcon,

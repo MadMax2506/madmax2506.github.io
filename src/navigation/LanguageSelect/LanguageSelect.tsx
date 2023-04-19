@@ -1,7 +1,7 @@
 import { MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import { LanguageConfiguration } from 'context/TranslationContext/utils';
-import { CountryInfo } from 'components/LanguageSelect/CountryInfo';
 import { useCookies } from 'react-cookie';
+import { CountryInfo } from 'navigation/LanguageSelect/CountryInfo';
 
 /**
  * Switch between the available {@link LanguageConfiguration}

@@ -14,6 +14,14 @@
     "part1": "Interest aroused?",
     "part2": "Then write me an email"
   },
+  "career-steps": {
+    "plagge-it": {
+      "title": "Plagge.IT"
+    },
+    "veda-gmbh": {
+      "title": "VEDA GmbH"
+    }
+  },
   "frameworks": {
     "react": "React",
     "python": "Python",

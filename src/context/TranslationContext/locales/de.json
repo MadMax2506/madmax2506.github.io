@@ -14,6 +14,14 @@
     "part1": "Interesse geweckt?",
     "part2": "Dann schreib mir doch ne' Mail"
   },
+  "career-steps": {
+    "plagge-it": {
+      "title": "Plagge.IT"
+    },
+    "veda-gmbh": {
+      "title": "VEDA GmbH"
+    }
+  },
   "frameworks": {
     "react": "React",
     "python": "Python",

@@ -5,8 +5,8 @@ import { flatJsonObject } from 'utils';
 import { LanguageConfiguration } from 'context/TranslationContext/utils';
 import { useCookies } from 'react-cookie';
 
-type TextKeyArgs = string | number;
-type TextKeyFunction = (key: TextKey, args?: TextKeyArgs[]) => string;
+export type TextKeyArg = string | number;
+type TextKeyFunction = (key: TextKey, args?: TextKeyArg[]) => string;
 
 type Translation = {
   /** Translation function */
@@ -28,7 +28,7 @@ export const TranslationProvider = (props: PropsWithChildren) => {
   const flatDeLocales = useMemo(() => flatJsonObject(deLocales), []);
   const flatEnLocales = useMemo(() => flatJsonObject(enLocales), []);
 
-  const t: TextKeyFunction = (key, args?: TextKeyArgs[]) => {
+  const t: TextKeyFunction = (key, args?: TextKeyArg[]) => {
     const text = (cookies.language === LanguageConfiguration.DE ? flatDeLocales : flatEnLocales)[key];
 
     if (!text) return key;

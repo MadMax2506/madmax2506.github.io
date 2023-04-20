@@ -1,12 +1,11 @@
 import { Typography } from '@mui/material';
-import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 import { NavigationPage } from 'navigation/types';
+import { T } from 'components/T/T';
 
 type NavigationLinkProps = Omit<NavigationPage, 'icon'>;
 
 export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
   const { textKey, navigate } = props;
-  const { t } = useTranslationContext();
 
   return (
     <Typography
@@ -35,7 +34,7 @@ export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
         },
       }}
     >
-      {t(textKey)}
+      <T textKey={textKey} />
     </Typography>
   );
 };

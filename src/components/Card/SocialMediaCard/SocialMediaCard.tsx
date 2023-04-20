@@ -1,7 +1,7 @@
-import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 import { Paper, Stack, Typography, useTheme } from '@mui/material';
 import { SocialMedia } from 'components/Card/SocialMediaCard/social-media.types';
 import { getSocialMediaDetails } from 'components/Card/SocialMediaCard/social-media.utils';
+import { T } from 'components/T/T';
 
 type SocialMediaCardProps = {
   type: SocialMedia;
@@ -17,8 +17,6 @@ type SocialMediaCardProps = {
  */
 export const SocialMediaCard = (props: SocialMediaCardProps): JSX.Element => {
   const { type, linkOnly = false } = props;
-
-  const { t } = useTranslationContext();
 
   const {
     highlighting: highlightingColor,
@@ -51,7 +49,9 @@ export const SocialMediaCard = (props: SocialMediaCardProps): JSX.Element => {
         <Paper sx={{ maxWidth: 'min-content', borderRadius: 10, py: 1, px: 2 }}>
           <Stack direction="row" alignItems="center" spacing={1.2}>
             {Icon && <Icon />}
-            <Typography noWrap>{t(`social-media.${type}`)}</Typography>
+            <Typography noWrap>
+              <T textKey={`social-media.${type}`} />
+            </Typography>
           </Stack>
         </Paper>
       )}

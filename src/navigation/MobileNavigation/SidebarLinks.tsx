@@ -13,7 +13,6 @@ export const SidebarLinks = (props: SidebarLinksProps): JSX.Element => {
 
   const { t } = useTranslationContext();
 
-  // TODO wrong behaviour
   const onClick = (navigate: () => void) => {
     setOpen(() => false);
     navigate();

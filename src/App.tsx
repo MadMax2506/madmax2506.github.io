@@ -6,7 +6,7 @@ import { MonoNavigationAnchors } from 'components/Route/types';
 import { AboutMe } from 'pages/AboutMe/AboutMe';
 import { Projects } from 'pages/Projects/Projects';
 import { Contact } from 'pages/Contact/Contact';
-import { TranslationProvider } from 'context/TranslationContext/TranslationContext';
+import { LanguageProvider } from 'context/LanguageContext/LanguageContext';
 import { Stack } from '@mui/material';
 import { Experience } from 'pages/Experience/Experience';
 import { Navigation } from 'navigation/Navigation';
@@ -14,7 +14,7 @@ import { Navigation } from 'navigation/Navigation';
 export const App = () => {
   return (
     <CookiesProvider>
-      <TranslationProvider>
+      <LanguageProvider>
         <ThemeProvider>
           <Navigation />
 
@@ -38,7 +38,7 @@ export const App = () => {
             </MonoRoute>
           </Stack>
         </ThemeProvider>
-      </TranslationProvider>
+      </LanguageProvider>
     </CookiesProvider>
   );
 };

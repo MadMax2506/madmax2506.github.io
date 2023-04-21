@@ -1,25 +1,25 @@
 import { MenuItem, Select, SelectChangeEvent } from '@mui/material';
-import { LanguageConfiguration } from 'context/TranslationContext/utils';
-import { useCookies } from 'react-cookie';
+import { LanguageConfiguration } from 'context/LanguageContext/language.types';
 import { CountryInfo } from 'navigation/LanguageSelect/CountryInfo';
+import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 
 /**
  * Switch between the available {@link LanguageConfiguration}
  */
 export const LanguageSelect = (): JSX.Element => {
-  const [cookies, setCookie] = useCookies<'language', { language: LanguageConfiguration }>(['language']);
+  const { language, changeLanguage } = useLanguageContext();
 
   const onChange = (event: SelectChangeEvent<LanguageConfiguration>) => {
-    setCookie('language', event.target.value as string);
+    changeLanguage(event.target.value as LanguageConfiguration);
   };
 
   return (
-    <Select value={cookies.language} onChange={onChange} size="small">
+    <Select value={language} onChange={onChange} size="small">
       <MenuItem value={LanguageConfiguration.DE}>
-        <CountryInfo type="de" />
+        <CountryInfo type={LanguageConfiguration.DE} />
       </MenuItem>
       <MenuItem value={LanguageConfiguration.EN}>
-        <CountryInfo type="en" />
+        <CountryInfo type={LanguageConfiguration.EN} />
       </MenuItem>
     </Select>
   );

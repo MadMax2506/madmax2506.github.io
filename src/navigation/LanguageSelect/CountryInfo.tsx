@@ -1,10 +1,14 @@
 import { Avatar, Stack } from '@mui/material';
 import { T } from 'components/T/T';
+import { LanguageConfiguration } from 'context/LanguageContext/language.types';
 
 type CountryProps = {
-  type: 'de' | 'en';
+  type: LanguageConfiguration;
 };
 
+/**
+ * Display the current selected {@link LanguageConfiguration}
+ */
 export const CountryInfo = (props: CountryProps): JSX.Element => {
   const { type } = props;
 

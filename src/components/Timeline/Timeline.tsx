@@ -24,6 +24,8 @@ export const Timeline = (props: TimelineProps): JSX.Element => {
 
   // TODO implement href
 
+  const openUrl = (href: string | undefined) => href && window.open(href, '_blank', 'noreferrer');
+
   return (
     <MuiTimeline position="alternate">
       {items.map(({ icon: Icon, href, ...rest }, index) => (
@@ -33,7 +35,15 @@ export const Timeline = (props: TimelineProps): JSX.Element => {
           </MuiTimelineOppositeContent>
 
           <MuiTimelineSeparator>
-            <MuiTimelineDot sx={{ border: 'none', background: 'none', boxShadow: 'none' }}>
+            <MuiTimelineDot
+              onClick={() => openUrl(href)}
+              sx={{
+                border: 'none',
+                background: 'none',
+                boxShadow: 'none',
+                cursor: href ? 'pointer' : 'default',
+              }}
+            >
               <Icon />
             </MuiTimelineDot>
             {index + 1 < items.length && <MuiTimelineConnector sx={{ height: 50 }} />}

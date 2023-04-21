@@ -1,5 +1,6 @@
-import { TextKeyArg, useTranslationContext } from 'context/TranslationContext/TranslationContext';
+import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 import { TextKey } from 'types';
+import { TextKeyArg } from 'context/LanguageContext/language.types';
 
 type TProps = {
   /**
@@ -23,7 +24,7 @@ type TProps = {
 export const T = (props: TProps): JSX.Element => {
   const { textKey, as: CustomTag = 'span', args } = props;
 
-  const { t } = useTranslationContext();
+  const { t } = useLanguageContext();
 
   return <CustomTag>{t(textKey, args)}</CustomTag>;
 };

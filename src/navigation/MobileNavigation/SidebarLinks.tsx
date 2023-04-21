@@ -1,5 +1,5 @@
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
+import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 import { Dispatch, SetStateAction } from 'react';
 import { NavigationPage } from 'navigation/types';
 
@@ -11,7 +11,7 @@ type SidebarLinksProps = {
 export const SidebarLinks = (props: SidebarLinksProps): JSX.Element => {
   const { pages, setOpen } = props;
 
-  const { t } = useTranslationContext();
+  const { t } = useLanguageContext();
 
   const onClick = (navigate: () => void) => {
     setOpen(() => false);

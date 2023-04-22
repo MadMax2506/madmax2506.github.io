@@ -15,6 +15,10 @@
     "part2": "Then write me an email"
   },
   "career-steps": {
+    "duration": {
+      "from-until": "From {0} to {1}",
+      "from-until-today": "From {0} until today"
+    },
     "plagge-it": {
       "title": "Plagge.IT"
     },

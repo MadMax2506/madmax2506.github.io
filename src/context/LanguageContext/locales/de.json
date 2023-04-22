@@ -15,6 +15,10 @@
     "part2": "Dann schreib mir doch ne' Mail"
   },
   "career-steps": {
+    "duration": {
+      "from-until": "Von {0} bis {1}",
+      "from-until-today": "Von {0} bis heute"
+    },
     "plagge-it": {
       "title": "Plagge.IT"
     },

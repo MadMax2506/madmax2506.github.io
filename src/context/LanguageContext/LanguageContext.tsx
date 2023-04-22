@@ -15,9 +15,13 @@ import {
 } from 'context/LanguageContext/language.types';
 import { useCookies } from 'react-cookie';
 import dayjs, { Dayjs } from 'dayjs';
-import { LocalizationProvider } from '@mui/lab';
-import AdapterDayjs from '@mui/lab/AdapterDayjs';
-import { deDE as muiDatePickersDE, enUS as muiDatePickersEN, PickersLocaleText } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import {
+  deDE as muiDatePickersDE,
+  enUS as muiDatePickersEN,
+  LocalizationProvider,
+  PickersLocaleText,
+} from '@mui/x-date-pickers';
 
 type Language = {
   /**

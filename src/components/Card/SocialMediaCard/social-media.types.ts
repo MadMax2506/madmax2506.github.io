@@ -11,7 +11,7 @@ export type SocialMediaDetails = {
   /**
    * Icon of the social media platform
    */
-  icon?: () => JSX.Element;
+  icon: () => JSX.Element;
 } & (
   | {
       /**

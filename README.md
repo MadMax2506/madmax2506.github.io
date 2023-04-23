@@ -26,3 +26,7 @@ To package apps for the local platform:
 ```bash
 npm run build
 ```
+
+## Icons
+
+[Devicons](https://github.com/devicons/devicon/tree/master/icons)

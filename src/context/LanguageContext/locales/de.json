@@ -33,7 +33,9 @@
     "arduino": "Arduino",
     "mui": "Material UI",
     "ruby-on-rails": "Ruby on Rails",
-    "rpi": "Raspberry Pi"
+    "rpi": "Raspberry Pi",
+    "android": "Android",
+    "kotlin": "Kotlin"
   },
   "pages": {
     "about-me": "Über mich",

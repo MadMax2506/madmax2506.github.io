@@ -2,7 +2,6 @@ import { SocialMedia, SocialMediaDetails } from 'components/Card/SocialMediaCard
 import {
   GitHub as GitHubIcon,
   Instagram as InstagramIcon,
-  LinkedIn as LinkedInIcon,
   Mail as MailIcon,
   Telegram as TelegramIcon,
 } from '@mui/icons-material';
@@ -25,7 +24,7 @@ export const getSocialMediaDetails = (type: SocialMedia): SocialMediaDetails => 
       };
     case SocialMedia.LINKED_IN:
       return {
-        icon: () => <LinkedInIcon />,
+        icon: () => <img src="src/assets/social-media/linkedin.png" alt="linkedin" />,
         link: 'https://www.linkedin.com/in/max-janorschke-5b6973225',
       };
     case SocialMedia.TELEGRAM:
@@ -40,6 +39,7 @@ export const getSocialMediaDetails = (type: SocialMedia): SocialMediaDetails => 
       };
     case SocialMedia.XING:
       return {
+        icon: () => <img src="src/assets/social-media/xing.jpg" alt="xing" />,
         link: 'https://www.xing.com/profile/Max_Janorschke',
       };
     default:

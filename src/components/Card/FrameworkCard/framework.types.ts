@@ -1,13 +1,15 @@
 export enum Framework {
   REACT = 'react',
+  MATERIAL_UI = 'mui',
   PYTHON = 'python',
   NEST_JS = 'nestjs',
   ELECTRON = 'electron',
   JAVA = 'java',
   SPRING_BOOT = 'spring',
+  ANDROID = 'android',
+  KOTLIN = 'kotlin',
   VUE_JS = 'vuejs',
   ARDUINO = 'arduino',
-  MATERIAL_UI = 'mui',
   RUBY_ON_RAILS = 'ruby-on-rails',
   RASPBERRY_PI = 'rpi',
 }

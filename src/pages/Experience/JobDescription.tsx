@@ -1,4 +1,4 @@
-import { Grid, Stack } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import { FrameworkCard } from 'components/Card/FrameworkCard/FrameworkCard';
 import { Framework } from 'components/Card/FrameworkCard/framework.types';
 import { TimelineItemDescriptionProps } from 'components/Timeline/timeline.types';
@@ -24,7 +24,9 @@ export const JobDescription = (props: JobDescriptionProps): JSX.Element => {
 
   return (
     <Stack direction="column" justifyContent={justifyContent} spacing={1}>
-      <T textKey={textKey} />
+      <Typography sx={{ pl: 1 }}>
+        <T textKey={textKey} />
+      </Typography>
 
       <Grid spacing={1} justifyContent={justifyContent} sx={{ display: { xs: 'none', md: 'flex' } }} container>
         {frameworks.map((framework) => (

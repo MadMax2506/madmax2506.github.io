@@ -10,19 +10,12 @@ import {
 import { NavigationPage } from 'navigation/types';
 import { DesktopNavigation } from 'navigation/DesktopNavigation/DesktopNavigation';
 import { MobileNavigation } from 'navigation/MobileNavigation/MobileNavigation';
+import { useNavigation } from 'navigation/useNavigation';
 
 export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();
 
-  const navigate = (anchor: MonoNavigationAnchors) => {
-    const elementY = document.getElementById(anchor)?.getBoundingClientRect()?.top || 0;
-    const scrollToY = elementY + window.scrollY;
-
-    window.scroll({
-      top: scrollToY,
-      behavior: 'smooth',
-    });
-  };
+  const { navigate } = useNavigation();
 
   const pages: NavigationPage[] = [
     {

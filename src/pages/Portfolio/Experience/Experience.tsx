@@ -1,10 +1,10 @@
 import { TimelineItem } from 'components/Timeline/timeline.types';
-import { Duration } from 'pages/Experience/Duration';
+import { Duration } from 'pages/Portfolio/Experience/Duration';
 import { Framework } from 'components/Card/FrameworkCard/framework.types';
 import { SectionContainer } from 'components/Container/SectionContainer';
 import { Stack } from '@mui/material';
 import { Timeline } from 'components/Timeline/Timeline';
-import { JobDescription } from 'pages/Experience/JobDescription';
+import { JobDescription } from 'pages/Portfolio/Experience/JobDescription';
 
 const LOGO_SIZE = 100;
 

@@ -1,3 +1,5 @@
+import { FullPageContainer } from 'components/Container/FullPageContainer';
+
 export const Imprint = (): JSX.Element => {
-  return <>Imprint</>;
+  return <FullPageContainer>Imprint</FullPageContainer>;
 };

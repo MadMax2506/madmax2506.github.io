@@ -6,6 +6,7 @@ import { Navigation } from 'components/navigation/Navigation';
 import RelativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
 import { Routes } from 'routes/Routes';
+import { Footer } from 'components/Footer';
 
 export const App = () => {
   // Activate dayjs plugins
@@ -20,6 +21,8 @@ export const App = () => {
           <Stack alignItems="center">
             <Routes />
           </Stack>
+
+          <Footer />
         </ThemeProvider>
       </LanguageProvider>
     </CookiesProvider>

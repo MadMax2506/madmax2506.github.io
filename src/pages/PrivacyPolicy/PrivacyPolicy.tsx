@@ -1,3 +1,5 @@
+import { FullPageContainer } from 'components/Container/FullPageContainer';
+
 export const PrivacyPolicy = (): JSX.Element => {
-  return <>PrivacyPolicy</>;
+  return <FullPageContainer>PrivacyPolicy</FullPageContainer>;
 };

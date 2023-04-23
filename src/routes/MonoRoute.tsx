@@ -1,4 +1,4 @@
-import { MonoNavigationAnchors } from 'components/Route/types';
+import { MonoNavigationAnchors } from 'routes/types';
 import { Box } from '@mui/material';
 import { PropsWithChildren } from 'react';
 

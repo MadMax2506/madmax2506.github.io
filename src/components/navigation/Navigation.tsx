@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, useTheme } from '@mui/material';
 
-import { MonoNavigationAnchors } from 'components/Route/types';
+import { MonoNavigationAnchors } from 'routes/types';
 import {
   Contacts as ContactsIcon,
   FolderCopy as FolderCopyIcon,

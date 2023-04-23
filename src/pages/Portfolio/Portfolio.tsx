@@ -1,6 +1,6 @@
 import { Home } from 'pages/Portfolio/Home/Home';
-import { MonoRoute } from 'components/Route/MonoRoute';
-import { MonoNavigationAnchors } from 'components/Route/types';
+import { MonoRoute } from 'routes/MonoRoute';
+import { MonoNavigationAnchors } from 'routes/types';
 import { AboutMe } from 'pages/Portfolio/AboutMe/AboutMe';
 import { Experience } from 'pages/Portfolio/Experience/Experience';
 import { Projects } from 'pages/Portfolio/Projects/Projects';

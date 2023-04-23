@@ -1,4 +1,4 @@
-import { MonoNavigationAnchors } from 'components/Route/types';
+import { MonoNavigationAnchors } from 'routes/types';
 
 type NavigateFunction = (anchor: MonoNavigationAnchors) => void;
 

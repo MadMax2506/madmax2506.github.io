@@ -1,4 +1,5 @@
-import { Typography, TypographyProps } from '@mui/material';
+import { Link, Typography, TypographyProps } from '@mui/material';
+import { paths } from 'routes/paths';
 
 type PageTitleProps = Pick<TypographyProps, 'variant' | 'flexShrink'>;
 
@@ -10,7 +11,7 @@ export const PageTitle = (props: PageTitleProps): JSX.Element => {
 
   return (
     <Typography variant={variant} flexShrink={flexShrink} component="div">
-      Max Janorschke
+      <Link href={paths.root.pattern}>Max Janorschke</Link>
     </Typography>
   );
 };

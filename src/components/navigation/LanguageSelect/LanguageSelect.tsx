@@ -1,6 +1,6 @@
 import { MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import { LanguageConfiguration } from 'context/LanguageContext/language.types';
-import { CountryInfo } from 'navigation/LanguageSelect/CountryInfo';
+import { CountryInfo } from 'components/navigation/LanguageSelect/CountryInfo';
 import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 
 /**

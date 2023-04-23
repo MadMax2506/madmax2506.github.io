@@ -7,10 +7,10 @@ import {
   Person as PersonIcon,
   Work as WorkIcon,
 } from '@mui/icons-material';
-import { NavigationPage } from 'navigation/types';
-import { DesktopNavigation } from 'navigation/DesktopNavigation/DesktopNavigation';
-import { MobileNavigation } from 'navigation/MobileNavigation/MobileNavigation';
-import { useNavigation } from 'navigation/useNavigation';
+import { NavigationPage } from 'components/navigation/types';
+import { DesktopNavigation } from 'components/navigation/DesktopNavigation/DesktopNavigation';
+import { MobileNavigation } from 'components/navigation/MobileNavigation/MobileNavigation';
+import { useNavigation } from 'components/navigation/useNavigation';
 
 export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();

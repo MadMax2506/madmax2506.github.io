@@ -1,11 +1,9 @@
 import { Avatar, Grid, Stack, Typography, useTheme } from '@mui/material';
-import { SocialMediaCard } from 'components/SocialMediaCard/SocialMediaCard';
-import { SocialMedia } from 'components/SocialMediaCard/social-media.types';
-import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
+import { SocialMediaCard } from 'components/Card/SocialMediaCard/SocialMediaCard';
+import { SocialMedia } from 'components/Card/SocialMediaCard/social-media.types';
+import { T } from 'components/T/T';
 
 export const MailReference = (): JSX.Element => {
-  const { t } = useTranslationContext();
-
   const { breakpoints } = useTheme();
 
   return (
@@ -30,8 +28,12 @@ export const MailReference = (): JSX.Element => {
         }}
       >
         <Stack direction="column" spacing={1}>
-          <Typography variant="h5">{t('contact.part1')}</Typography>
-          <Typography variant="h6">{t('contact.part2')}</Typography>
+          <Typography variant="h5">
+            <T textKey={'contact.part1'} />
+          </Typography>
+          <Typography variant="h6">
+            <T textKey={'contact.part2'} />
+          </Typography>
 
           <SocialMediaCard type={SocialMedia.MAIL} linkOnly />
         </Stack>

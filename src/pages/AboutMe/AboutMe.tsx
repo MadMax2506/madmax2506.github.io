@@ -1,12 +1,10 @@
 import { SectionContainer } from 'components/Container/SectionContainer';
 import { Grid, Typography, useTheme } from '@mui/material';
 import { PersonalAvatar } from 'pages/AboutMe/PersonalAvatar';
-import { useTranslationContext } from 'context/TranslationContext/TranslationContext';
 import { FrameworkList } from 'pages/AboutMe/FrameworkList';
+import { T } from 'components/T/T';
 
 export const AboutMe = (): JSX.Element => {
-  const { t } = useTranslationContext();
-
   const { breakpoints } = useTheme();
 
   return (
@@ -23,7 +21,9 @@ export const AboutMe = (): JSX.Element => {
         }}
       >
         <Grid item xs={12} md={8} xl={9} order={{ xs: 2, md: 1 }}>
-          <Typography sx={{ pb: 3 }}>{t('about-me')}</Typography>
+          <Typography sx={{ pb: 3 }}>
+            <T textKey={'about-me'} />
+          </Typography>
 
           <FrameworkList />
         </Grid>

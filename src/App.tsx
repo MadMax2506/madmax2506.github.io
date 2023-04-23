@@ -1,44 +1,49 @@
 import { ThemeProvider } from 'context/ThemeContext/ThemeContext';
 import { CookiesProvider } from 'react-cookie';
 import { Home } from 'pages/Home/Home';
-import { Route } from 'components/Route/Route';
-import { NavigationAnchors } from 'components/Route/types';
+import { MonoRoute } from 'components/Route/MonoRoute';
+import { MonoNavigationAnchors } from 'components/Route/types';
 import { AboutMe } from 'pages/AboutMe/AboutMe';
 import { Projects } from 'pages/Projects/Projects';
 import { Contact } from 'pages/Contact/Contact';
-import { TranslationProvider } from 'context/TranslationContext/TranslationContext';
+import { LanguageProvider } from 'context/LanguageContext/LanguageContext';
 import { Stack } from '@mui/material';
-import { Navigation } from 'components/Navigation/Navigation';
 import { Experience } from 'pages/Experience/Experience';
+import { Navigation } from 'navigation/Navigation';
+import RelativeTime from 'dayjs/plugin/relativeTime';
+import dayjs from 'dayjs';
 
 export const App = () => {
+  // Activate dayjs plugins
+  dayjs.extend(RelativeTime);
+
   return (
     <CookiesProvider>
-      <TranslationProvider>
+      <LanguageProvider>
         <ThemeProvider>
           <Navigation />
 
           <Stack alignItems="center">
             <Home />
 
-            <Route anchor={NavigationAnchors.ABOUT_ME}>
+            <MonoRoute anchor={MonoNavigationAnchors.ABOUT_ME}>
               <AboutMe />
-            </Route>
+            </MonoRoute>
 
-            <Route anchor={NavigationAnchors.EXPERIENCE}>
+            <MonoRoute anchor={MonoNavigationAnchors.EXPERIENCE}>
               <Experience />
-            </Route>
+            </MonoRoute>
 
-            <Route anchor={NavigationAnchors.PROJECTS}>
+            <MonoRoute anchor={MonoNavigationAnchors.PROJECTS}>
               <Projects />
-            </Route>
+            </MonoRoute>
 
-            <Route anchor={NavigationAnchors.CONTACT}>
+            <MonoRoute anchor={MonoNavigationAnchors.CONTACT}>
               <Contact />
-            </Route>
+            </MonoRoute>
           </Stack>
         </ThemeProvider>
-      </TranslationProvider>
+      </LanguageProvider>
     </CookiesProvider>
   );
 };

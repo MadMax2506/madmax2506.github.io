@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
-import { SocialMediaCard } from 'components/SocialMediaCard/SocialMediaCard';
-import { SocialMedia } from 'components/SocialMediaCard/social-media.types';
+import { SocialMediaCard } from 'components/Card/SocialMediaCard/SocialMediaCard';
+import { SocialMedia } from 'components/Card/SocialMediaCard/social-media.types';
 
 export const SocialMediaList = (): JSX.Element => {
   return (

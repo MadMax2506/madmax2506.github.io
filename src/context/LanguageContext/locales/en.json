@@ -1,0 +1,52 @@
+{
+  "about-me": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\n          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n          takimata sanctus est Lorem ipsum dolor sit amet.",
+  "career-steps": {
+    "duration": {
+      "from-until": "From {0} to {1}",
+      "from-until-today": "From {0} until today"
+    },
+    "plagge-it": {
+      "description": "Temporary help in the area of software development",
+      "title": "Plagge.IT"
+    },
+    "veda-gmbh": {
+      "description": "Dual study mathematical-technical software developer",
+      "title": "VEDA GmbH"
+    }
+  },
+  "contact": {
+    "part1": "Interest aroused?",
+    "part2": "Then write me an email"
+  },
+  "country": {
+    "de": "DE",
+    "en": "EN"
+  },
+  "frameworks": {
+    "react": "React",
+    "python": "Python",
+    "nestjs": "NestJS",
+    "electron": "Electron",
+    "java": "Java",
+    "spring": "Spring Boot",
+    "vuejs": "Vue.js",
+    "arduino": "Arduino",
+    "mui": "Material UI",
+    "ruby-on-rails": "Ruby on Rails",
+    "rpi": "Raspberry Pi"
+  },
+  "pages": {
+    "about-me": "About me",
+    "contact": "Contact",
+    "experience": "Experience",
+    "projects": "Projects"
+  },
+  "social-media": {
+    "xing": "XING",
+    "linked-in": "LinkedIn",
+    "git-hub": "GitHub",
+    "mail": "Mail",
+    "instagram": "Instagram",
+    "telegram": "Telegram"
+  }
+}

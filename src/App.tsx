@@ -10,8 +10,13 @@ import { LanguageProvider } from 'context/LanguageContext/LanguageContext';
 import { Stack } from '@mui/material';
 import { Experience } from 'pages/Experience/Experience';
 import { Navigation } from 'navigation/Navigation';
+import RelativeTime from 'dayjs/plugin/relativeTime';
+import dayjs from 'dayjs';
 
 export const App = () => {
+  // Activate dayjs plugins
+  dayjs.extend(RelativeTime);
+
   return (
     <CookiesProvider>
       <LanguageProvider>

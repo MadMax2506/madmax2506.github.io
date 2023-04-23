@@ -5,6 +5,7 @@ import {
   TimelineDot as MuiTimelineDot,
   TimelineItem as MuiTimelineItem,
   TimelineOppositeContent as MuiTimelineOppositeContent,
+  TimelineProps as MuiTimelineProps,
   TimelineSeparator as MuiTimelineSeparator,
 } from '@mui/lab';
 import { TimelineItem } from 'components/Timeline/timeline.types';
@@ -12,7 +13,10 @@ import { TimelineDescription } from 'components/Timeline/TimelineDescription';
 import { TimelineTitle } from 'components/Timeline/TimelineTitle';
 import { TimelineSubtitle } from 'components/Timeline/TimelineSubtitle';
 
-type TimelineProps = {
+export type TimelineProps = Pick<MuiTimelineProps, 'position'> & {
+  /**
+   * List of {@link TimelineItem TimelineItems}
+   */
   items: TimelineItem[];
 };
 
@@ -20,18 +24,16 @@ type TimelineProps = {
  * Timeline component
  */
 export const Timeline = (props: TimelineProps): JSX.Element => {
-  const { items } = props;
-
-  // TODO implement href
+  const { position, items } = props;
 
   const openUrl = (href: string | undefined) => href && window.open(href, '_blank', 'noreferrer');
 
   return (
-    <MuiTimeline position="alternate">
+    <MuiTimeline position={position}>
       {items.map(({ icon: Icon, href, ...rest }, index) => (
         <MuiTimelineItem key={`timeline-item-${index}`}>
           <MuiTimelineOppositeContent>
-            <TimelineDescription {...rest} />
+            <TimelineDescription index={index} position={position} {...rest} />
           </MuiTimelineOppositeContent>
 
           <MuiTimelineSeparator>
@@ -46,7 +48,7 @@ export const Timeline = (props: TimelineProps): JSX.Element => {
             >
               <Icon />
             </MuiTimelineDot>
-            {index + 1 < items.length && <MuiTimelineConnector sx={{ height: 50 }} />}
+            {index + 1 < items.length && <MuiTimelineConnector sx={{ height: 100 }} />}
           </MuiTimelineSeparator>
 
           <MuiTimelineContent>

@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+
 export type TimelineItem = {
   /**
    * Icon for the timeline item
@@ -43,6 +45,10 @@ export type TimelineItemSubtitle =
       subtitle?: () => JSX.Element;
     };
 
+export type TimelineItemDescriptionProps = {
+  justifyContent: CSSProperties['justifyContent'];
+};
+
 export type TimelineItemDescription =
   | {
       /**
@@ -56,5 +62,5 @@ export type TimelineItemDescription =
       /**
        * Description component for the timeline item
        */
-      description?: () => JSX.Element;
+      description?: (props: TimelineItemDescriptionProps) => JSX.Element;
     };

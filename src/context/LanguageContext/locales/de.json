@@ -1,30 +1,26 @@
 {
-  "pages": {
-    "about-me": "Über mich",
-    "contact": "Kontakt",
-    "experience": "Erfahrungen",
-    "projects": "Projekte"
-  },
-  "country": {
-    "de": "DE",
-    "en": "EN"
-  },
   "about-me": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\n          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n          takimata sanctus est Lorem ipsum dolor sit amet.",
-  "contact": {
-    "part1": "Interesse geweckt?",
-    "part2": "Dann schreib mir doch ne' Mail"
-  },
   "career-steps": {
     "duration": {
       "from-until": "Von {0} bis {1}",
       "from-until-today": "Von {0} bis heute"
     },
     "plagge-it": {
+      "description": "Aushilfe im Bereich Softwareentwicklung",
       "title": "Plagge.IT"
     },
     "veda-gmbh": {
+      "description": "Duales Studium Mathematisch-technischem Softwareentwickler",
       "title": "VEDA GmbH"
     }
+  },
+  "contact": {
+    "part1": "Interesse geweckt?",
+    "part2": "Dann schreib mir doch ne' Mail"
+  },
+  "country": {
+    "de": "DE",
+    "en": "EN"
   },
   "frameworks": {
     "react": "React",
@@ -38,6 +34,12 @@
     "mui": "Material UI",
     "ruby-on-rails": "Ruby on Rails",
     "rpi": "Raspberry Pi"
+  },
+  "pages": {
+    "about-me": "Über mich",
+    "contact": "Kontakt",
+    "experience": "Erfahrungen",
+    "projects": "Projekte"
   },
   "social-media": {
     "xing": "XING",

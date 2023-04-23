@@ -1,4 +1,4 @@
-export enum Frameworks {
+export enum Framework {
   REACT = 'react',
   PYTHON = 'python',
   NEST_JS = 'nestjs',

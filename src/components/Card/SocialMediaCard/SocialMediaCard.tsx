@@ -32,14 +32,14 @@ export const SocialMediaCard = (props: SocialMediaCardProps): JSX.Element => {
       {linkOnly ? (
         <Typography
           sx={{
-            'box-shadow': `inset 0 0 0 0 ${highlightingColor}`,
+            boxShadow: `inset 0 0 0 0 ${highlightingColor}`,
             color: highlightingColor,
             padding: '0 .25rem',
             margin: '0 -.25rem',
             transition: 'color .3s ease-in-out, box-shadow .3s ease-in-out',
             '&:hover': {
               color: primaryTextColor,
-              'box-shadow': `inset 220px 0 0 0 ${highlightingColor}`,
+              boxShadow: `inset 220px 0 0 0 ${highlightingColor}`,
             },
           }}
         >

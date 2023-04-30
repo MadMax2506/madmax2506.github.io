@@ -1,7 +1,7 @@
 import { Box, Container, Stack, useTheme } from '@mui/material';
 import { PageTitle } from 'components/navigation/PageTitle';
 import { NavigationLink } from 'components/navigation/NavigationLink';
-import { useNavigation } from 'hooks/useNavigation';
+import { useNavigation } from 'hooks/useNavigation/useNavigation';
 import { paths } from 'routes/paths';
 
 export const Footer = (): JSX.Element => {

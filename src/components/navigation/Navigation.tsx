@@ -10,7 +10,7 @@ import {
 import { NavigationPage } from 'components/navigation/types';
 import { DesktopNavigation } from 'components/navigation/DesktopNavigation/DesktopNavigation';
 import { MobileNavigation } from 'components/navigation/MobileNavigation/MobileNavigation';
-import { useNavigation } from 'hooks/useNavigation';
+import { useNavigation } from 'hooks/useNavigation/useNavigation';
 
 export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();

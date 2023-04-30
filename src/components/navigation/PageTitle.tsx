@@ -1,5 +1,5 @@
 import { Typography, TypographyProps } from '@mui/material';
-import { useNavigation } from 'hooks/useNavigation';
+import { useNavigation } from 'hooks/useNavigation/useNavigation';
 import { paths } from 'routes/paths';
 
 type PageTitleProps = Pick<TypographyProps, 'variant' | 'flexShrink'>;

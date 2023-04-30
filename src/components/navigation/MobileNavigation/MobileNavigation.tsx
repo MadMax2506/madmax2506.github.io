@@ -18,7 +18,7 @@ export const MobileNavigation = (props: MobileNavigationProps): JSX.Element => {
 
   return (
     <>
-      <PageTitle variant="h5" flexShrink={0} />
+      <PageTitle variant="h5" flexShrink={0} withLink />
 
       <Box sx={{ display: 'flex', flexGrow: 1, flexDirection: 'row-reverse' }}>
         <IconButton size="large" onClick={() => setOpen(true)}>
@@ -33,7 +33,7 @@ export const MobileNavigation = (props: MobileNavigationProps): JSX.Element => {
         PaperProps={{ sx: { width: '100%', alignItems: 'center' } }}
       >
         <Stack spacing={2} alignItems="center" pt={2}>
-          <PageTitle variant="h5" />
+          <PageTitle variant="h5" withLink />
 
           <IconButton size="large" sx={{ position: 'absolute', right: 20, top: -8 }} onClick={() => setOpen(false)}>
             <CloseIcon />

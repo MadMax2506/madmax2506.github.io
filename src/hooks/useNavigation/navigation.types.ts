@@ -5,6 +5,6 @@ export type NavigateMonoFunction = (anchor?: MonoNavigationAnchors) => void;
 export type NavigateReactRouterFunction = (path: Paths) => void;
 
 export type UseNavigationReturn = {
-  navigateMono: NavigateMonoFunction;
+  navigateMonoRoute: NavigateMonoFunction;
   navigateReactRouter: NavigateReactRouterFunction;
 };

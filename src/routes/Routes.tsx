@@ -8,10 +8,31 @@ import { Stack } from '@mui/material';
 import { Footer } from 'components/navigation/Footer';
 import { getScrollToY, scrollTo } from 'hooks/useNavigation/navigation.utils';
 import { MonoNavigationAnchors } from 'routes/types';
+import { useEffect } from 'react';
 
+/**
+ * Reset the state in the page history
+ *
+ * @param e {@link BeforeUnloadEvent}
+ */
+const resetState = (e: BeforeUnloadEvent) => {
+  e.preventDefault();
+  window.history.pushState({}, '');
+};
+
+/**
+ * Display all {@link ReactRoute routes} together with {@link Navigation} and {@link Footer}
+ */
 export function RouterBody(): JSX.Element {
   const { state } = useLocation();
   window.requestAnimationFrame(() => scrollTo(getScrollToY(state?.anchor as MonoNavigationAnchors)));
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', resetState);
+    return () => {
+      window.removeEventListener('beforeunload', resetState);
+    };
+  }, []);
 
   return (
     <>

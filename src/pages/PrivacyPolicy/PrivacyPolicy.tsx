@@ -23,17 +23,23 @@ export const PrivacyPolicy = (): JSX.Element => {
       <PrivacyPolicyContent deep>
         <>Erhebung und Verarbeitung von Daten</>
         <>
-          Wir erheben und speichern automatisch in unseren Server Log Files Informationen, die Ihr Browser an uns
-          übermittelt. Dies sind:
-          <ul>
+          <Typography>
+            Wir erheben und speichern automatisch in unseren Server Log Files Informationen, die Ihr Browser an uns
+            übermittelt. Dies sind:
+          </Typography>
+
+          <ul style={{ listStyleType: 'none' }}>
             <li>Browsertyp/ -version</li>
             <li>verwendetes Betriebssystem</li>
             <li>Referrer URL (die zuvor besuchte Seite)</li>
             <li>Hostname des zugreifenden Rechners (IP-Adresse)</li>
             <li>Uhrzeit der Serveranfrage</li>
           </ul>
-          Diese Daten sind für uns nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen
-          Datenquellen wird nicht vorgenommen.
+
+          <Typography>
+            Diese Daten sind für uns nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen
+            Datenquellen wird nicht vorgenommen.
+          </Typography>
         </>
       </PrivacyPolicyContent>
 

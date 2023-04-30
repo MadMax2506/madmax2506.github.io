@@ -22,7 +22,7 @@ export const PrivacyPolicyContent = (props: ImprintContentProps): JSX.Element =>
   return (
     <Box sx={{ p: 2 }}>
       <Typography variant="h5">{children[0]}</Typography>
-      <Typography sx={{ textAlign: deep ? 'left' : 'inherit' }}>{children[1]}</Typography>
+      {deep ? children[1] : <Typography>{children[1]}</Typography>}
     </Box>
   );
 };

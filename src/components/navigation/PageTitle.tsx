@@ -16,7 +16,7 @@ export const PageTitle = (props: PageTitleProps): JSX.Element => {
       variant={variant}
       flexShrink={flexShrink}
       component="div"
-      onClick={() => navigateReactRouter(paths.root)}
+      onClick={() => navigateReactRouter(paths.portfolio)}
     >
       Max Janorschke
     </Typography>

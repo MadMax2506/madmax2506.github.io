@@ -14,7 +14,7 @@ export function Routes(): JSX.Element {
       <Stack alignItems="center">
         <ReactRoutes>
           <ReactRoute path="*" element={<h1>Page not found</h1>} />
-          <ReactRoute index path={paths.root.pattern} element={<Portfolio />} />
+          <ReactRoute index path={paths.portfolio.pattern} element={<Portfolio />} />
           <ReactRoute index path={paths.imprint.pattern} element={<Imprint />} />
           <ReactRoute index path={paths.privacyPolicy.pattern} element={<PrivacyPolicy />} />
         </ReactRoutes>

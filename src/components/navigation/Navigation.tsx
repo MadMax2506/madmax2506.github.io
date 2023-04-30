@@ -15,28 +15,28 @@ import { useNavigation } from 'hooks/useNavigation';
 export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();
 
-  const { navigate } = useNavigation();
+  const { navigateMono } = useNavigation();
 
   const pages: NavigationPage[] = [
     {
       icon: PersonIcon,
       textKey: 'pages.about-me',
-      navigate: () => navigate(MonoNavigationAnchors.ABOUT_ME),
+      navigate: () => navigateMono(MonoNavigationAnchors.ABOUT_ME),
     },
     {
       icon: WorkIcon,
       textKey: 'pages.experience',
-      navigate: () => navigate(MonoNavigationAnchors.EXPERIENCE),
+      navigate: () => navigateMono(MonoNavigationAnchors.EXPERIENCE),
     },
     {
       icon: FolderCopyIcon,
       textKey: 'pages.projects',
-      navigate: () => navigate(MonoNavigationAnchors.PROJECTS),
+      navigate: () => navigateMono(MonoNavigationAnchors.PROJECTS),
     },
     {
       icon: ContactsIcon,
       textKey: 'pages.contact',
-      navigate: () => navigate(MonoNavigationAnchors.CONTACT),
+      navigate: () => navigateMono(MonoNavigationAnchors.CONTACT),
     },
   ];
 

@@ -1,10 +1,12 @@
-import { Box, Container, Link, Stack, useTheme } from '@mui/material';
+import { Box, Container, Stack, useTheme } from '@mui/material';
 import { PageTitle } from 'components/navigation/PageTitle';
-import { T } from 'components/T/T';
+import { NavigationLink } from 'components/navigation/NavigationLink';
+import { useNavigation } from 'hooks/useNavigation';
 import { paths } from 'routes/paths';
 
 export const Footer = (): JSX.Element => {
   const { highlighting } = useTheme();
+  const { navigateReactRouter } = useNavigation();
 
   return (
     <Box
@@ -21,13 +23,11 @@ export const Footer = (): JSX.Element => {
           <PageTitle variant="h4" />
 
           <Stack direction="row" justifyContent="center" spacing={2}>
-            <Link href={paths.imprint.pattern}>
-              <T textKey={'pages.imprint'} />
-            </Link>
-
-            <Link href={paths.privacyPolicy.pattern}>
-              <T textKey={'pages.privacy-policy'} />
-            </Link>
+            <NavigationLink textKey={'pages.imprint'} navigate={() => navigateReactRouter(paths.imprint)} />
+            <NavigationLink
+              textKey={'pages.privacy-policy'}
+              navigate={() => navigateReactRouter(paths.privacyPolicy)}
+            />
           </Stack>
         </Stack>
       </Container>

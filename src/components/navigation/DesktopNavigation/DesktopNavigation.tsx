@@ -1,7 +1,7 @@
 import { Stack } from '@mui/material';
 import { PageTitle } from 'components/navigation/PageTitle';
 import { NavigationPage } from 'components/navigation/types';
-import { NavigationLink } from 'components/navigation/DesktopNavigation/NavigationLink';
+import { NavigationLink } from 'components/navigation/NavigationLink';
 import { LanguageSelect } from 'components/navigation/LanguageSelect/LanguageSelect';
 import { ThemeModeToggle } from 'components/navigation/ThemeModeToggle';
 

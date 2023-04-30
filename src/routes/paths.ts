@@ -1,4 +1,6 @@
-import { path } from 'static-path';
+import { path, Path } from 'static-path';
+
+export type Paths = Path<'/'> | Path<'/imprint'> | Path<'/privacy-policy'>;
 
 export const paths = {
   root: path('/'),

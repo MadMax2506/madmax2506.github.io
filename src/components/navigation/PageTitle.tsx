@@ -1,4 +1,5 @@
-import { Link, Typography, TypographyProps } from '@mui/material';
+import { Typography, TypographyProps } from '@mui/material';
+import { useNavigation } from 'hooks/useNavigation';
 import { paths } from 'routes/paths';
 
 type PageTitleProps = Pick<TypographyProps, 'variant' | 'flexShrink'>;
@@ -8,10 +9,16 @@ type PageTitleProps = Pick<TypographyProps, 'variant' | 'flexShrink'>;
  */
 export const PageTitle = (props: PageTitleProps): JSX.Element => {
   const { variant, flexShrink } = props;
+  const { navigateReactRouter } = useNavigation();
 
   return (
-    <Typography variant={variant} flexShrink={flexShrink} component="div">
-      <Link href={paths.root.pattern}>Max Janorschke</Link>
+    <Typography
+      variant={variant}
+      flexShrink={flexShrink}
+      component="div"
+      onClick={() => navigateReactRouter(paths.root)}
+    >
+      Max Janorschke
     </Typography>
   );
 };

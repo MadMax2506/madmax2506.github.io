@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import { NavigationPage } from 'navigation/types';
+import { NavigationPage } from 'components/navigation/types';
 import { T } from 'components/T/T';
 
 type NavigationLinkProps = Omit<NavigationPage, 'icon'>;

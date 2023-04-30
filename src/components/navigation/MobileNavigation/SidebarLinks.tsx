@@ -1,7 +1,7 @@
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 import { Dispatch, SetStateAction } from 'react';
-import { NavigationPage } from 'navigation/types';
+import { NavigationPage } from 'components/navigation/types';
 
 type SidebarLinksProps = {
   pages: NavigationPage[];

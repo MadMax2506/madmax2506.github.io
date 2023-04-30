@@ -1,49 +1,42 @@
 import { AppBar, Toolbar, useTheme } from '@mui/material';
 
-import { MonoNavigationAnchors } from 'components/Route/types';
+import { MonoNavigationAnchors } from 'routes/types';
 import {
   Contacts as ContactsIcon,
   FolderCopy as FolderCopyIcon,
   Person as PersonIcon,
   Work as WorkIcon,
 } from '@mui/icons-material';
-import { NavigationPage } from 'navigation/types';
-import { DesktopNavigation } from 'navigation/DesktopNavigation/DesktopNavigation';
-import { MobileNavigation } from 'navigation/MobileNavigation/MobileNavigation';
+import { NavigationPage } from 'components/navigation/types';
+import { DesktopNavigation } from 'components/navigation/DesktopNavigation/DesktopNavigation';
+import { MobileNavigation } from 'components/navigation/MobileNavigation/MobileNavigation';
+import { useNavigation } from 'hooks/useNavigation/useNavigation';
 
 export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();
 
-  const navigate = (anchor: MonoNavigationAnchors) => {
-    const elementY = document.getElementById(anchor)?.getBoundingClientRect()?.top || 0;
-    const scrollToY = elementY + window.scrollY;
-
-    window.scroll({
-      top: scrollToY,
-      behavior: 'smooth',
-    });
-  };
+  const { navigateMono } = useNavigation();
 
   const pages: NavigationPage[] = [
     {
       icon: PersonIcon,
       textKey: 'pages.about-me',
-      navigate: () => navigate(MonoNavigationAnchors.ABOUT_ME),
+      navigate: () => navigateMono(MonoNavigationAnchors.ABOUT_ME),
     },
     {
       icon: WorkIcon,
       textKey: 'pages.experience',
-      navigate: () => navigate(MonoNavigationAnchors.EXPERIENCE),
+      navigate: () => navigateMono(MonoNavigationAnchors.EXPERIENCE),
     },
     {
       icon: FolderCopyIcon,
       textKey: 'pages.projects',
-      navigate: () => navigate(MonoNavigationAnchors.PROJECTS),
+      navigate: () => navigateMono(MonoNavigationAnchors.PROJECTS),
     },
     {
       icon: ContactsIcon,
       textKey: 'pages.contact',
-      navigate: () => navigate(MonoNavigationAnchors.CONTACT),
+      navigate: () => navigateMono(MonoNavigationAnchors.CONTACT),
     },
   ];
 

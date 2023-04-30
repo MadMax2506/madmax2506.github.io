@@ -35,6 +35,13 @@ export const components: Components<Omit<Theme, 'components'>> = {
       flexItem: true,
     },
   },
+  MuiLink: {
+    styleOverrides: {
+      root: {
+        textDecoration: 'none',
+      },
+    },
+  },
 };
 
 /**

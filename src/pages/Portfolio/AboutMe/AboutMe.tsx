@@ -1,7 +1,7 @@
 import { SectionContainer } from 'components/Container/SectionContainer';
 import { Grid, Typography, useTheme } from '@mui/material';
-import { PersonalAvatar } from 'pages/AboutMe/PersonalAvatar';
-import { FrameworkList } from 'pages/AboutMe/FrameworkList';
+import { PersonalAvatar } from 'pages/Portfolio/AboutMe/PersonalAvatar';
+import { FrameworkList } from 'pages/Portfolio/AboutMe/FrameworkList';
 import { T } from 'components/T/T';
 
 export const AboutMe = (): JSX.Element => {

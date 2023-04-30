@@ -5,7 +5,7 @@ import { TimelineItemDescriptionProps } from 'components/Timeline/timeline.types
 import { TextKey } from 'types';
 import { T } from 'components/T/T';
 
-type JobDescriptionProps = TimelineItemDescriptionProps & {
+export type JobDescriptionProps = TimelineItemDescriptionProps & {
   /**
    *
    */

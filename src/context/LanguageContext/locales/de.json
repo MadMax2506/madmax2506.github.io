@@ -9,8 +9,15 @@
       "description": "Aushilfe im Bereich Softwareentwicklung",
       "title": "Plagge.IT"
     },
+    "fh-aachen": {
+      "description": "Angewandte Mathematik und Informatik B.Sc.",
+      "title": "FH Aachen"
+    },
     "veda-gmbh": {
-      "description": "Duales Studium Mathematisch-technischem Softwareentwickler",
+      "description": {
+        "internship": "Praktikum",
+        "training": "Ausbildung zum mathematisch-Technischen Softwareentwickler"
+      },
       "title": "VEDA GmbH"
     }
   },

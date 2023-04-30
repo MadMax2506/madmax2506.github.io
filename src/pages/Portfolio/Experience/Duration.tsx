@@ -3,7 +3,7 @@ import { T } from 'components/T/T';
 import dayjs from 'dayjs';
 import { Typography } from '@mui/material';
 
-type DurationProps = { from: Date; until?: Date };
+export type DurationProps = { from: Date; until?: Date };
 
 /**
  * Display the duration in the different companies

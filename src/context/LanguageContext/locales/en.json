@@ -9,8 +9,15 @@
       "description": "Temporary help in the area of software development",
       "title": "Plagge.IT"
     },
+    "fh-aachen": {
+      "description": "Applied Mathematics and Computer Science B.Sc.",
+      "title": "FH Aachen"
+    },
     "veda-gmbh": {
-      "description": "Dual study mathematical-technical software developer",
+      "description": {
+        "internship": "Intership",
+        "training": "Training as mathematical-technical software developer"
+      },
       "title": "VEDA GmbH"
     }
   },

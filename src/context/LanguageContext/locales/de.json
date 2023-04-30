@@ -3,7 +3,7 @@
   "career-steps": {
     "duration": {
       "from-until": "Von {0} bis {1}",
-      "from-until-today": "Von {0} bis heute"
+      "from-until-today": "Von {0} <b>bis heute</b>"
     },
     "plagge-it": {
       "description": "Aushilfe im Bereich Softwareentwicklung",

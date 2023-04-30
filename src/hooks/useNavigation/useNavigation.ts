@@ -19,8 +19,7 @@ export const useNavigation = (): UseNavigationReturn => {
    * @param path react router {@link Path}
    */
   const navigateReactRouter: NavigateReactRouterFunction = (path) => {
-    reactRouterNavigate(path.pattern);
-    window.scroll({ top: 0, behavior: 'smooth' });
+    reactRouterNavigate(path.pattern, { state: {} });
   };
 
   /**

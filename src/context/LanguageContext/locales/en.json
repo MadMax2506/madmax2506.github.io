@@ -3,7 +3,7 @@
   "career-steps": {
     "duration": {
       "from-until": "From {0} to {1}",
-      "from-until-today": "From {0} until today"
+      "from-until-today": "From {0} <b>until today</b>"
     },
     "plagge-it": {
       "description": "Temporary help in the area of software development",

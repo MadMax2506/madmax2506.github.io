@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route as ReactRoute, Routes as ReactRoutes } from 'react-router-dom';
+import { BrowserRouter as Router, Route as ReactRoute, Routes as ReactRoutes, useLocation } from 'react-router-dom';
 import { paths } from './paths';
 import { Portfolio } from 'pages/Portfolio/Portfolio';
 import { PrivacyPolicy } from 'pages/PrivacyPolicy/PrivacyPolicy';
@@ -6,10 +6,15 @@ import { Imprint } from 'pages/Imprint/Imprint';
 import { Navigation } from 'components/navigation/Navigation';
 import { Stack } from '@mui/material';
 import { Footer } from 'components/navigation/Footer';
+import { getScrollToY, scrollTo } from 'hooks/useNavigation/navigation.utils';
+import { MonoNavigationAnchors } from 'routes/types';
 
-export function Routes(): JSX.Element {
+export function RouterBody(): JSX.Element {
+  const { state } = useLocation();
+  window.requestAnimationFrame(() => scrollTo(getScrollToY(state?.anchor as MonoNavigationAnchors)));
+
   return (
-    <Router>
+    <>
       <Navigation />
       <Stack alignItems="center">
         <ReactRoutes>
@@ -21,6 +26,17 @@ export function Routes(): JSX.Element {
       </Stack>
 
       <Footer />
+    </>
+  );
+}
+
+/**
+ * Provide the {@link Router} with the {@link RouterBody}
+ */
+export function Routes(): JSX.Element {
+  return (
+    <Router>
+      <RouterBody />
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 import { Typography, TypographyProps } from '@mui/material';
 import { useNavigation } from 'hooks/useNavigation/useNavigation';
-import { paths } from 'routes/paths';
+import { MonoNavigationAnchors } from 'routes/types';
 
 type PageTitleProps = Pick<TypographyProps, 'variant' | 'flexShrink'>;
 
@@ -9,14 +9,14 @@ type PageTitleProps = Pick<TypographyProps, 'variant' | 'flexShrink'>;
  */
 export const PageTitle = (props: PageTitleProps): JSX.Element => {
   const { variant, flexShrink } = props;
-  const { navigateReactRouter } = useNavigation();
+  const { navigateMono } = useNavigation();
 
   return (
     <Typography
       variant={variant}
       flexShrink={flexShrink}
       component="div"
-      onClick={() => navigateReactRouter(paths.portfolio)}
+      onClick={() => navigateMono(MonoNavigationAnchors.HOME)}
     >
       Max Janorschke
     </Typography>

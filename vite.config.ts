@@ -15,7 +15,7 @@ export default defineConfig({
     port: 4173,
   },
   preview: {
-    port: 80,
+    port: 8080,
   },
   test: {
     globals: true,

@@ -12,7 +12,6 @@ export default defineConfig({
   plugins: [viteTsconfigPaths(), react(), svgr(), eslint()],
   server: {
     host: '0.0.0.0',
-    port: 4173,
   },
   preview: {
     port: 8080,

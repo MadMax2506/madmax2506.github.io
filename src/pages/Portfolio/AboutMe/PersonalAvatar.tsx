@@ -10,5 +10,5 @@ export const PersonalAvatar = (): JSX.Element => {
     lg: 300,
   };
 
-  return <Avatar alt="personal-avatar" src="src/assets/profile.jpg" sx={{ width: size, height: size, m: 'auto' }} />;
+  return <Avatar alt="personal-avatar" src="/assets/profile.jpg" sx={{ width: size, height: size, m: 'auto' }} />;
 };

@@ -15,7 +15,7 @@ export const MailReference = (): JSX.Element => {
           display: { xs: 'none', md: 'block' },
         }}
       >
-        <Avatar alt="logo" src="src/assets/logo.png" sx={{ width: 200, height: 200, m: 'auto' }} />
+        <Avatar alt="logo" src="/assets/logo.png" sx={{ width: 200, height: 200, m: 'auto' }} />
       </Grid>
 
       <Grid

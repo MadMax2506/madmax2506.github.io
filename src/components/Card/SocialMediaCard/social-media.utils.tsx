@@ -24,7 +24,7 @@ export const getSocialMediaDetails = (type: SocialMedia): SocialMediaDetails => 
       };
     case SocialMedia.LINKED_IN:
       return {
-        icon: () => <img src="src/assets/social-media/linkedin.png" alt="linkedin" />,
+        icon: () => <img src="/assets/social-media/linkedin.png" alt="linkedin" />,
         link: 'https://www.linkedin.com/in/max-janorschke-5b6973225',
       };
     case SocialMedia.TELEGRAM:
@@ -39,7 +39,7 @@ export const getSocialMediaDetails = (type: SocialMedia): SocialMediaDetails => 
       };
     case SocialMedia.XING:
       return {
-        icon: () => <img src="src/assets/social-media/xing.jpg" alt="xing" />,
+        icon: () => <img src="/assets/social-media/xing.jpg" alt="xing" />,
         link: 'https://www.xing.com/profile/Max_Janorschke',
       };
     default:

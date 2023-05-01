@@ -21,26 +21,23 @@ export type GenerateCareerStepsProps = Pick<TimelineItem, 'href'> &
 const LOGO_SIZE = 100;
 
 export const generateCareerSteps = (steps: GenerateCareerStepsProps[]) => {
-  return steps
-    .sort((a, b) => {
-      return a.from.getTime() - b.from.getTime();
-    })
-    .map(
+  steps.sort((a, b) => a.from.getTime() - b.from.getTime());
+  return steps.map(
+    ({
+      key,
+      from,
+      until,
+      frameworks,
+      href,
+      imageType = 'png',
+      descriptionTextKey = `career-steps.${key}.description`,
+    }) =>
       ({
-        key,
-        from,
-        until,
-        frameworks,
+        titleTextKey: `career-steps.${key}.title`,
+        icon: () => <img src={`/assets/career/${key}.${imageType}`} alt={key} width={LOGO_SIZE} />,
         href,
-        imageType = 'png',
-        descriptionTextKey = `career-steps.${key}.description`,
-      }) =>
-        ({
-          titleTextKey: `career-steps.${key}.title`,
-          icon: () => <img src={`src/assets/career/${key}.${imageType}`} alt={key} width={LOGO_SIZE} />,
-          href,
-          subtitle: () => <Duration from={from} until={until} />,
-          description: (props) => <JobDescription {...props} textKey={descriptionTextKey} frameworks={frameworks} />,
-        } as TimelineItem)
-    );
+        subtitle: () => <Duration from={from} until={until} />,
+        description: (props) => <JobDescription {...props} textKey={descriptionTextKey} frameworks={frameworks} />,
+      } as TimelineItem)
+  );
 };

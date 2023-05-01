@@ -20,7 +20,7 @@ export const PROJECT_DATA: ProjectCardProps[] = [
   {
     owner: 'MadMax2506-SmartHome',
     repositoryName: 'roomlight',
-    imagePath: 'src/assets/projects/roomlight.jpg',
+    imagePath: '/assets/projects/roomlight.jpg',
     frameworks: [Framework.ARDUINO],
   },
 ];

@@ -35,14 +35,12 @@ export const ProjectCard = (props: ProjectCardProps): JSX.Element => {
   // TODO Add short description
   // TODO Create reference to github
 
-  console.log(owner, repositoryName); // FIXME
-
   return (
     <>
       {open && <ProjectDetailsDialog handleClose={() => setOpen(false)} />}
 
       <Card sx={{ width: '100%', cursor: 'pointer' }} onClick={() => setOpen(true)}>
-        {imagePath && <CardMedia sx={{ height: 200 }} image={imagePath} title="green iguana" />}
+        {imagePath && <CardMedia sx={{ height: 200 }} image={imagePath} title={`${owner}/${repositoryName}`} />}
 
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

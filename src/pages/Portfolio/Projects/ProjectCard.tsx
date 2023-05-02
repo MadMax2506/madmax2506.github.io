@@ -3,6 +3,7 @@ import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { FrameworkCard } from 'components/Card/FrameworkCard/FrameworkCard';
 import { ProjectDetailsDialog } from 'pages/Portfolio/Projects/ProjectDetailsDialog';
 import { useState } from 'react';
+import { T } from 'components/T/T';
 
 export type ProjectCardProps = {
   /**
@@ -14,9 +15,9 @@ export type ProjectCardProps = {
    */
   repositoryName: string;
   /**
-   * Used frameworks in the repository
+   * Used frameworks in the repository (Minimum is one {@link Framework})
    */
-  frameworks: Framework[];
+  frameworks: [Framework, ...Framework[]];
   /**
    * Cover image
    */
@@ -35,20 +36,24 @@ export const ProjectCard = (props: ProjectCardProps): JSX.Element => {
   // TODO Add short description
   // TODO Create reference to github
 
+  const fullName = `${owner}/${repositoryName}`;
+
+  const handleClose = () => setOpen(false);
+
   return (
     <>
-      {open && <ProjectDetailsDialog handleClose={() => setOpen(false)} />}
+      {open && <ProjectDetailsDialog fullName={fullName} handleClose={handleClose} />}
 
       <Card sx={{ width: '100%', cursor: 'pointer' }} onClick={() => setOpen(true)}>
-        {imagePath && <CardMedia sx={{ height: 200 }} image={imagePath} title={`${owner}/${repositoryName}`} />}
+        {imagePath && <CardMedia sx={{ height: 200 }} image={imagePath} title={fullName} />}
 
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {repositoryName}
+            {fullName}
           </Typography>
 
           <Typography variant="body2" color="text.secondary">
-            TODO
+            <T textKey={`project.${fullName}.description.short`} />
           </Typography>
 
           {frameworks.length > 0 && (

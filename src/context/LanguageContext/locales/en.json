@@ -52,6 +52,32 @@
     "privacy-policy": "Privacy policy",
     "projects": "Projects"
   },
+  "project": {
+    "MadMax2506/madmax2506.github.io": {
+      "description": {
+        "short": "TBD",
+        "long": "TBD"
+      }
+    },
+    "MadMax2506/electron-react-template": {
+      "description": {
+        "short": "Portfolio about myself",
+        "long": "TBD"
+      }
+    },
+    "MadMax2506/react-template": {
+      "description": {
+        "short": "TBD",
+        "long": "TBD"
+      }
+    },
+    "MadMax2506-SmartHome/roomlight": {
+      "description": {
+        "short": "TBD",
+        "long": "TBD"
+      }
+    }
+  },
   "social-media": {
     "xing": "XING",
     "linked-in": "LinkedIn",

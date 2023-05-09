@@ -2,7 +2,7 @@ node_modules
 *.log
 
 # Output directory
-dist
+dist/**
 
 # @vitjs/vit temporary directory
 .vit

@@ -5,7 +5,7 @@ Clone the repo and install dependencies:
 ```bash
 git clone --depth 1 --branch main git@github.com:MadMax2506/react-template.git your-project-name
 cd your-project-name
-npm install
+pnpm install
 ```
 
 * Adjust custom settings in `index.html`
@@ -16,7 +16,7 @@ npm install
 Start the app in the `dev` environment:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## :computer: Packaging for Production
@@ -24,7 +24,7 @@ npm run dev
 To package apps for the local platform:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## Icons

@@ -1,12 +1,7 @@
 import { AppBar, Toolbar, useTheme } from '@mui/material';
 
 import { MonoNavigationAnchors } from 'routes/types';
-import {
-  Contacts as ContactsIcon,
-  FolderCopy as FolderCopyIcon,
-  Person as PersonIcon,
-  Work as WorkIcon,
-} from '@mui/icons-material';
+import { Contacts as ContactsIcon, Person as PersonIcon, Work as WorkIcon } from '@mui/icons-material';
 import { NavigationPage } from 'components/navigation/types';
 import { DesktopNavigation } from 'components/navigation/DesktopNavigation/DesktopNavigation';
 import { MobileNavigation } from 'components/navigation/MobileNavigation/MobileNavigation';
@@ -27,11 +22,6 @@ export const Navigation = (): JSX.Element => {
       icon: WorkIcon,
       textKey: 'pages.experience',
       navigate: () => navigateMonoRoute(MonoNavigationAnchors.EXPERIENCE),
-    },
-    {
-      icon: FolderCopyIcon,
-      textKey: 'pages.projects',
-      navigate: () => navigateMonoRoute(MonoNavigationAnchors.PROJECTS),
     },
     {
       icon: ContactsIcon,

@@ -64,6 +64,10 @@ jobs:
         if: "!contains(github.event.head_commit.message, 'WIP')"
         run: |
           pnpm lint
+      - name: Typecheck
+        if: "!contains(github.event.head_commit.message, 'WIP')"
+        run: |
+          pnpm typecheck
       - name: Test
         if: "!contains(github.event.head_commit.message, 'WIP')"
         run: |

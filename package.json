@@ -10,6 +10,7 @@
     "test": "vitest --passWithNoTests",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings=0",
     "lintfix": "eslint . --ext .js,.jsx,.ts,.tsx --fix --max-warnings=0",
+    "typecheck": "tsc --noemit",
     "prepare": "husky install",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },

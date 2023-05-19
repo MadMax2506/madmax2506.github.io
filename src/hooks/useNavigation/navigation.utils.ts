@@ -14,6 +14,6 @@ export const scrollTo = (top: number) => window.scroll({ top, behavior: 'smooth'
 export const getScrollToY = (anchor?: MonoNavigationAnchors): number => {
   if (!anchor) return 0;
 
-  const elementY = document.getElementById(anchor)?.getBoundingClientRect()?.top || 0;
+  const elementY = document.getElementById(anchor)?.getBoundingClientRect().top || 0;
   return elementY + window.scrollY;
 };

@@ -26,7 +26,7 @@ export const Imprint = (): JSX.Element => {
         </>
       </ImprintContent>
 
-      <ImprintContent deep>
+      <ImprintContent>
         <>Haftungsausschluss</>
         <>
           <ImprintContent variant="h6">

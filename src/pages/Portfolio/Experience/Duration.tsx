@@ -21,6 +21,7 @@ export const Duration = (props: DurationProps): JSX.Element => {
         <T
           textKey={`career-steps.duration.from-until${until ? '' : '-today'}`}
           args={[formatByCurrentDate(from, dateOption), ...(until ? [formatByCurrentDate(until, dateOption)] : [])]}
+          html
         />
       </Typography>
     </>

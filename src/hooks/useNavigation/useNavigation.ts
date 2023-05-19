@@ -19,8 +19,7 @@ export const useNavigation = (): UseNavigationReturn => {
    * @param path react router {@link Path}
    */
   const navigateReactRouter: NavigateReactRouterFunction = (path) => {
-    reactRouterNavigate(path.pattern);
-    window.scroll({ top: 0, behavior: 'smooth' });
+    reactRouterNavigate(path.pattern, { state: {} });
   };
 
   /**
@@ -28,12 +27,12 @@ export const useNavigation = (): UseNavigationReturn => {
    *
    * @param anchor of the section
    */
-  const navigateMono: NavigateMonoFunction = (anchor?: MonoNavigationAnchors) => {
+  const navigateMonoRoute: NavigateMonoFunction = (anchor?: MonoNavigationAnchors) => {
     reactRouterNavigate(paths.portfolio.pattern, { state: { anchor } });
   };
 
   return {
-    navigateMono,
+    navigateMonoRoute,
     navigateReactRouter,
   };
 };

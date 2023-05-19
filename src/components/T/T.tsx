@@ -13,6 +13,10 @@ type TProps = {
    */
   as?: keyof JSX.IntrinsicElements;
   /**
+   * If true the {@link TProps#textKey textKey} contains html tags
+   */
+  html?: boolean;
+  /**
    * {@link TextKeyArg} for the translation
    */
   args?: TextKeyArg[];
@@ -22,9 +26,12 @@ type TProps = {
  * Display a translated {@link TextKey}
  */
 export const T = (props: TProps): JSX.Element => {
-  const { textKey, as: CustomTag = 'span', args } = props;
+  const { textKey, as: CustomTag = 'span', html = false, args } = props;
 
   const { t } = useLanguageContext();
 
-  return <CustomTag>{t(textKey, args)}</CustomTag>;
+  const translatedText = t(textKey, args);
+
+  if (html) return <CustomTag dangerouslySetInnerHTML={{ __html: translatedText }} />;
+  return <CustomTag>{translatedText}</CustomTag>;
 };

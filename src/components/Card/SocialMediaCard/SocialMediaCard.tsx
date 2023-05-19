@@ -1,9 +1,14 @@
-import { Paper, Stack, Typography, useTheme } from '@mui/material';
+import { Paper, Stack, Typography } from '@mui/material';
 import { SocialMedia } from 'components/Card/SocialMediaCard/social-media.types';
 import { getSocialMediaDetails } from 'components/Card/SocialMediaCard/social-media.utils';
 import { T } from 'components/T/T';
+import { JSX } from 'react';
+import { SocialMediaCardLink } from 'components/Card/SocialMediaCard/SocialMediaCardLink';
 
 type SocialMediaCardProps = {
+  /**
+   * Type of the social media card
+   */
   type: SocialMedia;
   /**
    * If true only the link of the social media reference is shown
@@ -18,33 +23,12 @@ type SocialMediaCardProps = {
 export const SocialMediaCard = (props: SocialMediaCardProps): JSX.Element => {
   const { type, linkOnly = false } = props;
 
-  const {
-    highlighting: highlightingColor,
-    palette: {
-      text: { primary: primaryTextColor },
-    },
-  } = useTheme();
-
   const { link, mailTo, icon: Icon } = getSocialMediaDetails(type);
 
   return (
     <a href={link ?? `mailto:${mailTo}`} style={{ textDecoration: 'none' }} target={link ? '_blank' : ''}>
-      {linkOnly ? (
-        <Typography
-          sx={{
-            boxShadow: `inset 0 0 0 0 ${highlightingColor}`,
-            color: highlightingColor,
-            padding: '0 .25rem',
-            margin: '0 -.25rem',
-            transition: 'color .3s ease-in-out, box-shadow .3s ease-in-out',
-            '&:hover': {
-              color: primaryTextColor,
-              boxShadow: `inset 220px 0 0 0 ${highlightingColor}`,
-            },
-          }}
-        >
-          {mailTo}
-        </Typography>
+      {linkOnly && mailTo ? (
+        <SocialMediaCardLink mailTo={mailTo} />
       ) : (
         <Paper sx={{ maxWidth: 'min-content', borderRadius: 10, py: 1, px: 2 }}>
           <Stack direction="row" alignItems="center" spacing={1.2}>

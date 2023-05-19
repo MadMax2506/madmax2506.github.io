@@ -32,7 +32,7 @@ export const useNavigation = (): UseNavigationReturn => {
   };
 
   return {
-    navigateMonoRoute: navigateMonoRoute,
+    navigateMonoRoute,
     navigateReactRouter,
   };
 };

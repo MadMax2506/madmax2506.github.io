@@ -1,7 +1,11 @@
 import { Grid } from '@mui/material';
 import { SocialMediaCard } from 'components/Card/SocialMediaCard/SocialMediaCard';
 import { SocialMedia } from 'components/Card/SocialMediaCard/social-media.types';
+import { JSX } from 'react';
 
+/**
+ * Display all social media references
+ */
 export const SocialMediaList = (): JSX.Element => {
   return (
     <Grid container spacing={{ xs: 2, md: 3 }} sx={{ justifyContent: 'center' }}>
@@ -15,10 +19,6 @@ export const SocialMediaList = (): JSX.Element => {
 
       <Grid item>
         <SocialMediaCard type={SocialMedia.TELEGRAM} />
-      </Grid>
-
-      <Grid item>
-        <SocialMediaCard type={SocialMedia.MAIL} />
       </Grid>
 
       <Grid item>

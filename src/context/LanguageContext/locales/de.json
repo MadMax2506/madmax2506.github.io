@@ -3,7 +3,7 @@
   "career-steps": {
     "duration": {
       "from-until": "Von {0} bis {1}",
-      "from-until-today": "Von {0} bis heute"
+      "from-until-today": "Von {0} <b>bis heute</b>"
     },
     "plagge-it": {
       "description": "Aushilfe im Bereich Softwareentwicklung",
@@ -23,7 +23,8 @@
   },
   "contact": {
     "part1": "Interesse geweckt?",
-    "part2": "Dann schreib mir doch ne' Mail"
+    "part2": "Dann schreib mir doch ne' Mail",
+    "part3": "Oder schau mal auf Discord vorbei"
   },
   "country": {
     "de": "DE",
@@ -49,8 +50,7 @@
     "contact": "Kontakt",
     "experience": "Erfahrungen",
     "imprint": "Impressum",
-    "privacy-policy": "Datenschutz",
-    "projects": "Projekte"
+    "privacy-policy": "Datenschutz"
   },
   "social-media": {
     "xing": "XING",

@@ -20,7 +20,7 @@ export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
   const { children, titleTextKey, fullWidth = false } = props;
 
   return (
-    <Stack sx={{ width: '100%', minHeight: '100vh', alignItems: 'center', mx: 'auto', pt: 12 }}>
+    <Stack sx={{ width: '100%', minHeight: '100vh', alignItems: 'center', mx: 'auto', py: 6 }}>
       <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', mb: 4 }}>
         <Divider flexItem px={2} />
         <Typography variant="h3" sx={{ textShadow: `1px 1px` }}>

@@ -14,7 +14,7 @@ export const DesktopNavigation = (props: DesktopNavigationProps): JSX.Element =>
 
   return (
     <Stack direction="row" alignItems="center" spacing={4}>
-      <PageTitle variant="h5" flexShrink={0} />
+      <PageTitle variant="h5" flexShrink={0} withLink />
 
       <Stack direction="row" justifyContent="flex-end" spacing={4} flexGrow={1}>
         {pages.map(({ textKey, navigate }) => (

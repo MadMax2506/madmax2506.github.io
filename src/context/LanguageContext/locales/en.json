@@ -3,7 +3,7 @@
   "career-steps": {
     "duration": {
       "from-until": "From {0} to {1}",
-      "from-until-today": "From {0} until today"
+      "from-until-today": "From {0} <b>until today</b>"
     },
     "plagge-it": {
       "description": "Temporary help in the area of software development",
@@ -23,7 +23,8 @@
   },
   "contact": {
     "part1": "Interest aroused?",
-    "part2": "Then write me an email"
+    "part2": "Then write me an email",
+    "part3": "Or check me out on Discord"
   },
   "country": {
     "de": "DE",
@@ -49,8 +50,7 @@
     "contact": "Contact",
     "experience": "Experience",
     "imprint": "Imprint",
-    "privacy-policy": "Privacy policy",
-    "projects": "Projects"
+    "privacy-policy": "Privacy policy"
   },
   "social-media": {
     "xing": "XING",

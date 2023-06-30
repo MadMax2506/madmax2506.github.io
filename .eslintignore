@@ -1,2 +1,9 @@
-vite.config.ts
+.github
+.husky
+dist
+node_modules
 dist/**
+Dockerfile
+*.yml
+*.json
+vite.config.ts

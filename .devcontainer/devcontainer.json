@@ -1,0 +1,36 @@
+{
+    "name": "Portfolio",
+    "dockerComposeFile": ["../docker-compose.dev.yml"],
+    "service": "web",
+    "overrideCommand": true,
+    "workspaceFolder": "/app",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+			"dbaeumer.vscode-eslint",
+			"github.vscode-github-actions",
+			"github.vscode-pull-request-github",
+			"eamodio.gitlens",
+			"wix.vscode-import-cost",
+			"esbenp.prettier-vscode",
+			"ms-azuretools.vscode-docker",
+			"usernamehw.errorlens",
+			"file-icons.file-icons",
+			"GitHub.vscode-pull-request-github",
+			"k--kato.intellij-idea-keybindings",
+			"ZainChen.json",
+			"DavidAnson.vscode-markdownlint",
+			"Gruntfuggly.todo-tree",
+			"mutantdino.resourcemonitor",
+			"dsznajder.es7-react-js-snippets",
+			"burkeholland.simple-react-snippets",
+			"planbcoding.vscode-react-refactor"
+		]
+      }
+    },
+    "postStartCommand": "/startup.sh",
+    "mounts": [
+		"type=bind,source=./src,target=/app/src",
+		"type=bind,source=~/.ssh,target=/root/.ssh"
+    ]
+  }

@@ -16,15 +16,15 @@ pnpm install
 Start the app in the `dev` environment:
 
 ```bash
-pnpm dev
+pnpm start:dev
 ```
 
-## :computer: Packaging for Production
+## :computer: Starting Production
 
-To package apps for the local platform:
+Start the app in the `prod` environment:
 
 ```bash
-pnpm build
+pnpm start:prod
 ```
 
 ## Icons

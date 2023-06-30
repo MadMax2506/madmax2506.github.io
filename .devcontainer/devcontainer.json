@@ -28,7 +28,7 @@
 		]
       }
     },
-    "postStartCommand": "/startup.sh",
+    "postStartCommand": "./startup.sh",
     "mounts": [
 		"type=bind,source=./src,target=/app/src",
 		"type=bind,source=~/.ssh,target=/root/.ssh"

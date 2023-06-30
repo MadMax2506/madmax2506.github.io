@@ -8,9 +8,6 @@ services:
       target: development
     ports:
       - ${PORT}:3000
-    depends_on:
-      - mongo
-      - postgres
     volumes:
       - ./:/madmax/usr/app
       - /madmax/usr/app/.pnpm-store/

@@ -6,4 +6,5 @@ dist/**
 Dockerfile
 *.yml
 *.json
+*.md
 vite.config.ts

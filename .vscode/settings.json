@@ -1,5 +1,6 @@
 {
     "prettier.prettierPath": "./node_modules/.pnpm/prettier@2.8.8",
-    "ltex.additionalRules.motherTongue": "en-US",
-    "ltex.language": "en-US",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
 }

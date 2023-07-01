@@ -24,13 +24,16 @@
 			"mutantdino.resourcemonitor",
 			"dsznajder.es7-react-js-snippets",
 			"burkeholland.simple-react-snippets",
-			"planbcoding.vscode-react-refactor"
+			"planbcoding.vscode-react-refactor",
+			"aaravb.chrome-extension-developer-tools",
+			"donjayamanne.githistory",
+			"christian-kohler.npm-intellisense"
 		]
       }
     },
     "postStartCommand": "/startup.sh",
     "mounts": [
-		"type=bind,source=./src,target=/app/src",
+		"type=bind,source=.,target=/app",
 		"type=bind,source=~/.ssh,target=/root/.ssh"
     ]
   }

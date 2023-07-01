@@ -4,120 +4,119 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@emotion/react':
-    specifier: ^11.11.1
-    version: 11.11.1(@types/react@18.2.14)(react@18.2.0)
-  '@emotion/styled':
-    specifier: ^11.11.0
-    version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.2.0)
-  '@mui/icons-material':
-    specifier: ^5.11.16
-    version: 5.11.16(@mui/material@5.13.6)(@types/react@18.2.14)(react@18.2.0)
-  '@mui/lab':
-    specifier: 5.0.0-alpha.134
-    version: 5.0.0-alpha.134(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.13.6)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
-  '@mui/material':
-    specifier: ^5.13.6
-    version: 5.13.6(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
-  '@mui/x-date-pickers':
-    specifier: ^6.9.0
-    version: 6.9.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.5)(@mui/material@5.13.6)(@mui/system@5.13.6)(dayjs@1.11.8)(react-dom@18.2.0)(react@18.2.0)
-  '@tanstack/react-query':
-    specifier: ^4.29.19
-    version: 4.29.19(react-dom@18.2.0)(react@18.2.0)
-  dayjs:
-    specifier: ^1.11.8
-    version: 1.11.8
-  react:
-    specifier: ^18.2.0
-    version: 18.2.0
-  react-cookie:
-    specifier: ^4.1.1
-    version: 4.1.1(react@18.2.0)
-  react-dom:
-    specifier: ^18.2.0
-    version: 18.2.0(react@18.2.0)
-  react-router-dom:
-    specifier: ^6.14.0
-    version: 6.14.0(react-dom@18.2.0)(react@18.2.0)
-  static-path:
-    specifier: ^0.0.4
-    version: 0.0.4
-  vite-plugin-eslint:
-    specifier: ^1.8.1
-    version: 1.8.1(eslint@8.43.0)(vite@4.3.9)
-  vite-plugin-svgr:
-    specifier: ^3.2.0
-    version: 3.2.0(vite@4.3.9)
-  vite-tsconfig-paths:
-    specifier: ^4.2.0
-    version: 4.2.0(typescript@5.1.6)(vite@4.3.9)
+importers:
 
-devDependencies:
-  '@testing-library/jest-dom':
-    specifier: ^5.16.5
-    version: 5.16.5
-  '@testing-library/react':
-    specifier: ^14.0.0
-    version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
-  '@types/node':
-    specifier: ^20.3.2
-    version: 20.3.2
-  '@types/react':
-    specifier: ^18.2.14
-    version: 18.2.14
-  '@types/react-cookies':
-    specifier: ^0.1.0
-    version: 0.1.0
-  '@types/react-dom':
-    specifier: ^18.2.6
-    version: 18.2.6
-  '@types/react-router-dom':
-    specifier: ^5.3.3
-    version: 5.3.3
-  '@typescript-eslint/eslint-plugin':
-    specifier: ^5.60.1
-    version: 5.60.1(@typescript-eslint/parser@5.60.1)(eslint@8.43.0)(typescript@5.1.6)
-  '@typescript-eslint/parser':
-    specifier: ^5.60.1
-    version: 5.60.1(eslint@8.43.0)(typescript@5.1.6)
-  '@vitejs/plugin-react':
-    specifier: ^4.0.1
-    version: 4.0.1(vite@4.3.9)
-  eslint:
-    specifier: ^8.43.0
-    version: 8.43.0
-  eslint-config-prettier:
-    specifier: ^8.8.0
-    version: 8.8.0(eslint@8.43.0)
-  eslint-plugin-prettier:
-    specifier: ^4.2.1
-    version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-  husky:
-    specifier: ^8.0.3
-    version: 8.0.3
-  jsdom:
-    specifier: ^22.1.0
-    version: 22.1.0
-  node-fetch:
-    specifier: ^3.3.1
-    version: 3.3.1
-  prettier:
-    specifier: ^2.8.8
-    version: 2.8.8
-  react-test-renderer:
-    specifier: ^18.2.0
-    version: 18.2.0(react@18.2.0)
-  typescript:
-    specifier: ^5.1.6
-    version: 5.1.6
-  vite:
-    specifier: ^4.3.9
-    version: 4.3.9(@types/node@20.3.2)
-  vitest:
-    specifier: ^0.32.2
-    version: 0.32.2(jsdom@22.1.0)
+  .:
+    dependencies:
+      '@emotion/react':
+        specifier: ^11.11.1
+        version: 11.11.1(@types/react@18.2.14)(react@18.2.0)
+      '@emotion/styled':
+        specifier: ^11.11.0
+        version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.2.0)
+      '@mui/icons-material':
+        specifier: ^5.11.16
+        version: 5.11.16(@mui/material@5.13.6)(@types/react@18.2.14)(react@18.2.0)
+      '@mui/lab':
+        specifier: 5.0.0-alpha.134
+        version: 5.0.0-alpha.134(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.13.6)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/material':
+        specifier: ^5.13.6
+        version: 5.13.6(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/x-date-pickers':
+        specifier: ^6.9.0
+        version: 6.9.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.5)(@mui/material@5.13.6)(@mui/system@5.13.6)(dayjs@1.11.8)(react-dom@18.2.0)(react@18.2.0)
+      '@tanstack/react-query':
+        specifier: ^4.29.19
+        version: 4.29.19(react-dom@18.2.0)(react@18.2.0)
+      dayjs:
+        specifier: ^1.11.8
+        version: 1.11.8
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-cookie:
+        specifier: ^4.1.1
+        version: 4.1.1(react@18.2.0)
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: ^6.14.0
+        version: 6.14.0(react-dom@18.2.0)(react@18.2.0)
+      static-path:
+        specifier: ^0.0.4
+        version: 0.0.4
+      vite-plugin-eslint:
+        specifier: ^1.8.1
+        version: 1.8.1(eslint@8.43.0)(vite@4.3.9)
+      vite-plugin-svgr:
+        specifier: ^3.2.0
+        version: 3.2.0(vite@4.3.9)
+      vite-tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0(typescript@5.1.6)(vite@4.3.9)
+    devDependencies:
+      '@testing-library/jest-dom':
+        specifier: ^5.16.5
+        version: 5.16.5
+      '@testing-library/react':
+        specifier: ^14.0.0
+        version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@types/node':
+        specifier: ^20.3.2
+        version: 20.3.2
+      '@types/react':
+        specifier: ^18.2.14
+        version: 18.2.14
+      '@types/react-cookies':
+        specifier: ^0.1.0
+        version: 0.1.0
+      '@types/react-dom':
+        specifier: ^18.2.6
+        version: 18.2.6
+      '@types/react-router-dom':
+        specifier: ^5.3.3
+        version: 5.3.3
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^5.60.1
+        version: 5.60.1(@typescript-eslint/parser@5.60.1)(eslint@8.43.0)(typescript@5.1.6)
+      '@typescript-eslint/parser':
+        specifier: ^5.60.1
+        version: 5.60.1(eslint@8.43.0)(typescript@5.1.6)
+      '@vitejs/plugin-react':
+        specifier: ^4.0.1
+        version: 4.0.1(vite@4.3.9)
+      eslint:
+        specifier: ^8.43.0
+        version: 8.43.0
+      eslint-config-prettier:
+        specifier: ^8.8.0
+        version: 8.8.0(eslint@8.43.0)
+      eslint-plugin-prettier:
+        specifier: ^4.2.1
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
+      jsdom:
+        specifier: ^22.1.0
+        version: 22.1.0
+      node-fetch:
+        specifier: ^3.3.1
+        version: 3.3.1
+      prettier:
+        specifier: ^2.8.8
+        version: 2.8.8
+      react-test-renderer:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5.1.6
+        version: 5.1.6
+      vite:
+        specifier: ^4.3.9
+        version: 4.3.9(@types/node@20.3.2)
+      vitest:
+        specifier: ^0.32.2
+        version: 0.32.2(jsdom@22.1.0)
 
 packages:
 
@@ -2612,12 +2611,6 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
-    hasBin: true
     dev: true
 
   /iconv-lite@0.6.3:

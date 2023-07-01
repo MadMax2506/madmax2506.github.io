@@ -17,6 +17,7 @@ public
 CNAME
 Dockerfile
 LICENSE
+vite.config.ts
 
 *.html
 *.md

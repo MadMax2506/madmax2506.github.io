@@ -1,112 +1,109 @@
 import { Skill } from 'components/Card/SkillCard/skill.types';
-import { TextKey } from 'types';
 
 // TODO
 type SkillDetails = {
-  label: TextKey;
+  name: string;
   since: number;
+  imageSrc: string;
 };
 
 /**
  * @param {Skill} type of the skill
- * @return {string} link for a specific {@link Skill}
+ * @return {SkillDetails} details of an skill {@link Skill}
  */
 export const getSkillDetails = (type: Skill): SkillDetails => {
+  const imageSrc = `/assets/skills/${type}.svg`;
+
   switch (type) {
     case Skill.JAVA:
       return {
-        label: 'skills.java',
+        imageSrc,
+        name: 'Java',
         since: 2019,
       };
     case Skill.JAVASCRIPT:
       return {
-        label: 'skills.javascript',
+        imageSrc,
+        name: 'JavaScript',
         since: 2019,
       };
     case Skill.REACT:
       return {
-        label: 'skills.react',
+        imageSrc,
+        name: 'React',
         since: 2021,
       };
     case Skill.TYPESCRIPT:
       return {
-        label: 'skills.typescript',
+        imageSrc,
+        name: 'TypeScript',
         since: 2021,
       };
     case Skill.POSTGRESQL:
       return {
-        label: 'skills.postgresql',
+        imageSrc,
+        name: 'PostgreSQL',
         since: 2021,
-      };
-    case Skill.MARIA_DB:
-      return {
-        label: 'skills.maria-db',
-        since: 2019,
       };
     case Skill.MATERIAL_UI:
       return {
-        label: 'skills.material-ui',
+        imageSrc,
+        name: 'Material-UI',
         since: 2021,
       };
     case Skill.GIT:
       return {
-        label: 'skills.git',
+        imageSrc,
+        name: 'Git',
+        since: 2019,
+      };
+    case Skill.GIT_HUB:
+      return {
+        imageSrc,
+        name: 'GitHub',
         since: 2019,
       };
     case Skill.ARDUINO:
       return {
-        label: 'skills.git',
-        since: 2017,
-      };
-    case Skill.C_CPP:
-      return {
-        label: 'skills.c-cpp',
+        imageSrc,
+        name: 'Arduino',
         since: 2017,
       };
     case Skill.RUBY_ON_RAILS:
       return {
-        label: 'skills.ruby-on-rails',
+        imageSrc,
+        name: 'Ruby on Rails',
         since: 2019,
       };
     case Skill.VUE_JS:
       return {
-        label: 'skills.vue-js',
+        imageSrc,
+        name: 'Vue.js',
         since: 2019,
       };
     case Skill.DOCKER:
       return {
-        label: 'skills.docker',
+        imageSrc,
+        name: 'Docker',
         since: 2022,
-      };
-    case Skill.PYTHON:
-      return {
-        label: 'skills.python',
-        since: 2017,
-      };
-    case Skill.KOTLIN:
-      return {
-        label: 'skills.kotlin',
-        since: 2023,
       };
     case Skill.NEST_JS:
       return {
-        label: 'skills.nest-js',
+        imageSrc,
+        name: 'NestJS',
         since: 2022,
       };
     case Skill.SPRING_BOOT:
       return {
-        label: 'skills.spring-boot',
+        imageSrc,
+        name: 'Spring-Boot',
         since: 2019,
       };
     case Skill.MONGO_DB:
       return {
-        label: 'skills.mongo-db',
+        imageSrc,
+        name: 'MongoDB',
         since: 2023,
-      };
-    case Skill.SQLITE:
-      return {
-        label: 'skills.sqlite',
-        since: 2017,
       };
     default:
       throw new Error(`Invalid skill '${type}'`);

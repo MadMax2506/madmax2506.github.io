@@ -24,3 +24,7 @@ Start the app in the `prod` environment:
 ```bash
 pnpm start:prod
 ```
+
+## Icons
+
+[Devicons](https://github.com/devicons/devicon/tree/master/icons)

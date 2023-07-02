@@ -1,6 +1,6 @@
-import { Avatar, Paper, Stack, Typography } from '@mui/material';
+import { Box, Paper, Tooltip, Typography } from '@mui/material';
 import { Skill } from 'components/Card/SkillCard/skill.types';
-import { T } from 'components/T/T';
+import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 import { getSkillDetails } from './skills.utils';
 
 type SkillCardProps = {
@@ -21,17 +21,30 @@ type SkillCardProps = {
 export const SkillCard = (props: SkillCardProps): JSX.Element => {
   const { type, small = false } = props;
 
-  const avatarSize = small ? 25 : 18;
-  const { label, since } = getSkillDetails(type);
+  const { translate } = useLanguageContext();
+
+  const { name, since, imageSrc } = getSkillDetails(type);
+
+  const avatarSize = small ? 50 : 36;
+
+  const buildTextKey = () => {
+    const duration = new Date().getFullYear() - since;
+    const durationTextKey = `skills.usage.duration.${duration === 0 ? '' : duration === 1 ? '' : 'multiple'}`;
+    return `${translate('skills.usage.since', [since])} - ${translate(durationTextKey, [duration])}`;
+  };
 
   return (
-    <Paper sx={{ maxWidth: 'min-content', borderRadius: 10, py: small ? 0.5 : 1, px: small ? 1 : 2 }}>
-      <Stack direction="row" alignItems="center" spacing={1.2}>
-        <Avatar alt={type} src={`/assets/skills/${type}.svg`} sx={{ width: avatarSize, height: avatarSize }} />
-        <Typography sx={{ fontSize: small ? '0.8rem' : '1rem' }} noWrap>
-          <T textKey={label} />
-        </Typography>
-      </Stack>
-    </Paper>
+    <Tooltip
+      title={
+        <Box>
+          <Typography variant="h6">{name}</Typography>
+          <Typography variant="body1">{buildTextKey()}</Typography>
+        </Box>
+      }
+    >
+      <Paper elevation={0} sx={{ width: avatarSize, height: avatarSize }}>
+        <img alt={name} src={imageSrc} loading="lazy" />
+      </Paper>
+    </Tooltip>
   );
 };

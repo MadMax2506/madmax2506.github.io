@@ -17,11 +17,13 @@ export const SkillList = (): JSX.Element => {
         [breakpoints.up('md')]: { justifyContent: 'left' },
       }}
     >
-      {Object.values(Skill).map((value) => (
-        <Grid key={value} item>
-          <SkillCard type={value} />
-        </Grid>
-      ))}
+      {[Skill.JAVASCRIPT, Skill.REACT, Skill.VUE_JS, Skill.TYPESCRIPT, Skill.MATERIAL_UI, Skill.GIT_HUB].map(
+        (value) => (
+          <Grid key={value} item>
+            <SkillCard type={value} />
+          </Grid>
+        )
+      )}
     </Grid>
   );
 };

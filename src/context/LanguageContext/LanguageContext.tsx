@@ -2,10 +2,14 @@
 import 'dayjs/locale/de';
 import 'dayjs/locale/en';
 // END: DONT REMOVE THE FOLLOWING IMPORTS
-import { deDE as muiMaterialDE, enUS as muiMaterialEN, Localization } from '@mui/material/locale';
-import { createContext, PropsWithChildren, useContext, useEffect, useMemo } from 'react';
-import { deLocales, enLocales } from './locales';
-import { flatJsonObject } from 'utils';
+import { Localization, deDE as muiMaterialDE, enUS as muiMaterialEN } from '@mui/material/locale';
+import {
+  LocalizationProvider,
+  PickersLocaleText,
+  deDE as muiDatePickersDE,
+  enUS as muiDatePickersEN,
+} from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import {
   ChangeLanguageFunction,
   LanguageConfiguration,
@@ -13,21 +17,17 @@ import {
   TextKeyArg,
   TextKeyFunction,
 } from 'context/LanguageContext/language.types';
-import { useCookies } from 'react-cookie';
 import dayjs, { Dayjs } from 'dayjs';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import {
-  deDE as muiDatePickersDE,
-  enUS as muiDatePickersEN,
-  LocalizationProvider,
-  PickersLocaleText,
-} from '@mui/x-date-pickers';
+import { PropsWithChildren, createContext, useContext, useEffect, useMemo } from 'react';
+import { useCookies } from 'react-cookie';
+import { flatJsonObject } from 'utils';
+import { deLocales, enLocales } from './locales';
 
 type Language = {
   /**
    * Translation function
    */
-  t: TextKeyFunction;
+  translate: TextKeyFunction;
   /**
    * Current language
    */
@@ -71,7 +71,7 @@ export const LanguageProvider = (props: PropsWithChildren) => {
     }
   }, [language]);
 
-  const t: TextKeyFunction = (key, args?: TextKeyArg[]) => {
+  const translate: TextKeyFunction = (key, args?: TextKeyArg[]) => {
     const text = (language === LanguageConfiguration.DE ? flatDeLocales : flatEnLocales)[key];
 
     if (!text) return key;
@@ -129,7 +129,7 @@ export const LanguageProvider = (props: PropsWithChildren) => {
   return (
     <LanguageContext.Provider
       value={{
-        t,
+        translate,
         language: language || DEFAULT_LANGUAGE,
         languageTag: currentLanguageTag(),
         muiLocale: currentMuiLocale(),

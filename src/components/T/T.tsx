@@ -1,6 +1,6 @@
 import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
-import { TextKey } from 'types';
 import { TextKeyArg } from 'context/LanguageContext/language.types';
+import { TextKey } from 'types';
 
 type TProps = {
   /**
@@ -28,9 +28,9 @@ type TProps = {
 export const T = (props: TProps): JSX.Element => {
   const { textKey, as: CustomTag = 'span', html = false, args } = props;
 
-  const { t } = useLanguageContext();
+  const { translate } = useLanguageContext();
 
-  const translatedText = t(textKey, args);
+  const translatedText = translate(textKey, args);
 
   if (html) return <CustomTag dangerouslySetInnerHTML={{ __html: translatedText }} />;
   return <CustomTag>{translatedText}</CustomTag>;

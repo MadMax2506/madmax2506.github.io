@@ -4,9 +4,9 @@ export enum Skill {
   REACT = 'react',
   TYPESCRIPT = 'typescript',
   POSTGRESQL = 'postgresql',
-  MARIA_DB = 'mariadb',
   MATERIAL_UI = 'mui',
   GIT = 'git',
+  GIT_HUB = 'github',
   ARDUINO = 'arduino',
   C_CPP = 'c-cpp',
   RUBY_ON_RAILS = 'ruby-on-rails',
@@ -17,5 +17,4 @@ export enum Skill {
   NEST_JS = 'nestjs',
   SPRING_BOOT = 'spring',
   MONGO_DB = 'mongodb',
-  SQLITE = 'sqlite',
 }

@@ -5,11 +5,19 @@
     "part2": "Dann schreib mir doch ne' Mail",
     "part3": "Oder schau mal auf Discord vorbei"
   },
+  "skills": {
+    "usage": {
+      "since": "seit {0}",
+      "duration": {
+        "zero": "weniger als 1 Jahr",
+        "one": "mehr als 1 Jahr",
+        "multiple": "mehr als {0} Jahre"
+      }
+    }
+  },
   "country": {
     "de": "DE",
     "en": "EN"
-  },
-  "skills": {
   },
   "pages": {
     "about-me": "Über mich",

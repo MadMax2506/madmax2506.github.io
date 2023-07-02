@@ -9,14 +9,13 @@ export const AboutMe = (): JSX.Element => (
     <Stack
       spacing={4}
       alignItems="center"
-      justifyContent="center"
       sx={{
         textAlign: 'center',
       }}
     >
       <PersonalAvatar />
 
-      <Typography>
+      <Typography width="50%">
         <T textKey={'about-me'} html />
       </Typography>
 

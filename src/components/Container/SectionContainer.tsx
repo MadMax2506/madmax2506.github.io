@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Hidden, Stack, Typography, useTheme } from '@mui/material';
 import { Divider } from 'components/Divider';
 import { T } from 'components/T/T';
 import { PropsWithChildren } from 'react';
@@ -14,16 +14,46 @@ type SectionContainerProps = PropsWithChildren<{
 export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
   const { children, titleTextKey } = props;
 
+  const { breakpoints } = useTheme();
+
   return (
-    <Stack sx={{ width: '100%', minHeight: '100vh', alignItems: 'center', mx: 'auto', py: 8 }}>
-      <Box sx={{ display: 'flex', width: '100%', alignItems: 'center', mb: 4 }}>
-        <Divider flexItem px={2} />
+    <Stack
+      sx={{
+        width: '100%',
+        minHeight: '100vh',
+        alignItems: 'center',
+        mx: 'auto',
+        py: 10,
+        [breakpoints.up('lg')]: {
+          width: '60%',
+        },
+      }}
+    >
+      <Box
+        sx={{
+          width: '100%',
+          alignItems: 'center',
+          textAlign: 'center',
+          mb: 4,
+          [breakpoints.up('md')]: {
+            display: 'flex',
+          },
+        }}
+      >
+        <Hidden mdDown>
+          <Divider flexItem px={3} />
+        </Hidden>
+
         <Typography variant="h3" sx={{ textShadow: `1px 1px` }}>
           <T textKey={titleTextKey} />
         </Typography>
-        <Divider flexItem px={2} />
+
+        <Hidden mdDown>
+          <Divider flexItem px={3} />
+        </Hidden>
       </Box>
-      <Box px={8} sx={{ width: '80%' }}>
+
+      <Box px={8} sx={{ width: '100%', alignContent: 'center', alignItems: 'center', textAlign: 'center' }}>
         {children}
       </Box>
     </Stack>

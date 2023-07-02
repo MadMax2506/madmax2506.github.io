@@ -1,7 +1,6 @@
-import { Box, Button, ClickAwayListener, Paper, Tooltip, Typography } from '@mui/material';
+import { Box, Paper, Tooltip, Typography } from '@mui/material';
 import { Skill } from 'components/Card/SkillCard/skill.types';
 import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
-import { useState } from 'react';
 import { getSkillDetails } from './skills.utils';
 
 type SkillCardProps = {
@@ -32,28 +31,18 @@ export const SkillCard = (props: SkillCardProps): JSX.Element => {
     return `${translate('skills.usage.since', [since])} - ${translate(durationTextKey, [duration])}`;
   };
 
-  const [open, setOpen] = useState<boolean>(false);
-  const handleTooltipClose = () => setOpen(false);
-  const handleTooltipOpen = () => setOpen(true);
-
   return (
-    <ClickAwayListener onClickAway={handleTooltipClose}>
-      <Tooltip
-        onClose={handleTooltipClose}
-        open={open}
-        title={
-          <Box>
-            <Typography variant="body1">{name}</Typography>
-            <Typography variant="body2">{buildTextKey()}</Typography>
-          </Box>
-        }
-      >
-        <Paper elevation={0} sx={{ width: avatarSize, height: avatarSize }}>
-          <Button variant="text" onClick={handleTooltipOpen}>
-            <img alt={name} src={imageSrc} loading="lazy" />
-          </Button>
-        </Paper>
-      </Tooltip>
-    </ClickAwayListener>
+    <Tooltip
+      title={
+        <Box>
+          <Typography variant="body1">{name}</Typography>
+          <Typography variant="body2">{buildTextKey()}</Typography>
+        </Box>
+      }
+    >
+      <Paper elevation={0} sx={{ width: avatarSize, height: avatarSize }}>
+        <img alt={name} src={imageSrc} loading="lazy" />
+      </Paper>
+    </Tooltip>
   );
 };

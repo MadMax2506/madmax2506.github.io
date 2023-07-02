@@ -8,7 +8,7 @@ import { SkillCard } from 'components/Card/SkillCard/SkillCard';
 export const SkillList = (): JSX.Element => (
   <Grid
     container
-    spacing={4}
+    spacing={2}
     sx={{
       justifyContent: 'center',
     }}

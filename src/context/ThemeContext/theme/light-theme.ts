@@ -1,6 +1,6 @@
-import { components, generalSettings } from 'context/ThemeContext/theme/theme-options';
-import { grey, red } from '@mui/material/colors';
+import { deepOrange, grey } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
+import { components, generalSettings } from 'context/ThemeContext/theme/theme-options';
 
 const scrollbarGrey = {
   100: '#f1f1f1',
@@ -45,7 +45,7 @@ export const lightTheme = createTheme({
       },
     },
   },
-  highlighting: red[400],
+  highlighting: deepOrange[800],
   palette: {
     mode: 'light',
     primary: {

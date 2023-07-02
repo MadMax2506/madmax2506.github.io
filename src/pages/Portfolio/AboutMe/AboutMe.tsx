@@ -1,8 +1,8 @@
-import { SectionContainer } from 'components/Container/SectionContainer';
 import { Grid, Typography, useTheme } from '@mui/material';
-import { PersonalAvatar } from 'pages/Portfolio/AboutMe/PersonalAvatar';
-import { FrameworkList } from 'pages/Portfolio/AboutMe/FrameworkList';
+import { SectionContainer } from 'components/Container/SectionContainer';
 import { T } from 'components/T/T';
+import { PersonalAvatar } from 'pages/Portfolio/AboutMe/PersonalAvatar';
+import { SkillList } from 'pages/Portfolio/AboutMe/SkillList';
 
 export const AboutMe = (): JSX.Element => {
   const { breakpoints } = useTheme();
@@ -25,7 +25,7 @@ export const AboutMe = (): JSX.Element => {
             <T textKey={'about-me'} />
           </Typography>
 
-          <FrameworkList />
+          <SkillList />
         </Grid>
 
         <Grid item xs={12} md={4} xl={3} order={{ xs: 1, md: 2 }}>

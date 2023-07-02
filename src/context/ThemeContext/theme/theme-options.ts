@@ -6,7 +6,7 @@ import { Theme, ThemeOptions } from '@mui/material/styles/createTheme';
  */
 export const generalSettings: Partial<Omit<ThemeOptions, 'palette' | 'components'>> = {
   typography: {
-    fontFamily: ['"Courier New"'].join(','),
+    fontFamily: ['Chilanka', 'cursive'].join(','),
   },
 };
 

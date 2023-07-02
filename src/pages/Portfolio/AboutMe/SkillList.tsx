@@ -1,11 +1,11 @@
 import { Grid, useTheme } from '@mui/material';
-import { Framework } from 'components/Card/FrameworkCard/framework.types';
-import { FrameworkCard } from 'components/Card/FrameworkCard/FrameworkCard';
+import { Skill } from 'components/Card/SkillCard/skill.types';
+import { SkillCard } from 'components/Card/SkillCard/SkillCard';
 
 /**
- * Display all frameworks
+ * Display all skills
  */
-export const FrameworkList = (): JSX.Element => {
+export const SkillList = (): JSX.Element => {
   const { breakpoints } = useTheme();
 
   return (
@@ -17,9 +17,9 @@ export const FrameworkList = (): JSX.Element => {
         [breakpoints.up('md')]: { justifyContent: 'left' },
       }}
     >
-      {Object.values(Framework).map((value) => (
+      {Object.values(Skill).map((value) => (
         <Grid key={value} item>
-          <FrameworkCard type={value} />
+          <SkillCard type={value} />
         </Grid>
       ))}
     </Grid>

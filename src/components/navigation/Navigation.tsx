@@ -1,11 +1,11 @@
 import { AppBar, Toolbar, useTheme } from '@mui/material';
 
-import { MonoNavigationAnchors } from 'routes/types';
 import { Contacts as ContactsIcon, Person as PersonIcon, Work as WorkIcon } from '@mui/icons-material';
-import { NavigationPage } from 'components/navigation/types';
 import { DesktopNavigation } from 'components/navigation/DesktopNavigation/DesktopNavigation';
 import { MobileNavigation } from 'components/navigation/MobileNavigation/MobileNavigation';
+import { NavigationPage } from 'components/navigation/types';
 import { useNavigation } from 'hooks/useNavigation/useNavigation';
+import { MonoNavigationAnchors } from 'routes/types';
 
 export const Navigation = (): JSX.Element => {
   const { highlighting } = useTheme();
@@ -20,8 +20,8 @@ export const Navigation = (): JSX.Element => {
     },
     {
       icon: WorkIcon,
-      textKey: 'pages.experience',
-      navigate: () => navigateMonoRoute(MonoNavigationAnchors.EXPERIENCE),
+      textKey: 'pages.projects',
+      navigate: () => navigateMonoRoute(MonoNavigationAnchors.PROJECTS),
     },
     {
       icon: ContactsIcon,

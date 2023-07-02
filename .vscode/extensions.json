@@ -1,0 +1,24 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "usernamehw.errorlens",
+        "file-icons.file-icons",
+        "k--kato.intellij-idea-keybindings",
+        "zainchen.json",
+        "davidanson.vscode-markdownlint",
+        "gruntfuggly.todo-tree",
+        "mutantdino.resourcemonitor",
+        "dsznajder.es7-react-js-snippets",
+        "burkeholland.simple-react-snippets",
+        "planbcoding.vscode-react-refactor",
+        "aaravb.chrome-extension-developer-tools",
+        "donjayamanne.githistory",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense"
+    ]
+}

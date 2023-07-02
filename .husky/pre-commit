@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-echo '🏗️👷 Linting and typechecking your project before committing'
-pnpm lintfix && pnpm typecheck

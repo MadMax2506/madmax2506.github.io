@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Start Development",
+            "command": "pnpm start:dev",
+        },
+        {
+            "type": "shell",
+            "label": "Start Production",
+            "command": "pnpm start:prod"
+        }
+    ]
+}

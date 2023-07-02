@@ -9,15 +9,10 @@ type SectionContainerProps = PropsWithChildren<{
    * Text key of the section
    */
   titleTextKey: TextKey;
-  /**
-   * If true the container has a with of 100%
-   * @default false
-   */
-  fullWidth?: boolean;
 }>;
 
 export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
-  const { children, titleTextKey, fullWidth = false } = props;
+  const { children, titleTextKey } = props;
 
   return (
     <Stack sx={{ width: '100%', minHeight: '100vh', alignItems: 'center', mx: 'auto', py: 8 }}>
@@ -28,7 +23,7 @@ export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
         </Typography>
         <Divider flexItem px={2} />
       </Box>
-      <Box px={8} sx={fullWidth ? { width: '100%' } : {}}>
+      <Box px={8} sx={{ width: '80%' }}>
         {children}
       </Box>
     </Stack>

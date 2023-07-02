@@ -1,6 +1,5 @@
 import { Skill } from 'components/Card/SkillCard/skill.types';
 
-// TODO
 type SkillDetails = {
   name: string;
   since: number;
@@ -91,6 +90,12 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
       return {
         imageSrc,
         name: 'NestJS',
+        since: 2022,
+      };
+    case Skill.NODE_JS:
+      return {
+        imageSrc,
+        name: 'NodeJS',
         since: 2022,
       };
     case Skill.SPRING_BOOT:

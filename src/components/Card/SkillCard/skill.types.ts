@@ -15,6 +15,7 @@ export enum Skill {
   PYTHON = 'python',
   KOTLIN = 'kotlin',
   NEST_JS = 'nestjs',
+  NODE_JS = 'nodejs',
   SPRING_BOOT = 'spring',
   MONGO_DB = 'mongodb',
 }

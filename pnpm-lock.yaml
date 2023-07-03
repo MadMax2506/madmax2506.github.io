@@ -21,8 +21,8 @@ dependencies:
     specifier: ^5.13.6
     version: 5.13.6(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
   '@mui/x-date-pickers':
-    specifier: ^6.9.0
-    version: 6.9.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.5)(@mui/material@5.13.6)(@mui/system@5.13.6)(dayjs@1.11.8)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^6.9.1
+    version: 6.9.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.5)(@mui/material@5.13.6)(@mui/system@5.13.6)(dayjs@1.11.8)(react-dom@18.2.0)(react@18.2.0)
   '@tanstack/react-query':
     specifier: ^4.29.19
     version: 4.29.19(react-dom@18.2.0)(react@18.2.0)
@@ -1013,8 +1013,8 @@ packages:
       react-is: 18.2.0
     dev: false
 
-  /@mui/x-date-pickers@6.9.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.5)(@mui/material@5.13.6)(@mui/system@5.13.6)(dayjs@1.11.8)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-aQ2FPQIf+Il85pkNdJ/vQaCEMJ/RiFor9qJzgSfm1NkCMlvAL8GguLxbvn3M0UdY3wSIdT23C4xyQRji7rV5Xg==}
+  /@mui/x-date-pickers@6.9.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.5)(@mui/material@5.13.6)(@mui/system@5.13.6)(dayjs@1.11.8)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-iqw0U8fn58tP5OPXoITqkjp1JKY2EvFpsLLTd8stP/pJkVjjAnhhm/KOneMmBziIgTyMSXP4SnoRaKjwpXILew==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@emotion/react': ^11.9.0
@@ -1057,7 +1057,7 @@ packages:
       '@mui/base': 5.0.0-beta.5(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
       '@mui/material': 5.13.6(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
       '@mui/system': 5.13.6(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.14)(react@18.2.0)
-      '@mui/utils': 5.13.1(react@18.2.0)
+      '@mui/utils': 5.13.6(react@18.2.0)
       '@types/react-transition-group': 4.4.6
       clsx: 1.2.1
       dayjs: 1.11.8

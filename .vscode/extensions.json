@@ -19,6 +19,8 @@
         "aaravb.chrome-extension-developer-tools",
         "donjayamanne.githistory",
         "christian-kohler.npm-intellisense",
-        "christian-kohler.path-intellisense"
+        "christian-kohler.path-intellisense",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples"
     ]
 }

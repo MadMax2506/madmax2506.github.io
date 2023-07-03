@@ -21,6 +21,7 @@
         "christian-kohler.npm-intellisense",
         "christian-kohler.path-intellisense",
         "visualstudioexptteam.vscodeintellicode",
-        "visualstudioexptteam.intellicode-api-usage-examples"
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "ms-vscode.vscode-typescript-next"
     ]
 }

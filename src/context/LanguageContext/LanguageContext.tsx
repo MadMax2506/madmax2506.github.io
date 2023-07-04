@@ -48,17 +48,16 @@ type Language = {
 
 const DEFAULT_LANGUAGE = LanguageConfiguration.DE;
 
+const osLanguage = (): LanguageConfiguration => window.navigator.language.split('-')[0] as LanguageConfiguration;
+
 const LanguageContext = createContext<Language>({} as Language);
 
 export const LanguageProvider = (props: PropsWithChildren) => {
   const { children } = props;
 
-  const [{ language }, setCookie] = useCookies<
+  const [{ language }, setCookie] = useCookies<'language', { language: LanguageConfiguration | undefined }>([
     'language',
-    {
-      language: LanguageConfiguration | undefined;
-    }
-  >(['language']);
+  ]);
 
   const flatDeLocales = useMemo(() => flatJsonObject(deLocales), []);
   const flatEnLocales = useMemo(() => flatJsonObject(enLocales), []);
@@ -67,7 +66,7 @@ export const LanguageProvider = (props: PropsWithChildren) => {
     if (language) {
       dayjs().locale(language);
     } else {
-      changeLanguage(DEFAULT_LANGUAGE);
+      changeLanguage(osLanguage());
     }
   }, [language]);
 

@@ -34,7 +34,7 @@ export function ThemeProvider(props: PropsWithChildren): JSX.Element {
   const { children } = props;
 
   const [cookies, setCookie] = useCookies([COOKIE_KEY]);
-  const [themeMode, setThemeMode] = useState<ThemeMode>(cookies[COOKIE_KEY] ?? osTheme());
+  const [themeMode, setThemeMode] = useState<ThemeMode>(cookies[COOKIE_KEY] ?? ThemeMode.SYNC);
   const [paletteMode, setPaletteMode] = useState<PaletteMode>(paletteModeByThemeMode(themeMode));
 
   const theme = useMemo(() => (paletteMode === 'dark' ? darkTheme : lightTheme), [paletteMode]);

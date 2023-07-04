@@ -11,6 +11,7 @@ export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
     <Typography
       key={textKey}
       onClick={navigate}
+      variant="h6"
       sx={{
         position: 'relative',
         '&:before': {

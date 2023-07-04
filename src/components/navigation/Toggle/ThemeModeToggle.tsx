@@ -1,7 +1,20 @@
 import { DarkMode as DarkModeIcon, LightMode as LightModeIcon, Sync as SyncIcon } from '@mui/icons-material';
-import { ToggleButton, ToggleButtonGroup, ToggleButtonGroupProps } from '@mui/material';
+import { ToggleButton, ToggleButtonGroup, ToggleButtonGroupProps, Tooltip } from '@mui/material';
+import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 import { ThemeMode, useThemeContext } from 'context/ThemeContext/ThemeContext';
-import { MouseEvent } from 'react';
+import { MouseEvent, ReactElement } from 'react';
+
+type ThemeModeIconProps = {
+  type: ThemeMode;
+  children: ReactElement;
+};
+
+const ThemeModeButton = (props: ThemeModeIconProps) => {
+  const { type, children } = props;
+  const { translate } = useLanguageContext();
+
+  return <Tooltip title={translate(`theme-mode.${type}`)}>{children}</Tooltip>;
+};
 
 type ThemeModeToggle = Required<Pick<ToggleButtonGroupProps, 'color'>>;
 
@@ -17,15 +30,21 @@ export const ThemeModeToggle = (props: ThemeModeToggle): JSX.Element => {
   return (
     <ToggleButtonGroup value={themeMode} exclusive onChange={handleMode} color={color}>
       <ToggleButton value={ThemeMode.LIGHT}>
-        <LightModeIcon fontSize="small" />
+        <ThemeModeButton type={ThemeMode.LIGHT}>
+          <LightModeIcon fontSize="small" />
+        </ThemeModeButton>
       </ToggleButton>
 
       <ToggleButton value={ThemeMode.DARK}>
-        <DarkModeIcon fontSize="small" />
+        <ThemeModeButton type={ThemeMode.DARK}>
+          <DarkModeIcon fontSize="small" />
+        </ThemeModeButton>
       </ToggleButton>
 
       <ToggleButton value={ThemeMode.SYNC}>
-        <SyncIcon fontSize="small" />
+        <ThemeModeButton type={ThemeMode.SYNC}>
+          <SyncIcon fontSize="small" />
+        </ThemeModeButton>
       </ToggleButton>
     </ToggleButtonGroup>
   );

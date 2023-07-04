@@ -1,12 +1,19 @@
-import { Avatar, ToggleButton, ToggleButtonGroup } from '@mui/material';
+import { Avatar, ToggleButton, ToggleButtonGroup, Tooltip } from '@mui/material';
 import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 import { LanguageConfiguration } from 'context/LanguageContext/language.types';
 import { MouseEvent } from 'react';
 
 type CountryIconProps = { type: LanguageConfiguration };
-const CountryIcon = ({ type }: CountryIconProps) => (
-  <Avatar sx={{ width: 20, height: 20 }} alt={type} src={`/assets/country-flags/${type}.png`} />
-);
+const CountryIcon = (props: CountryIconProps) => {
+  const { type } = props;
+  const { translate } = useLanguageContext();
+
+  return (
+    <Tooltip title={translate(`language.${type}`)}>
+      <Avatar sx={{ width: 20, height: 20 }} alt={type} src={`/assets/country-flags/${type}.png`} />
+    </Tooltip>
+  );
+};
 
 /**
  * Switch between the available {@link LanguageConfiguration}

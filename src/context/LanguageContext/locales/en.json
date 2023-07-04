@@ -5,9 +5,14 @@
     "part2": "Then write me an email",
     "part3": "Or check me out on Discord"
   },
-  "country": {
-    "de": "DE",
-    "en": "EN"
+  "language": {
+    "de": "German",
+    "en": "English"
+  },
+  "theme-mode": {
+    "light": "Light-Mode",
+    "dark": "Dark-Mode",
+    "sync": "OS"
   },
   "pages": {
     "about-me": "About me",

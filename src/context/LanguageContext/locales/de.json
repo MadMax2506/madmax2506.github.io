@@ -15,9 +15,14 @@
       }
     }
   },
-  "country": {
-    "de": "DE",
-    "en": "EN"
+  "language": {
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
+  "theme-mode": {
+    "light": "Light-Mode",
+    "dark": "Dark-Mode",
+    "sync": "Betriebssystem"
   },
   "pages": {
     "about-me": "Über mich",

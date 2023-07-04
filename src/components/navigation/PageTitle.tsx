@@ -1,4 +1,4 @@
-import { Typography, TypographyProps } from '@mui/material';
+import { Typography, TypographyProps, useTheme } from '@mui/material';
 import { useNavigation } from 'hooks/useNavigation/useNavigation';
 import { MonoNavigationAnchors } from 'routes/types';
 
@@ -17,13 +17,20 @@ export const PageTitle = (props: PageTitleProps): JSX.Element => {
   const { variant, flexShrink, withLink = false } = props;
   const { navigateMonoRoute } = useNavigation();
 
+  const {
+    palette: {
+      secondary: { main },
+    },
+  } = useTheme();
+  const baseSx = { color: main };
+
   return (
     <Typography
       variant={variant}
       flexShrink={flexShrink}
       component="div"
       onClick={withLink ? () => navigateMonoRoute(MonoNavigationAnchors.HOME) : undefined}
-      sx={withLink ? { cursor: 'pointer' } : {}}
+      sx={withLink ? { cursor: 'pointer', ...baseSx } : { ...baseSx }}
     >
       Max Janorschke
     </Typography>

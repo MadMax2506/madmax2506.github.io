@@ -1,12 +1,12 @@
-import { Box, Drawer, IconButton, Stack } from '@mui/material';
 import { Close as CloseIcon, Menu as MenuIcon } from '@mui/icons-material';
-import { useState } from 'react';
+import { Box, Drawer, IconButton, Stack } from '@mui/material';
 import { Divider } from 'components/Divider';
-import { PageTitle } from 'components/navigation/PageTitle';
-import { NavigationPage } from 'components/navigation/types';
 import { SidebarLinks } from 'components/navigation/MobileNavigation/SidebarLinks';
-import { LanguageSelect } from 'components/navigation/LanguageSelect/LanguageSelect';
-import { ThemeModeToggle } from 'components/navigation/ThemeModeToggle';
+import { PageTitle } from 'components/navigation/PageTitle';
+import { ThemeModeToggle } from 'components/navigation/Toggle/ThemeModeToggle';
+import { NavigationPage } from 'components/navigation/types';
+import { useState } from 'react';
+import { LanguageToggle } from '../Toggle/LanguageToggle';
 
 type MobileNavigationProps = {
   pages: NavigationPage[];
@@ -43,9 +43,9 @@ export const MobileNavigation = (props: MobileNavigationProps): JSX.Element => {
 
           <SidebarLinks pages={pages} setOpen={setOpen} />
 
-          <LanguageSelect />
+          <LanguageToggle />
 
-          <ThemeModeToggle />
+          <ThemeModeToggle color="primary" />
 
           <Divider width={'100%'} borderRadius={0} />
         </Stack>

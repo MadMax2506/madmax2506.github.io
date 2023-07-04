@@ -1,8 +1,8 @@
 import { Grid, Stack, useTheme } from '@mui/material';
 import { NavigationLink } from 'components/navigation/NavigationLink';
 import { NavigationPage } from 'components/navigation/types';
-import { LanguageSelect } from '../LanguageSelect/LanguageSelect';
-import { ThemeModeToggle } from '../ThemeModeToggle';
+import { LanguageToggle } from '../Toggle/LanguageToggle';
+import { ThemeModeToggle } from '../Toggle/ThemeModeToggle';
 
 type DesktopNavigationProps = {
   pages: NavigationPage[];
@@ -36,10 +36,9 @@ export const DesktopNavigation = (props: DesktopNavigationProps): JSX.Element =>
       </Grid>
 
       <Grid item xs={2}>
-        <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={4}>
-          <LanguageSelect />
-
-          <ThemeModeToggle />
+        <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={2}>
+          <LanguageToggle />
+          <ThemeModeToggle color="secondary" />
         </Stack>
       </Grid>
     </Grid>

@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography, useTheme } from '@mui/material';
 import { NavigationPage } from 'components/navigation/types';
 import { T } from 'components/T/T';
 
@@ -7,6 +7,12 @@ type NavigationLinkProps = Omit<NavigationPage, 'icon'>;
 export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
   const { textKey, navigate } = props;
 
+  const {
+    palette: {
+      secondary: { main },
+    },
+  } = useTheme();
+
   return (
     <Typography
       key={textKey}
@@ -14,6 +20,7 @@ export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
       variant="h6"
       sx={{
         position: 'relative',
+        color: main,
         '&:before': {
           content: "''",
           position: 'absolute',
@@ -22,7 +29,7 @@ export const NavigationLink = (props: NavigationLinkProps): JSX.Element => {
           bottom: '-3px',
           left: '50%',
           transform: 'translate(-50%,0%)',
-          backgroundColor: 'text.primary',
+          backgroundColor: 'secondary.main',
           visibility: 'hidden',
           transition: 'all 0.3s ease-in-out',
         },

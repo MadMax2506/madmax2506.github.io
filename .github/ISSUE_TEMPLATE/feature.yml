@@ -2,14 +2,13 @@ name: Feature
 description: File a bug report
 title: "[DATE]: [FEATURE NAME]"
 labels: ["feature"]
-assignees:
-  - MadMax2506
+assignees: MadMax2506
 body:
-  - type: markdown
-    attributes:
+    - type: markdown
+      attributes:
       value: |
-        ## DoD
+          ## DoD
 
-        ## Relates to
+          ## Relates to
 
-        ## Blocked by
+          ## Blocked by

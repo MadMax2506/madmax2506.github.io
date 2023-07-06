@@ -1,6 +1,6 @@
+import { grey } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
-import { components, generalSettings } from 'context/ThemeContext/theme/theme-options';
-import { deepOrange, grey } from '@mui/material/colors';
+import { components, generalSettings, rgbWhite } from 'context/ThemeContext/theme/theme-options';
 
 const scrollbarGrey = {
   100: '#959595',
@@ -45,20 +45,24 @@ export const darkTheme = createTheme({
       },
     },
   },
-  highlighting: deepOrange[800],
   palette: {
     mode: 'dark',
     primary: {
-      dark: '#ffffff',
-      main: '#ffffff',
-      light: '#ffffff',
+      dark: rgbWhite,
+      main: rgbWhite,
+      light: rgbWhite,
+    },
+    secondary: {
+      dark: rgbWhite,
+      main: rgbWhite,
+      light: rgbWhite,
     },
     background: {
       default: grey[900],
       paper: grey[900],
     },
     text: {
-      primary: '#ffffff',
+      primary: rgbWhite,
       secondary: grey[500],
     },
   },

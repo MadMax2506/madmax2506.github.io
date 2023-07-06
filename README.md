@@ -27,3 +27,7 @@ pnpm i
 pnpm build
 pnpm start:prod
 ```
+
+## Icons
+
+[Devicons](https://github.com/devicons/devicon/tree/master/icons)

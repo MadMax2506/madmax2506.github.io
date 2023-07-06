@@ -1,13 +1,18 @@
+import { deepOrange } from '@mui/material/colors';
 import { Components } from '@mui/material/styles/components';
 import { Theme, ThemeOptions } from '@mui/material/styles/createTheme';
+
+export const rgbWhite = '#ffffff';
 
 /**
  * General styling for light and dark mode
  */
-export const generalSettings: Partial<Omit<ThemeOptions, 'palette' | 'components'>> = {
+export const generalSettings: Required<Pick<ThemeOptions, 'typography' | 'highlighting'>> = {
   typography: {
-    fontFamily: ['"Courier New"'].join(','),
+    fontFamily: ['Montserrat'].join(','),
+    fontSize: 16,
   },
+  highlighting: deepOrange[800],
 };
 
 /**

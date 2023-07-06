@@ -1,37 +1,30 @@
+import { Stack, Typography, useTheme } from '@mui/material';
 import { SectionContainer } from 'components/Container/SectionContainer';
-import { Grid, Typography, useTheme } from '@mui/material';
-import { PersonalAvatar } from 'pages/Portfolio/AboutMe/PersonalAvatar';
-import { FrameworkList } from 'pages/Portfolio/AboutMe/FrameworkList';
 import { T } from 'components/T/T';
+import { PersonalAvatar } from 'pages/Portfolio/AboutMe/PersonalAvatar';
+import { SkillList } from 'pages/Portfolio/AboutMe/SkillList';
 
 export const AboutMe = (): JSX.Element => {
   const { breakpoints } = useTheme();
 
   return (
     <SectionContainer titleTextKey={'pages.about-me'}>
-      <Grid
-        container
-        rowSpacing={{ xs: 6, md: 0 }}
-        columnSpacing={{ xs: 0, md: 4 }}
-        alignItems="flex-start"
-        justifyContent="center"
-        sx={{
-          textAlign: 'center',
-          [breakpoints.up('md')]: { textAlign: 'left' },
-        }}
-      >
-        <Grid item xs={12} md={8} xl={9} order={{ xs: 2, md: 1 }}>
-          <Typography sx={{ pb: 3 }}>
-            <T textKey={'about-me'} />
-          </Typography>
+      <Stack spacing={4} alignItems="center" sx={{ textAlign: 'center' }}>
+        <PersonalAvatar />
 
-          <FrameworkList />
-        </Grid>
+        <Typography
+          sx={{
+            width: '100%',
+            [breakpoints.up('sm')]: {
+              width: '80%',
+            },
+          }}
+        >
+          <T textKey={'about-me'} html />
+        </Typography>
 
-        <Grid item xs={12} md={4} xl={3} order={{ xs: 1, md: 2 }}>
-          <PersonalAvatar />
-        </Grid>
-      </Grid>
+        <SkillList />
+      </Stack>
     </SectionContainer>
   );
 };

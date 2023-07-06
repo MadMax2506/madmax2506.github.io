@@ -20,17 +20,13 @@ type DividerProps = {
    * x-axis padding
    */
   px?: number;
-  /**
-   * y-axis padding
-   */
-  py?: number;
 };
 
 /**
  * Custom divider
  */
 export const Divider = (props: DividerProps): JSX.Element => {
-  const { flexItem = false, borderRadius = 4, width, px, py } = props;
+  const { flexItem = false, borderRadius = 4, width, px } = props;
 
   const { highlighting } = useTheme();
 
@@ -42,7 +38,7 @@ export const Divider = (props: DividerProps): JSX.Element => {
     : {};
 
   return (
-    <Box sx={{ ...boxPropsSX, px, py, width }}>
+    <Box sx={{ ...boxPropsSX, px, width }}>
       <MuiDivider
         sx={{
           backgroundColor: highlighting,

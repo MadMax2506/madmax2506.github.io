@@ -1,6 +1,6 @@
-import { components, generalSettings } from 'context/ThemeContext/theme/theme-options';
-import { grey, red } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
+import { components, generalSettings, rgbWhite } from 'context/ThemeContext/theme/theme-options';
 
 const scrollbarGrey = {
   100: '#f1f1f1',
@@ -45,7 +45,6 @@ export const lightTheme = createTheme({
       },
     },
   },
-  highlighting: red[400],
   palette: {
     mode: 'light',
     primary: {
@@ -53,13 +52,18 @@ export const lightTheme = createTheme({
       main: grey[800],
       light: grey[800],
     },
+    secondary: {
+      dark: rgbWhite,
+      main: rgbWhite,
+      light: rgbWhite,
+    },
     background: {
-      default: '#ffffff',
-      paper: '#ffffff',
+      default: rgbWhite,
+      paper: rgbWhite,
     },
     text: {
       primary: grey[900],
-      secondary: grey[800],
+      secondary: rgbWhite,
     },
   },
 });

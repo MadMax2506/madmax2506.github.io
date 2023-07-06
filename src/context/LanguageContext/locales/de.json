@@ -1,54 +1,33 @@
 {
-  "about-me": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\n          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n          takimata sanctus est Lorem ipsum dolor sit amet.",
-  "career-steps": {
-    "duration": {
-      "from-until": "Von {0} bis {1}",
-      "from-until-today": "Von {0} <b>bis heute</b>"
-    },
-    "plagge-it": {
-      "description": "Aushilfe im Bereich Softwareentwicklung",
-      "title": "Plagge.IT"
-    },
-    "fh-aachen": {
-      "description": "Angewandte Mathematik und Informatik B.Sc.",
-      "title": "FH Aachen"
-    },
-    "veda-gmbh": {
-      "description": {
-        "internship": "Praktikum",
-        "training": "Ausbildung zum mathematisch-Technischen Softwareentwickler"
-      },
-      "title": "VEDA GmbH"
-    }
-  },
+  "about-me": "Moin✌<br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
   "contact": {
     "part1": "Interesse geweckt?",
     "part2": "Dann schreib mir doch ne' Mail",
     "part3": "Oder schau mal auf Discord vorbei"
   },
-  "country": {
-    "de": "DE",
-    "en": "EN"
+  "skills": {
+    "usage": {
+      "since": "seit {0}",
+      "duration": {
+        "zero": "weniger als 1 Jahr",
+        "one": "mehr als 1 Jahr",
+        "multiple": "mehr als {0} Jahre"
+      }
+    }
   },
-  "frameworks": {
-    "react": "React",
-    "python": "Python",
-    "nestjs": "NestJS",
-    "electron": "Electron",
-    "java": "Java",
-    "spring": "Spring Boot",
-    "vuejs": "Vue.js",
-    "arduino": "Arduino",
-    "mui": "Material UI",
-    "ruby-on-rails": "Ruby on Rails",
-    "rpi": "Raspberry Pi",
-    "android": "Android",
-    "kotlin": "Kotlin"
+  "language": {
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
+  "theme-mode": {
+    "light": "Light-Mode",
+    "dark": "Dark-Mode",
+    "sync": "Betriebssystem"
   },
   "pages": {
     "about-me": "Über mich",
     "contact": "Kontakt",
-    "experience": "Erfahrungen",
+    "projects": "Projekte",
     "imprint": "Impressum",
     "privacy-policy": "Datenschutz"
   },

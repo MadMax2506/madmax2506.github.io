@@ -1,54 +1,23 @@
 {
-  "about-me": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\n          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n          takimata sanctus est Lorem ipsum dolor sit amet.",
-  "career-steps": {
-    "duration": {
-      "from-until": "From {0} to {1}",
-      "from-until-today": "From {0} <b>until today</b>"
-    },
-    "plagge-it": {
-      "description": "Temporary help in the area of software development",
-      "title": "Plagge.IT"
-    },
-    "fh-aachen": {
-      "description": "Applied Mathematics and Computer Science B.Sc.",
-      "title": "FH Aachen"
-    },
-    "veda-gmbh": {
-      "description": {
-        "internship": "Intership",
-        "training": "Training as mathematical-technical software developer"
-      },
-      "title": "VEDA GmbH"
-    }
-  },
+  "about-me": "Moin✌<br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
   "contact": {
     "part1": "Interest aroused?",
     "part2": "Then write me an email",
     "part3": "Or check me out on Discord"
   },
-  "country": {
-    "de": "DE",
-    "en": "EN"
+  "language": {
+    "de": "German",
+    "en": "English"
   },
-  "frameworks": {
-    "react": "React",
-    "python": "Python",
-    "nestjs": "NestJS",
-    "electron": "Electron",
-    "java": "Java",
-    "spring": "Spring Boot",
-    "vuejs": "Vue.js",
-    "arduino": "Arduino",
-    "mui": "Material UI",
-    "ruby-on-rails": "Ruby on Rails",
-    "rpi": "Raspberry Pi",
-    "android": "Android",
-    "kotlin": "Kotlin"
+  "theme-mode": {
+    "light": "Light-Mode",
+    "dark": "Dark-Mode",
+    "sync": "OS"
   },
   "pages": {
     "about-me": "About me",
     "contact": "Contact",
-    "experience": "Experience",
+    "projects": "Projekte",
     "imprint": "Imprint",
     "privacy-policy": "Privacy policy"
   },

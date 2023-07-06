@@ -1,9 +1,8 @@
-import { Stack } from '@mui/material';
-import { PageTitle } from 'components/navigation/PageTitle';
-import { NavigationPage } from 'components/navigation/types';
+import { Grid, Stack, useTheme } from '@mui/material';
 import { NavigationLink } from 'components/navigation/NavigationLink';
-import { LanguageSelect } from 'components/navigation/LanguageSelect/LanguageSelect';
-import { ThemeModeToggle } from 'components/navigation/ThemeModeToggle';
+import { NavigationPage } from 'components/navigation/types';
+import { LanguageToggle } from '../Toggle/LanguageToggle';
+import { ThemeModeToggle } from '../Toggle/ThemeModeToggle';
 
 type DesktopNavigationProps = {
   pages: NavigationPage[];
@@ -12,19 +11,36 @@ type DesktopNavigationProps = {
 export const DesktopNavigation = (props: DesktopNavigationProps): JSX.Element => {
   const { pages } = props;
 
+  const { breakpoints } = useTheme();
+
   return (
-    <Stack direction="row" alignItems="center" spacing={4}>
-      <PageTitle variant="h5" flexShrink={0} withLink />
+    <Grid container alignItems="center">
+      <Grid item lg={2} />
 
-      <Stack direction="row" justifyContent="flex-end" spacing={4} flexGrow={1}>
-        {pages.map(({ textKey, navigate }) => (
-          <NavigationLink key={textKey} textKey={textKey} navigate={navigate} />
-        ))}
-      </Stack>
+      <Grid item xs={10} lg={8}>
+        <Stack
+          direction="row"
+          spacing={4}
+          sx={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            [breakpoints.only('md')]: {
+              justifyContent: 'flex-start',
+            },
+          }}
+        >
+          {pages.map(({ textKey, navigate }) => (
+            <NavigationLink key={textKey} textKey={textKey} navigate={navigate} />
+          ))}
+        </Stack>
+      </Grid>
 
-      <LanguageSelect />
-
-      <ThemeModeToggle />
-    </Stack>
+      <Grid item xs={2}>
+        <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={2}>
+          <LanguageToggle />
+          <ThemeModeToggle color="secondary" />
+        </Stack>
+      </Grid>
+    </Grid>
   );
 };

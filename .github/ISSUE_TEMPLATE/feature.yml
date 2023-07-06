@@ -1,0 +1,15 @@
+name: Feature
+description: File a bug report
+title: "[DATE]: [FEATURE NAME]"
+labels: ["feature"]
+assignees:
+  - MadMax2506
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## DoD
+
+        ## Relates to
+
+        ## Blocked by

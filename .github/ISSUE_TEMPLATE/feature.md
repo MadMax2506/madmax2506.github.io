@@ -1,16 +1,15 @@
 ---
 name: Feature
-about: File a bug/issue
-labels: feature
+about: Feature for the application
 assignees: MadMax2506
 
 ---
 
-### DoD
+## DoD
 <!-- A concise description of what you're experiencing. -->
 
-### Blocked by
+## Blocked by
 <!-- A concise description of what you expected to happen. -->
 
-### Relates to
+## Relates to
 <!-- A concise description of what you expected to happen. -->

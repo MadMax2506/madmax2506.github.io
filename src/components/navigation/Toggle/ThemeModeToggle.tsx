@@ -21,6 +21,7 @@ type ThemeModeToggle = Required<Pick<ToggleButtonGroupProps, 'color'>>;
 /**
  * Switch between the light and dark mode
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const ThemeModeToggle = (props: ThemeModeToggle): JSX.Element => {
   const { color } = props;
   const { themeMode, changeThemeMode } = useThemeContext();

@@ -14,6 +14,7 @@ pnpm i
 Start the app in the `dev` environment:
 
 ```bash
+pnpm i
 pnpm start:dev
 ```
 
@@ -22,5 +23,7 @@ pnpm start:dev
 Start the app in the `prod` environment:
 
 ```bash
+pnpm i
+pnpm build
 pnpm start:prod
 ```

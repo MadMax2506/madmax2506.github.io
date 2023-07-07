@@ -20,7 +20,7 @@ type Theme = {
 
 const osThemeEventList = () => window.matchMedia('(prefers-color-scheme: dark)');
 
-const COOKIE_KEY = 'palette-mode';
+const COOKIE_KEY = 'theme-mode';
 
 const osTheme = (): PaletteMode => (osThemeEventList().matches ? 'dark' : 'light');
 
@@ -45,9 +45,9 @@ export function ThemeProvider(props: PropsWithChildren): JSX.Element {
   };
 
   useEffect(() => {
-    if (cookies[COOKIE_KEY] === paletteMode) return;
-    setCookie(COOKIE_KEY, paletteMode);
-  }, [paletteMode, cookies]);
+    if (cookies[COOKIE_KEY] === themeMode) return;
+    setCookie(COOKIE_KEY, themeMode);
+  }, [themeMode, cookies]);
 
   osThemeEventList().addEventListener('change', () => {
     if (ThemeMode.SYNC !== themeMode) return;

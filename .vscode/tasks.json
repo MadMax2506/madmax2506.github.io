@@ -10,6 +10,26 @@
             "type": "shell",
             "label": "Start Production",
             "command": "pnpm start:prod"
+        },
+        {
+            "type": "shell",
+            "label": "Lint",
+            "command": "pnpm lintfix"
+        },
+        {
+            "type": "shell",
+            "label": "Typecheck",
+            "command": "pnpm typecheck"
+        },
+        {
+            "type": "shell",
+            "label": "Test",
+            "command": "pnpm test"
+        },
+        {
+            "type": "shell",
+            "label": "CI",
+            "command": "pnpm lintfix && pnpm typecheck && pnpm test"
         }
     ]
 }

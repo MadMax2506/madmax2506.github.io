@@ -31,7 +31,7 @@ export const Navigation = (): JSX.Element => {
   ];
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: highlighting }}>
+    <AppBar sx={{ backgroundColor: highlighting }}>
       <Toolbar sx={{ display: { xs: 'none', md: 'flex' } }}>
         <DesktopNavigation pages={pages} />
       </Toolbar>

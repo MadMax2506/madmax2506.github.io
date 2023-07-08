@@ -29,7 +29,7 @@ export const PageTitle = (props: PageTitleProps): JSX.Element => {
       variant={variant}
       flexShrink={flexShrink}
       component="div"
-      onClick={withLink ? () => navigateMonoRoute(MonoNavigationAnchors.HOME) : undefined}
+      onClick={withLink ? () => navigateMonoRoute(MonoNavigationAnchors.ABOUT_ME) : undefined}
       sx={withLink ? { cursor: 'pointer', ...baseSx } : { ...baseSx }}
     >
       Max Janorschke

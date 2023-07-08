@@ -3,6 +3,7 @@ import { SectionContainer } from 'components/Container/SectionContainer';
 import { T } from 'components/T/T';
 import { PersonalAvatar } from 'pages/Portfolio/AboutMe/PersonalAvatar';
 import { SkillList } from 'pages/Portfolio/AboutMe/SkillList';
+import './waving-hand.css';
 
 export const AboutMe = (): JSX.Element => {
   const { breakpoints } = useTheme();

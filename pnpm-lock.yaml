@@ -44,9 +44,6 @@ importers:
       react-router-dom:
         specifier: ^6.14.1
         version: 6.14.1(react-dom@18.2.0)(react@18.2.0)
-      react-scroll-parallax:
-        specifier: ^3.4.2
-        version: 3.4.2(react-dom@18.2.0)(react@18.2.0)
       static-path:
         specifier: ^0.0.4
         version: 0.0.4
@@ -1764,10 +1761,6 @@ packages:
   /balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  /bezier-easing@2.1.0:
-    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
-    dev: false
-
   /brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
     dependencies:
@@ -3067,13 +3060,6 @@ packages:
     dependencies:
       p-limit: 3.1.0
 
-  /parallax-controller@1.7.0:
-    resolution: {integrity: sha512-tIU/LgH9oIrvC6o+rvGQis8/NXxsHNuF5LODmcc5TjvEDUi2qiR/iisFmyaqI9LImQ3psdAv28k2ZEAnFekiig==}
-    engines: {node: '>=12'}
-    dependencies:
-      bezier-easing: 2.1.0
-    dev: false
-
   /parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -3262,18 +3248,6 @@ packages:
     dependencies:
       '@remix-run/router': 1.7.1
       react: 18.2.0
-    dev: false
-
-  /react-scroll-parallax@3.4.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-jNltdM1a6y2TRHW4X4nyNT9BAzbLoISTvXaoB9YKGudVcAsGWManMI6UZ6PMd2si6bbWtTROgF/A9IoplZ2OLA==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      react: ^16.8.0-0 || >=17.0.1 || ^18.0.0
-      react-dom: ^16.8.0-0 || >=17.0.1 || ^18.0.0
-    dependencies:
-      parallax-controller: 1.7.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-shallow-renderer@16.15.0(react@18.2.0):

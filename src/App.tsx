@@ -5,7 +5,6 @@ import { ThemeProvider } from 'context/ThemeContext/ThemeContext';
 import dayjs from 'dayjs';
 import RelativeTime from 'dayjs/plugin/relativeTime';
 import { CookiesProvider } from 'react-cookie';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import { Routes } from 'routes/Routes';
 import { queryClient } from 'utils/query-client.utils';
 
@@ -21,9 +20,7 @@ export const App = () => {
       <CookiesProvider>
         <LanguageProvider>
           <ThemeProvider>
-            <ParallaxProvider>
-              <Routes />
-            </ParallaxProvider>
+            <Routes />
           </ThemeProvider>
         </LanguageProvider>
       </CookiesProvider>

@@ -1,5 +1,9 @@
 {
-  "about-me": "Moin<span class='wave'>✌️</span><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "about-me": {
+    "part1": "Moin<span class='wave'>✌️</span>",
+    "part2": "I'm Max, {0} years old and a MATSE trainee. During my apprenticeship I focused on frontend development with React and Typescript.",
+    "part3": "In my free time I develop my own software projects, so that I have the opportunity to try out new technologies and constantly expand my knowledge. Thereby I have focused on JavaScript and built up my knowledge in different frameworks:"
+  },
   "contact": {
     "part1": "Interest aroused?",
     "part2": "Then write me an email",

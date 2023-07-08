@@ -34,7 +34,7 @@ export const Overlay = ({ children }: PropsWithChildren): JSX.Element => {
         }}
         className={overlayClass}
       >
-        <Typography variant="h1" textAlign="center">
+        <Typography textAlign="center" sx={{ typography: { xs: 'h5', sm: 'h4', md: 'h3', lg: 'h1' } }}>
           Max Janorschke
         </Typography>
       </Box>

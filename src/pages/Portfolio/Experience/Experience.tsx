@@ -1,6 +1,6 @@
 import { Timeline } from '@mui/lab';
 import { SectionContainer } from 'components/Container/SectionContainer';
-import { PROJECTS } from './project.util';
+import { PROJECTS } from './const.experience';
 import { ProjectItem } from './TimelineItems/ProjectItem';
 
 /**

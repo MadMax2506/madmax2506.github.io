@@ -7,6 +7,7 @@ export enum Skill {
   MATERIAL_UI = 'mui',
   GIT = 'git',
   GIT_HUB = 'github',
+  GIT_LAB = 'gitlab',
   ARDUINO = 'arduino',
   C_CPP = 'c-cpp',
   RUBY_ON_RAILS = 'ruby-on-rails',

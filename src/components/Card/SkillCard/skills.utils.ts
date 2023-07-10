@@ -62,10 +62,22 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         name: 'GitHub',
         since: 2019,
       };
+    case Skill.GIT_LAB:
+      return {
+        imageSrc,
+        name: 'GitHub',
+        since: 2019,
+      };
     case Skill.ARDUINO:
       return {
         imageSrc,
         name: 'Arduino',
+        since: 2017,
+      };
+    case Skill.C_CPP:
+      return {
+        imageSrc,
+        name: 'C / C++',
         since: 2017,
       };
     case Skill.RUBY_ON_RAILS:

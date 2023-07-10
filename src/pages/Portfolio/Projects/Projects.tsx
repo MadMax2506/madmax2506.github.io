@@ -1,7 +1,7 @@
 import { Timeline } from '@mui/lab';
 import { SectionContainer } from 'components/Container/SectionContainer';
-import { ProjectItem } from './ProjectItem';
 import { PROJECTS } from './project.util';
+import { ProjectItem } from './TimelineItems/ProjectItem';
 
 /**
  * Displays my projects

@@ -36,7 +36,7 @@ export const ProjectItemBody = (props: ProjectItemBodyProps): JSX.Element => {
       <Grid container spacing={2} sx={{ justifyContent: 'flex-start', mb: lastElement ? 0 : marginBottom * 3 }}>
         {skills.map((value) => (
           <Grid key={value} item>
-            <SkillCard type={value} small={small} />
+            <SkillCard type={value} small />
           </Grid>
         ))}
       </Grid>

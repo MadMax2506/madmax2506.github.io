@@ -2,14 +2,21 @@
   "about-me": {
     "part1": "Moin<span class='wave'>✌️</span>",
     "part2": "Ich bin Max, {0} Jahre alt und MATSE-Auszubildender. Während meiner Ausbildung habe ich mich auf die Frontend-Entwicklung mit React und Typescript fokussiert.",
-    "part3": "In meiner Freizeit enwickle ich eigene Softwarerojekte, sodass ich dadurch die Möglichkeit habe, neue Technologien auszuprobieren und mein Wissen stetig zu erweitern. Dabei habe ich mich vorallen auf JavaScript eingeschossen und mein Wissen in verschiedene Frameworks aufgebaut:"
+    "part3": "In meiner Freizeit enwickle ich eigene Softwareprojekte, sodass ich dadurch die Möglichkeit habe, neue Technologien auszuprobieren und mein Wissen stetig zu erweitern. Dabei habe ich mich vorallen auf JavaScript eingeschossen und mein Wissen in verschiedene Frameworks aufgebaut:"
   },
   "contact": {
     "part1": "Interesse geweckt?",
     "part2": "Dann schreib mir doch ne' Mail",
     "part3": "Oder schau mal auf Discord vorbei"
   },
+  "experience": {
+    "until-yet": "jetzt",
+    "duration": "{0} bis {1}",
+    "plagge-it": "Aushilfe im Bereich Softwareentwicklung",
+    "veda-gmbh": "Ausbildung zum mathematisch-Technischen Softwareentwickler"
+  },
   "skills": {
+    "technologies": "Technologien",
     "usage": {
       "since": "seit {0}",
       "duration": {

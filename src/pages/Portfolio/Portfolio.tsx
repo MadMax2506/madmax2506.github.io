@@ -3,7 +3,7 @@ import { Contact } from 'pages/Portfolio/Contact/Contact';
 import { Overlay } from 'pages/Portfolio/Overlay/Overlay';
 import { MonoRoute } from 'routes/MonoRoute';
 import { MonoNavigationAnchors } from 'routes/types';
-import { Projects } from './Projects/Projects';
+import { Experience } from './Experience/Experience';
 
 export const Portfolio = (): JSX.Element => (
   <Overlay>
@@ -11,8 +11,8 @@ export const Portfolio = (): JSX.Element => (
       <AboutMe />
     </MonoRoute>
 
-    <MonoRoute anchor={MonoNavigationAnchors.PROJECTS}>
-      <Projects />
+    <MonoRoute anchor={MonoNavigationAnchors.EXPERIENCE}>
+      <Experience />
     </MonoRoute>
 
     <MonoRoute anchor={MonoNavigationAnchors.CONTACT}>

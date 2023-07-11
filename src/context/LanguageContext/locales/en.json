@@ -9,6 +9,23 @@
     "part2": "Then write me an email",
     "part3": "Or check me out on Discord"
   },
+  "experience": {
+    "until-yet": "yet",
+    "duration": "{0} until {1}",
+    "plagge-it": "Temporary help in the area of software development",
+    "veda-gmbh": "Training as mathematical-technical software developer"
+  },
+  "skills": {
+    "technologies": "Technologies",
+    "usage": {
+      "since": "until {0}",
+      "duration": {
+        "zero": "less than 1 year",
+        "one": "more than 1 year",
+        "multiple": "more than {0} years"
+      }
+    }
+  },
   "language": {
     "de": "German",
     "en": "English"

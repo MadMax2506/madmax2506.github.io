@@ -21,7 +21,7 @@ export const Navigation = (): JSX.Element => {
     {
       icon: WorkIcon,
       textKey: 'pages.projects',
-      navigate: () => navigateMonoRoute(MonoNavigationAnchors.PROJECTS),
+      navigate: () => navigateMonoRoute(MonoNavigationAnchors.EXPERIENCE),
     },
     {
       icon: ContactsIcon,

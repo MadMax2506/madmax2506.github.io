@@ -8,49 +8,54 @@ import {
 } from '@mui/lab';
 import { Grid, Typography, useTheme } from '@mui/material';
 import { SkillCard } from 'components/Card/SkillCard/SkillCard';
-import { Skill } from 'components/Card/SkillCard/skill.types';
-import { DOT_SIZE } from './const.timeline-items';
+import { T } from 'components/T/T';
+import { ProjectDetails } from '../experience.types';
+import { DOT_SIZE, DOT_SIZE_SMALL, IMAGE_SIZE } from './timeline-items.const';
 
-export type ProjectItemProps = {
-  title: string;
-  imageName: string;
-  skills: Skill[];
+export type ProjectItemProps = ProjectDetails & {
+  lastElement?: boolean;
 };
 
 export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
-  const { title, imageName, skills } = props;
-  console.log(skills);
+  const { name, imagePath, skills, details: Details, small = false, lastElement = false } = props;
+
   const { highlighting } = useTheme();
+
+  const size = small ? DOT_SIZE_SMALL : DOT_SIZE;
+  const headlineVariante = small ? 'h6' : 'h5';
+  const textVariante = small ? 'body2' : 'body1';
+  const marginBottom = small ? 1 : 2;
 
   return (
     <TimelineItem>
-      <TimelineOppositeContent>
-        <img src={imageName} alt={title} width={150} />
-      </TimelineOppositeContent>
+      {imagePath && (
+        <TimelineOppositeContent>
+          <img src={imagePath} alt={name} width={IMAGE_SIZE} />
+        </TimelineOppositeContent>
+      )}
 
       <TimelineSeparator>
-        <TimelineDot sx={{ backgroundColor: highlighting, width: DOT_SIZE, height: DOT_SIZE }} />
+        <TimelineDot sx={{ backgroundColor: highlighting, width: size, height: size }} />
         <TimelineConnector sx={{ width: 4 }} />
       </TimelineSeparator>
 
       <TimelineContent>
-        <Typography variant="h5" mb={2}>
-          {title}
+        <Typography variant={headlineVariante} mb={marginBottom}>
+          {name}
         </Typography>
 
-        <Typography variant="body2" mb={2}>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+        <Typography variant={textVariante} mb={marginBottom}>
+          <Details />
         </Typography>
 
-        <Grid container spacing={2} sx={{ justifyContent: 'flex-start', pb: 2 }}>
+        <Typography variant={textVariante} mb={marginBottom} fontWeight="bold">
+          <T textKey="skills.technologies" />
+        </Typography>
+
+        <Grid container spacing={2} sx={{ justifyContent: 'flex-start', mb: lastElement ? 0 : marginBottom * 3 }}>
           {skills.map((value) => (
             <Grid key={value} item>
-              <SkillCard type={value} />
+              <SkillCard type={value} small={small} />
             </Grid>
           ))}
         </Grid>

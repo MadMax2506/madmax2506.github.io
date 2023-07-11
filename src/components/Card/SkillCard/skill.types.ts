@@ -5,6 +5,7 @@ export enum Skill {
   TYPESCRIPT = 'typescript',
   POSTGRESQL = 'postgresql',
   MATERIAL_UI = 'mui',
+  TAILWIND_CSS = 'tailwindcss',
   GIT = 'git',
   GIT_HUB = 'github',
   GIT_LAB = 'gitlab',

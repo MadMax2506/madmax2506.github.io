@@ -50,6 +50,12 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         name: 'Material-UI',
         since: 2021,
       };
+    case Skill.TAILWIND_CSS:
+      return {
+        imageSrc,
+        name: 'Tailwind CSS',
+        since: 2023,
+      };
     case Skill.GIT:
       return {
         imageSrc,

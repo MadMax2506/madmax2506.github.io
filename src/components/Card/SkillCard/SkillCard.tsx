@@ -20,7 +20,7 @@ type SkillCardProps = {
  */
 export const SkillCard = (props: SkillCardProps): JSX.Element => {
   const { type, small = false } = props;
-  const avatarSize = small ? 50 : 36;
+  const avatarSize = small ? 36 : 50;
 
   const { name, since, imageSrc } = getSkillDetails(type);
 

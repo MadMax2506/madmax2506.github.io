@@ -1,11 +1,10 @@
-import { SectionContainer } from 'components/Container/SectionContainer';
 import { Box, Grid, Typography } from '@mui/material';
-import { SocialMediaList } from 'pages/Portfolio/Contact/SocialMediaList';
-import { JSX } from 'react';
-import { T } from 'components/T/T';
 import { SocialMediaCard } from 'components/Card/SocialMediaCard/SocialMediaCard';
 import { SocialMedia } from 'components/Card/SocialMediaCard/social-media.types';
-import { DiscordIntegration } from 'pages/Portfolio/Contact/DiscordIntegration';
+import { SectionContainer } from 'components/Container/SectionContainer';
+import { T } from 'components/T/T';
+import { SocialMediaList } from 'pages/Portfolio/Contact/SocialMediaList';
+import { JSX } from 'react';
 
 export const Contact = (): JSX.Element => {
   return (
@@ -28,16 +27,6 @@ export const Contact = (): JSX.Element => {
 
           <Box display="flex" justifyContent="center">
             <SocialMediaCard type={SocialMedia.MAIL} linkOnly />
-          </Box>
-        </Grid>
-
-        <Grid xs={12} item>
-          <Typography variant="h6" sx={{ pb: 1 }}>
-            <T textKey={'contact.part3'} />
-          </Typography>
-
-          <Box display="flex" justifyContent="center">
-            <DiscordIntegration width={300} height={300} />
           </Box>
         </Grid>
       </Grid>

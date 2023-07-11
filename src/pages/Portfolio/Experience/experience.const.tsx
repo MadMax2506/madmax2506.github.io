@@ -1,11 +1,7 @@
 import { Skill } from 'components/Card/SkillCard/skill.types';
-import { DesktopCompanyItemProps } from './TimelineItems/Desktop/DesktopCompanyItem';
-import { DesktopProjectItemProps } from './TimelineItems/Desktop/DesktopProjectItem';
+import { CompanyDetails, ProjectDetails } from './experience.types';
 
-export const EXPERIENCE: (
-  | Omit<DesktopCompanyItemProps, 'lastElement'>
-  | Omit<DesktopProjectItemProps, 'lastElement'>
-)[] = [
+export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
   {
     company: 'VEDA GmbH',
     startDate: new Date('2021/09/01'),

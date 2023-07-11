@@ -1,8 +1,11 @@
 import { Skill } from 'components/Card/SkillCard/skill.types';
-import { CompanyItemProps } from './TimelineItems/CompanyItem';
-import { ProjectItemProps } from './TimelineItems/ProjectItem';
+import { DesktopCompanyItemProps } from './TimelineItems/Desktop/DesktopCompanyItem';
+import { DesktopProjectItemProps } from './TimelineItems/Desktop/DesktopProjectItem';
 
-export const EXPERIENCE: (Omit<CompanyItemProps, 'lastElement'> | Omit<ProjectItemProps, 'lastElement'>)[] = [
+export const EXPERIENCE: (
+  | Omit<DesktopCompanyItemProps, 'lastElement'>
+  | Omit<DesktopProjectItemProps, 'lastElement'>
+)[] = [
   {
     company: 'VEDA GmbH',
     startDate: new Date('2021/09/01'),

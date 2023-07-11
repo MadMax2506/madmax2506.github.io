@@ -9,14 +9,14 @@ import {
 import { Grid, Typography, useTheme } from '@mui/material';
 import { SkillCard } from 'components/Card/SkillCard/SkillCard';
 import { T } from 'components/T/T';
-import { ProjectDetails } from '../experience.types';
-import { DOT_SIZE, DOT_SIZE_SMALL, IMAGE_SIZE } from './timeline-items.const';
+import { ProjectDetails } from '../../experience.types';
+import { DOT_SIZE, DOT_SIZE_SMALL, IMAGE_SIZE } from '../timeline-items.const';
 
-export type ProjectItemProps = ProjectDetails & {
+export type DesktopProjectItemProps = ProjectDetails & {
   lastElement?: boolean;
 };
 
-export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
+export const DesktopProjectItem = (props: DesktopProjectItemProps): JSX.Element => {
   const { name, imagePath, skills, details: Details, small = false, lastElement = false } = props;
 
   const { highlighting } = useTheme();

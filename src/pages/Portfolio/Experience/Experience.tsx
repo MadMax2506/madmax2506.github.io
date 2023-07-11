@@ -1,8 +1,8 @@
 import { Timeline } from '@mui/lab';
 import { Box } from '@mui/material';
 import { SectionContainer } from 'components/Container/SectionContainer';
-import { CompanyItem } from './TimelineItems/CompanyItem';
-import { ProjectItem } from './TimelineItems/ProjectItem';
+import { DesktopCompanyItem } from './TimelineItems/Desktop/DesktopCompanyItem';
+import { DesktopProjectItem } from './TimelineItems/Desktop/DesktopProjectItem';
 import { EXPERIENCE } from './experience.const';
 import { isCompany, isProject } from './experience.utils';
 
@@ -16,11 +16,11 @@ export const Experience = (): JSX.Element => (
         const lastElement = EXPERIENCE.length - 1 === index;
 
         if (isProject(experience)) {
-          return <ProjectItem {...experience} key={experience.name} lastElement={lastElement} />;
+          return <DesktopProjectItem {...experience} key={experience.name} lastElement={lastElement} />;
         }
 
         if (isCompany(experience)) {
-          return <CompanyItem {...experience} key={experience.company} lastElement={lastElement} />;
+          return <DesktopCompanyItem {...experience} key={experience.company} lastElement={lastElement} />;
         }
 
         throw Error('Invalid experience');

@@ -12,17 +12,17 @@ import { T } from 'components/T/T';
 import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 import dayjs from 'dayjs';
 import { JSX } from 'react';
-import { CompanyDetails } from '../experience.types';
-import { ProjectItem } from './ProjectItem';
-import { DOT_SIZE, IMAGE_SIZE } from './timeline-items.const';
+import { CompanyDetails } from '../../experience.types';
+import { DOT_SIZE, IMAGE_SIZE } from '../timeline-items.const';
+import { DesktopProjectItem } from './DesktopProjectItem';
 
 const DATE_FORMAT = 'MM/YYYY';
 
-export type CompanyItemProps = CompanyDetails & {
+export type DesktopCompanyItemProps = CompanyDetails & {
   lastElement?: boolean;
 };
 
-export const CompanyItem = (props: CompanyItemProps): JSX.Element => {
+export const DesktopCompanyItem = (props: DesktopCompanyItemProps): JSX.Element => {
   const { company, startDate, imagePath, href, detailsTextKey, projects, endDate, lastElement = false } = props;
 
   const { translate } = useLanguageContext();
@@ -63,7 +63,7 @@ export const CompanyItem = (props: CompanyItemProps): JSX.Element => {
       </TimelineItem>
 
       {projects.map((project, index) => (
-        <ProjectItem
+        <DesktopProjectItem
           {...project}
           key={`${company}-${project.name}`}
           lastElement={lastElement && index === projects.length - 1}

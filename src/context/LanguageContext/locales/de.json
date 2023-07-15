@@ -11,8 +11,21 @@
   "experience": {
     "until-yet": "jetzt",
     "duration": "{0} bis {1}",
-    "plagge-it": "Aushilfe im Bereich Softwareentwicklung",
-    "veda-gmbh": "Ausbildung zum mathematisch-Technischen Softwareentwickler"
+    "type": {
+      "web": "Webentwicklung",
+      "fullStack": "Fullstack-Entwicklung",
+      "microcontroller": "Mikrocontroller-Entwicklung"
+    },
+    "plagge-it": {
+      "employmentType": "Aushilfe im Bereich Softwareentwicklung"
+    },
+    "veda-gmbh": {
+      "employmentType": "Ausbildung zum mathematisch-Technischen Softwareentwickler",
+      "veda-horizon": {
+        "part1": "Umsetzung von Frontend- und Backend Funktionalität für Personalmanagement-Software",
+        "part2": "Einführung von React und Typescript, als neues Frontend-Framework"
+      }
+    }
   },
   "skills": {
     "technologies": "Technologien",

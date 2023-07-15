@@ -10,11 +10,11 @@ const DATE_FORMAT = 'MM/YYYY';
 
 export type CompanyItemBodyProps = Pick<
   CompanyTimelineItemProps,
-  'company' | 'startDate' | 'href' | 'detailsTextKey' | 'projects' | 'endDate'
+  'company' | 'startDate' | 'href' | 'employmentType' | 'projects' | 'endDate'
 >;
 
 export const CompanyItemBody = (props: CompanyItemBodyProps): JSX.Element => {
-  const { company, startDate, href, detailsTextKey, projects, endDate } = props;
+  const { company, startDate, href, employmentType, projects, endDate } = props;
 
   const { translate } = useLanguageContext();
 
@@ -36,7 +36,7 @@ export const CompanyItemBody = (props: CompanyItemBodyProps): JSX.Element => {
       </Typography>
 
       <Typography variant="body1" mb={projects.length === 0 ? 0 : 2}>
-        <T textKey={detailsTextKey} />
+        <T textKey={employmentType} />
       </Typography>
     </>
   );

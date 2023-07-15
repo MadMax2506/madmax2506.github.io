@@ -11,8 +11,21 @@
   "experience": {
     "until-yet": "yet",
     "duration": "{0} until {1}",
-    "plagge-it": "Temporary help in the area of software development",
-    "veda-gmbh": "Training as mathematical-technical software developer"
+    "type": {
+      "web": "Web development",
+      "fullStack": "Fullstack development",
+      "microcontroller": "Microcontroller development"
+    },
+    "plagge-it": {
+      "employmentType": "Temporary help in the area of software development"
+    },
+    "veda-gmbh": {
+      "employmentType": "Training as mathematical-technical software developer",
+      "veda-horizon": {
+        "part1": "Implementation of frontend and backend functionality for personnel management software",
+        "part2": "Introduction of React and Typescript, as a new frontend framework."
+      }
+    }
   },
   "skills": {
     "technologies": "Technologies",

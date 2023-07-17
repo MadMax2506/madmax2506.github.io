@@ -1,8 +1,8 @@
 name: Deploy
 
 on:
-  push:
-    branches: [ 'production' ]
+  #push:
+  #  tags: ['*']
   workflow_dispatch:
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
@@ -26,6 +26,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Checkout last tag
+        run: |
+          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+          git checkout $LATEST_TAG
       - name: Set up Node
         uses: actions/setup-node@v3
         with:

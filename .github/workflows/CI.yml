@@ -2,6 +2,7 @@ name: CI
 
 # Run if something is commited on `main` or there is still an open pulll request with `main` as target branch
 on:
+  workflow_call:
   pull_request:
     branches:
       - main
@@ -61,15 +62,15 @@ jobs:
         run: |
           pnpm install --no-frozen-lockfile
       - name: Lint
-        if: "!contains(github.event.head_commit.message, 'WIP')"
+        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
         run: |
           pnpm lint
       - name: Typecheck
-        if: "!contains(github.event.head_commit.message, 'WIP')"
+        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
         run: |
           pnpm typecheck
       - name: Test
-        if: "!contains(github.event.head_commit.message, 'WIP')"
+        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
         run: |
           pnpm build
           pnpm test

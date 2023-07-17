@@ -11,6 +11,8 @@ jobs:
     uses: ./.github/workflows/CI.yml
 
   release:
+    needs: ci
+
     runs-on: ubuntu-latest
 
     steps:

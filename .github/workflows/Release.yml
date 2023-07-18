@@ -20,11 +20,11 @@ permissions:
   id-token: write
 
 jobs:
-  #ci:
-  #  uses: ./.github/workflows/CI.yml
+  ci:
+    uses: ./.github/workflows/CI.yml
 
   release:
-    #needs: ci
+    needs: ci
     runs-on: ubuntu-latest
 
     outputs:
@@ -77,13 +77,6 @@ jobs:
             ${{ steps.changelog.outputs.changelog }}
           draft: false
           prerelease: false
-
-  test:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send greeting
-        run: echo "${{ needs.release.outputs.new-version }}"
 
   deploy:
     needs: release

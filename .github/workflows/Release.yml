@@ -42,3 +42,7 @@ jobs:
             ${{ steps.changelog.outputs.changelog }}
           draft: false
           prerelease: false
+
+  deploy:
+    needs: release
+    uses: ./.github/workflows/Deploy.yml

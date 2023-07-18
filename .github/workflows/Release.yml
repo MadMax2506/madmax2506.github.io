@@ -53,17 +53,6 @@ jobs:
           current_version: ${{ steps.get-latest-tag.outputs.tag }}
           level: ${{ github.event.inputs.type }}
 
-      - name: Changelog
-        id: changelog
-        uses: scottbrenner/generate-changelog-action@master
-        with:
-          from-tag: ${{ steps.get-latest-tag.outputs.tag }}
-          to-tag: HEAD
-          type: ${{ github.event.inputs.type }}
-          allow-unknown: true
-        env:
-          REPO: ${{ github.repository }}
-
       ## Create release
       - name: Create Release
         id: create_release
@@ -73,8 +62,6 @@ jobs:
         with:
           tag_name: ${{ steps.bump-semver.outputs.new_version }}
           release_name: Release ${{ steps.bump-semver.outputs.new_version }}
-          body: |
-            ${{ steps.changelog.outputs.changelog }}
           draft: false
           prerelease: false
 

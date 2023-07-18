@@ -59,6 +59,8 @@ jobs:
         with:
           from-tag: ${{ steps.get-latest-tag.outputs.tag }}
           to-tag: HEAD
+          type: ${{ github.event.inputs.type }}
+          allow-unknown: true
         env:
           REPO: ${{ github.repository }}
 
@@ -75,6 +77,13 @@ jobs:
             ${{ steps.changelog.outputs.changelog }}
           draft: false
           prerelease: false
+
+  test:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send greeting
+        run: echo "${{ needs.release.outputs.new-version }}"
 
   deploy:
     needs: release

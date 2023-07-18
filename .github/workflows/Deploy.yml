@@ -1,9 +1,16 @@
 name: Deploy
 
 on:
-  push:
-    branches: [ 'production' ]
+  workflow_call:
+    inputs:
+      tag:
+        required: true
+        type: string
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag name'
+        required: true
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
@@ -24,8 +31,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout ${{ github.event.inputs.tag }}
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.tag }}
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
@@ -55,7 +64,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           # Upload dist repository
           path: './dist'

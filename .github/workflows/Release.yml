@@ -6,6 +6,9 @@ on:
       - production
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   ci:
     uses: ./.github/workflows/CI.yml
@@ -17,6 +20,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3

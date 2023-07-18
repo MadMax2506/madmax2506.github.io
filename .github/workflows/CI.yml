@@ -26,6 +26,7 @@ jobs:
     strategy:
       matrix:
         node-version: [ 16.x ]
+
     env:
       NODE_ENV: "development"
       NODE_OPTIONS: "--max_old_space_size=4096"
@@ -34,23 +35,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Merge Conflict Check
         uses: olivernybroe/action-conflict-finder@v4.0
+
       - name: Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
           version: 7
           run_install: false
+
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
       - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
@@ -58,17 +64,21 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+
       - name: Setup
         run: |
           pnpm install --no-frozen-lockfile
+
       - name: Lint
         if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
         run: |
           pnpm lint
+
       - name: Typecheck
         if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
         run: |
           pnpm typecheck
+
       - name: Test
         if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
         run: |

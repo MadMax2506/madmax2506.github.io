@@ -2,10 +2,6 @@ name: Release
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag name'
-        required: true
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
@@ -19,28 +15,60 @@ jobs:
 
   release:
     needs: ci
-
     runs-on: ubuntu-latest
 
+    outputs:
+      new-version: ${{ steps.bump-semver.outputs.new_version }}
+
     steps:
-      - uses: actions/checkout@v3
+      ## Setup
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      
+      ## Change package.json version
       - name: package.json version
         uses: technote-space/package-version-check-action@v1
+      
+      ## Get release informations
+      - name: Generate release label
+        id: release-label
+        uses: actions-ecosystem/action-release-label@v1
+      
+      - name: Get last version
+        id: get-latest-tag
+        uses: actions-ecosystem/action-get-latest-tag@v1
+        if: ${{ steps.release-label.outputs.level != null }}
+      
+      - name: Update version
+        id: bump-semver
+        uses: actions-ecosystem/action-bump-semver@v1
+        if: ${{ steps.release-label.outputs.level != null }}
+        with:
+          current_version: ${{ steps.get-latest-tag.outputs.tag }}
+          level: ${{ steps.release-label.outputs.level }}
+      
       - name: Changelog
         id: changelog
         uses: scottbrenner/generate-changelog-action@master
+        if: ${{ steps.release-label.outputs.level != null }}
+        with:
+          from-tag: ${{ steps.get-latest-tag.outputs.tag }}
+          to-tag: HEAD
         env:
           REPO: ${{ github.repository }}
+      
+      ## Create release
       - name: Create Release
         id: create_release
+        if: ${{ steps.release-label.outputs.level != null }}
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.event.inputs.tag }}
-          release_name: Release ${{ github.event.inputs.tag }}
+          tag_name: ${{ steps.bump-semver.outputs.new_version }}
+          release_name: Release ${{ steps.bump-semver.outputs.new_version }}
           body: |
             ${{ steps.changelog.outputs.changelog }}
           draft: false
@@ -50,4 +78,4 @@ jobs:
     needs: release
     uses: ./.github/workflows/Deploy.yml
     with:
-      tag: ${{ github.event.inputs.tag }}
+      tag: ${{ needs.release.outputs.new-version }}

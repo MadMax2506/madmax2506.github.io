@@ -49,3 +49,5 @@ jobs:
   deploy:
     needs: release
     uses: ./.github/workflows/Deploy.yml
+    with:
+      tag: ${{ github.event.inputs.tag }}

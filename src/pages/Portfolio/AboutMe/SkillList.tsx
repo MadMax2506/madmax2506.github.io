@@ -6,13 +6,7 @@ import { SkillCard } from 'components/Card/SkillCard/SkillCard';
  * Display all skills
  */
 export const SkillList = (): JSX.Element => (
-  <Grid
-    container
-    spacing={2}
-    sx={{
-      justifyContent: 'center',
-    }}
-  >
+  <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
     {[
       Skill.JAVASCRIPT,
       Skill.NODE_JS,

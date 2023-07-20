@@ -24,12 +24,8 @@ export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
         alignItems: 'center',
         mx: 'auto',
         py: 10,
-        [breakpoints.only('lg')]: {
-          width: '80%',
-        },
-        [breakpoints.only('xl')]: {
-          width: '70%',
-        },
+        [breakpoints.only('lg')]: { width: '80%' },
+        [breakpoints.only('xl')]: { width: '70%' },
       }}
     >
       <Box

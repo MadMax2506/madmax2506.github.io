@@ -1,10 +1,21 @@
-import { Box, Typography } from '@mui/material';
-import { PrivacyPolicyContent } from 'pages/PrivacyPolicy/PrivacyPolicyContent';
+import { Box, Typography, useTheme } from '@mui/material';
 import { MailLink } from 'components/MailLink';
+import { PrivacyPolicyContent } from 'pages/PrivacyPolicy/PrivacyPolicyContent';
 
 export const PrivacyPolicy = (): JSX.Element => {
+  const { breakpoints } = useTheme();
+
   return (
-    <Box textAlign="center" minHeight="100vh" sx={{ py: 2 }}>
+    <Box
+      textAlign="center"
+      minHeight="100vh"
+      sx={{
+        py: 10,
+        width: '100%',
+        [breakpoints.only('lg')]: { width: '70%' },
+        [breakpoints.only('xl')]: { width: '50%' },
+      }}
+    >
       <Typography variant="h4">Datenschutzerklärung</Typography>
       <Typography>
         Ich, Max Janorschke, nehmen den Schutz Ihrer persönlichen Daten sehr ernst und halten uns strikt an die Regeln

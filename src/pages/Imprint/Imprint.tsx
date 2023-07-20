@@ -1,10 +1,21 @@
-import { Box, Typography } from '@mui/material';
-import { ImprintContent } from 'pages/Imprint/ImprintContent';
+import { Box, Typography, useTheme } from '@mui/material';
 import { MailLink } from 'components/MailLink';
+import { ImprintContent } from 'pages/Imprint/ImprintContent';
 
 export const Imprint = (): JSX.Element => {
+  const { breakpoints } = useTheme();
+
   return (
-    <Box textAlign="center" minHeight="100vh" sx={{ py: 2 }}>
+    <Box
+      textAlign="center"
+      minHeight="100vh"
+      sx={{
+        py: 10,
+        width: '100%',
+        [breakpoints.only('lg')]: { width: '70%' },
+        [breakpoints.only('xl')]: { width: '50%' },
+      }}
+    >
       <Typography variant="h4">Impressum</Typography>
 
       <ImprintContent>

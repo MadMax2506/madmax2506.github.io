@@ -39,6 +39,7 @@ export const SkillCard = (props: SkillCardProps): JSX.Element => {
           <Typography variant="body2">{buildTextKey()}</Typography>
         </Box>
       }
+      enterTouchDelay={0}
     >
       <Paper elevation={0} sx={{ width: avatarSize, height: avatarSize }}>
         <img alt={name} src={imageSrc} loading="lazy" />

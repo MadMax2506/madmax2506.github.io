@@ -37,7 +37,7 @@ export type ProjectDetails = {
   /**
    * Project name
    */
-  name: string;
+  nameTextKey: string;
   /**
    * Project description
    */

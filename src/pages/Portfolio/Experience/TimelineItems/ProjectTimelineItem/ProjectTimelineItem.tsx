@@ -17,7 +17,7 @@ export type ProjectTimelineItemProps = ProjectDetails & {
 };
 
 export const ProjectTimelineItem = (props: ProjectTimelineItemProps): JSX.Element => {
-  const { variant, name, imagePath, small = false, ...rest } = props;
+  const { variant, nameTextKey: name, imagePath, small = false, ...rest } = props;
 
   const { highlighting } = useTheme();
 
@@ -38,7 +38,7 @@ export const ProjectTimelineItem = (props: ProjectTimelineItemProps): JSX.Elemen
         </TimelineSeparator>
 
         <TimelineContent>
-          <ProjectItemBody {...rest} variant={variant} name={name} small={small} />
+          <ProjectItemBody {...rest} variant={variant} nameTextKey={name} small={small} />
         </TimelineContent>
       </TimelineItem>
     );
@@ -46,7 +46,7 @@ export const ProjectTimelineItem = (props: ProjectTimelineItemProps): JSX.Elemen
 
   return (
     <Box textAlign="center" alignItems="center">
-      <ProjectItemBody {...rest} variant={variant} name={name} small={small} />
+      <ProjectItemBody {...rest} variant={variant} nameTextKey={name} small={small} />
     </Box>
   );
 };

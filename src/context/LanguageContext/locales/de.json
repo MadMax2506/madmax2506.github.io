@@ -17,13 +17,31 @@
       "microcontroller": "Mikrocontroller-Entwicklung"
     },
     "plagge-it": {
-      "employmentType": "Aushilfe im Bereich Softwareentwicklung"
+      "employmentType": "Aushilfe im Bereich Softwareentwicklung",
+      "stock-management": {
+        "name": "Lagerverwaltung Uni Siegen",
+        "part1": "Umsetzung von Frontend- und Backend-Funktionalität für Inventuren, Wekzeugausleihen, Bestellungen und Materialentnahmen.",
+        "part2": "Verwaltung der Materialentnahmen auf mobilen Geräten über die Progressiv Web App (PWA) mit Barcode-Scanner und Offline-Funktionalität."
+      },
+      "evaluation-tool": {
+        "name": "Evaluationstool FH-Aachen",
+        "part1": "Entwicklung eines Tools zur Auswertung von Evaluationen der FH-Aachen, in Anlehnung an Mentimeter mit Benutzerverwaltung."
+      },
+      "roomlight": {
+        "name": "Flurbeleuchtung",
+        "part1": "Flurbeleuchtung, welche über Bewegungsmelder gesteuert wird.",
+        "part2": "Konfiguration der Beleuchtung über einen MQTT-Server."
+      }
     },
     "veda-gmbh": {
       "employmentType": "Ausbildung zum mathematisch-Technischen Softwareentwickler",
       "veda-horizon": {
-        "part1": "Umsetzung von Frontend- und Backend Funktionalität für Personalmanagement-Software",
-        "part2": "Einführung von React und Typescript, als neues Frontend-Framework"
+        "name": "VEDA Horizon",
+        "part1": "Umsetzung von Frontend- und Backend-Funktionalität für Personalmanagement-Software",
+        "part2": "Einführung von React und Typescript, als neues Frontend-Framework, mit Material-UI als Komponenten-Bibliothek"
+      },
+      "nuwork": {
+        "name": "nuWork"
       }
     }
   },

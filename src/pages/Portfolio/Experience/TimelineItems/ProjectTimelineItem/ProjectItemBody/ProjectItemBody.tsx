@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import { T } from 'components/T/T';
 import { ProjectDetails } from '../../../experience.types';
 import { ProjectTimelineItemProps } from '../ProjectTimelineItem';
 import { ProjectItemBodyDetails } from './ProjectItemBodyDetails';
@@ -10,7 +11,16 @@ export type ProjectItemBodyProps = ProjectDetails &
   };
 
 export const ProjectItemBody = (props: ProjectItemBodyProps): JSX.Element => {
-  const { name, skills, type, variant, detailTextKeys, small = false, lastElement = false, hideName = false } = props;
+  const {
+    nameTextKey,
+    skills,
+    type,
+    variant,
+    detailTextKeys,
+    small = false,
+    lastElement = false,
+    hideName = false,
+  } = props;
 
   const textVariante = small ? 'body2' : 'body1';
   const marginBottom = small ? 1 : 2;
@@ -21,7 +31,7 @@ export const ProjectItemBody = (props: ProjectItemBodyProps): JSX.Element => {
     <>
       {!hideName && (
         <Typography variant={headlineVariante} mb={marginBottom}>
-          {name}
+          <T textKey={nameTextKey} />
         </Typography>
       )}
 

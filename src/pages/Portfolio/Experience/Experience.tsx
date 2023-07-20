@@ -17,7 +17,12 @@ export const Experience = (): JSX.Element => (
 
         if (isProject(experience)) {
           return (
-            <ProjectTimelineItem {...experience} key={experience.name} variant="desktop" lastElement={lastElement} />
+            <ProjectTimelineItem
+              {...experience}
+              key={experience.nameTextKey}
+              variant="desktop"
+              lastElement={lastElement}
+            />
           );
         }
 
@@ -37,7 +42,12 @@ export const Experience = (): JSX.Element => (
 
         if (isProject(experience)) {
           return (
-            <ProjectTimelineItem {...experience} key={experience.name} variant="mobile" lastElement={lastElement} />
+            <ProjectTimelineItem
+              {...experience}
+              key={experience.nameTextKey}
+              variant="mobile"
+              lastElement={lastElement}
+            />
           );
         }
 

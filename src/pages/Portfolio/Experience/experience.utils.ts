@@ -3,7 +3,7 @@ import { CompanyDetails, ProjectDetails } from './experience.types';
 export const isProject = (elem: ProjectDetails | CompanyDetails): elem is ProjectDetails => {
   const project = elem as ProjectDetails;
   return (
-    project.name !== undefined &&
+    project.nameTextKey !== undefined &&
     project.type !== undefined &&
     project.skills !== undefined &&
     project.detailTextKeys !== undefined

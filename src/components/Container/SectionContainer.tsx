@@ -24,8 +24,11 @@ export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
         alignItems: 'center',
         mx: 'auto',
         py: 10,
-        [breakpoints.up('lg')]: {
-          width: '60%',
+        [breakpoints.only('lg')]: {
+          width: '80%',
+        },
+        [breakpoints.only('xl')]: {
+          width: '70%',
         },
       }}
     >
@@ -53,7 +56,7 @@ export const SectionContainer = (props: SectionContainerProps): JSX.Element => {
         </Hidden>
       </Box>
 
-      <Box px={8} sx={{ width: '100%', alignContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+      <Box px={2} sx={{ width: '100%', alignContent: 'center', alignItems: 'center', textAlign: 'center' }}>
         {children}
       </Box>
     </Stack>

@@ -6,10 +6,10 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from '@mui/lab';
-import { useTheme } from '@mui/material';
+import { Stack, useTheme } from '@mui/material';
 import { JSX } from 'react';
-import { CompanyDetails } from '../../experience.types';
-import { ProjectItemBody } from '../ProjectTimelineItem/ProjectItemBody';
+import { CompanyDetails, ProjectDetails } from '../../experience.types';
+import { ProjectItemBody } from '../ProjectTimelineItem/ProjectItemBody/ProjectItemBody';
 import { ProjectTimelineItem } from '../ProjectTimelineItem/ProjectTimelineItem';
 import { DOT_SIZE, IMAGE_SIZE } from '../timeline-items.const';
 import { CompanyItemBody } from './CompanyItemBody';
@@ -23,6 +23,16 @@ export const CompanyTimelineItem = (props: CompanyTimelineItemProps): JSX.Elemen
   const { variant, company, imagePath, projects, lastElement = false, ...rest } = props;
 
   const { highlighting } = useTheme();
+
+  const generateProjectItem = (project: ProjectDetails, index: number) => (
+    <ProjectTimelineItem
+      {...project}
+      key={`${company}-${project.name}`}
+      variant={variant}
+      lastElement={lastElement && index === projects.length - 1}
+      small
+    />
+  );
 
   if (variant === 'desktop') {
     return (
@@ -40,23 +50,21 @@ export const CompanyTimelineItem = (props: CompanyTimelineItemProps): JSX.Elemen
           <TimelineContent>
             <CompanyItemBody {...rest} company={company} projects={projects} />
 
-            {projects.length === 1 && <ProjectItemBody {...projects[0]} small hideName />}
+            {/** Generate project item for a single project */}
+            {projects.length === 1 && <ProjectItemBody {...projects[0]} variant={variant} small hideName />}
           </TimelineContent>
         </TimelineItem>
 
-        {projects.length > 1 &&
-          projects.map((project, index) => (
-            <ProjectTimelineItem
-              {...project}
-              key={`${company}-${project.name}`}
-              variant={variant}
-              lastElement={lastElement && index === projects.length - 1}
-              small
-            />
-          ))}
+        {/** Generate list project list for more than one project */}
+        {projects.length > 1 && projects.map(generateProjectItem)}
       </>
     );
   }
 
-  return <>TODO </>;
+  return (
+    <Stack alignItems="center" textAlign="center" mb={lastElement ? 0 : 8}>
+      <CompanyItemBody {...rest} company={company} projects={projects} imagePath={imagePath} detailed />
+      {projects.length > 1 && projects.map(generateProjectItem)}
+    </Stack>
+  );
 };

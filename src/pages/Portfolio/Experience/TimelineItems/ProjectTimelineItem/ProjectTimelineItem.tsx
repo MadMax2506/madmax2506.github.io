@@ -6,10 +6,10 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from '@mui/lab';
-import { useTheme } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { ProjectDetails } from '../../experience.types';
 import { DOT_SIZE, DOT_SIZE_SMALL, IMAGE_SIZE } from '../timeline-items.const';
-import { ProjectItemBody } from './ProjectItemBody';
+import { ProjectItemBody } from './ProjectItemBody/ProjectItemBody';
 
 export type ProjectTimelineItemProps = ProjectDetails & {
   variant: 'desktop' | 'mobile';
@@ -38,11 +38,15 @@ export const ProjectTimelineItem = (props: ProjectTimelineItemProps): JSX.Elemen
         </TimelineSeparator>
 
         <TimelineContent>
-          <ProjectItemBody {...rest} name={name} small={small} />
+          <ProjectItemBody {...rest} variant={variant} name={name} small={small} />
         </TimelineContent>
       </TimelineItem>
     );
   }
 
-  return <>TODO https://github.com/MadMax2506/madmax2506.github.io/issues/198</>;
+  return (
+    <Box textAlign="center" alignItems="center">
+      <ProjectItemBody {...rest} variant={variant} name={name} small={small} />
+    </Box>
+  );
 };

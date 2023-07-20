@@ -31,6 +31,24 @@ export const Experience = (): JSX.Element => (
       })}
     </Timeline>
 
-    <Box sx={{ display: { xs: 'block', md: 'none' } }}>TODO</Box>
+    <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+      {EXPERIENCE.map((experience, index) => {
+        const lastElement = EXPERIENCE.length - 1 === index;
+
+        if (isProject(experience)) {
+          return (
+            <ProjectTimelineItem {...experience} key={experience.name} variant="mobile" lastElement={lastElement} />
+          );
+        }
+
+        if (isCompany(experience)) {
+          return (
+            <CompanyTimelineItem {...experience} key={experience.company} variant="mobile" lastElement={lastElement} />
+          );
+        }
+
+        throw Error('Invalid experience');
+      })}
+    </Box>
   </SectionContainer>
 );

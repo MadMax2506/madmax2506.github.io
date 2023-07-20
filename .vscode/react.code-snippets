@@ -1,0 +1,68 @@
+{
+	"React Component": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": "react-component",
+		"body": [
+			"type ${TM_FILENAME_BASE}Props = {$1};",
+			"",
+			"export const ${TM_FILENAME_BASE} = (props: ${TM_FILENAME_BASE}Props): JSX.Element => {",
+			"  const {$2} = props;",
+			"  return <>${TM_FILENAME_BASE}</>;",
+			"};",
+			""
+		],
+		"description": "React Component"
+	},
+	"React Context": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": "react-context",
+		"body": [
+			"import { createContext, PropsWithChildren, useContext } from 'react';",
+			"",
+			"type ${TM_FILENAME_BASE/Context//g} = {$1};",
+			"",
+			"const ${TM_FILENAME_BASE} = createContext<${TM_FILENAME_BASE/Context//g}>({} as ${TM_FILENAME_BASE/Context//g});",
+			"",
+			"export function ${TM_FILENAME_BASE/Context//g}Provider(props: PropsWithChildren): JSX.Element {",
+			"  const { children } = props;",
+			"  return <${TM_FILENAME_BASE}.Provider value={{}}>{children}</${TM_FILENAME_BASE}.Provider>;",
+			"}",
+			"", 
+			"export function use${TM_FILENAME_BASE}(): ${TM_FILENAME_BASE/Context//g} {",
+			"  const context = useContext(${TM_FILENAME_BASE});",
+			"  if (context === undefined) {",
+			"    throw new Error('use${TM_FILENAME_BASE} must be used within a ${TM_FILENAME_BASE/Context//g}Provider');",
+			"  }",
+			"  return context;",
+			"}",
+			""
+		],
+		"description": "React Context"
+	},
+	"Custom React Hook": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": "react-hook",
+		"body": [
+			"type ${TM_FILENAME_BASE}Props = {$1};",
+			"type ${TM_FILENAME_BASE}Return = {$2};",
+			"",  
+			"export const ${TM_FILENAME_BASE} = (props: ${TM_FILENAME_BASE}Props): ${TM_FILENAME_BASE}Return => {",
+			"  const {$3} = props;",
+			"  return {$4};",
+			"};", 
+			""
+		],
+		"description": "Custom React Hook"
+	},
+	"React Router Page": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": "react-router-page",
+		"body": [
+			"export const ${TM_FILENAME_BASE} = (): JSX.Element => {",
+			"  return <>${TM_FILENAME_BASE}</>;",
+			"};", 
+			""
+		],
+		"description": "React Router Page"
+	}
+}

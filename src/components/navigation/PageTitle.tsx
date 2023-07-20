@@ -28,6 +28,7 @@ export const PageTitle = (props: PageTitleProps): JSX.Element => {
     <Typography
       variant={variant}
       flexShrink={flexShrink}
+      textAlign="center"
       component="div"
       onClick={withLink ? () => navigateMonoRoute(MonoNavigationAnchors.ABOUT_ME) : undefined}
       sx={withLink ? { cursor: 'pointer', ...baseSx } : { ...baseSx }}

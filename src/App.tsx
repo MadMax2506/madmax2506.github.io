@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import RelativeTime from 'dayjs/plugin/relativeTime';
 import { CookiesProvider } from 'react-cookie';
 import { Routes } from 'routes/Routes';
-import { queryClient } from 'utils/query-client.utils';
+import { queryClient } from 'utils';
 
 export const App = () => {
   // TODO Application is not ready for prod

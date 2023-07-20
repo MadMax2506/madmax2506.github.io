@@ -27,7 +27,7 @@
 			"  const { children } = props;",
 			"  return <${TM_FILENAME_BASE}.Provider value={{}}>{children}</${TM_FILENAME_BASE}.Provider>;",
 			"}",
-			"",
+			"", 
 			"export function use${TM_FILENAME_BASE}(): ${TM_FILENAME_BASE/Context//g} {",
 			"  const context = useContext(${TM_FILENAME_BASE});",
 			"  if (context === undefined) {",

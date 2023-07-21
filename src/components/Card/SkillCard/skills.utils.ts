@@ -1,3 +1,4 @@
+import { useTheme } from '@mui/material';
 import { Skill } from 'components/Card/SkillCard/skill.types';
 
 type SkillDetails = {
@@ -12,6 +13,10 @@ type SkillDetails = {
  */
 export const getSkillDetails = (type: Skill): SkillDetails => {
   const imageSrc = `/assets/skills/${type}.svg`;
+
+  const {
+    palette: { mode },
+  } = useTheme();
 
   switch (type) {
     case Skill.JAVA:
@@ -64,7 +69,7 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
       };
     case Skill.GIT_HUB:
       return {
-        imageSrc,
+        imageSrc: `/assets/skills/${type}_${mode}.svg`,
         name: 'GitHub',
         since: 2019,
       };

@@ -20,9 +20,9 @@ export const AboutMe = (): JSX.Element => {
           spacing={2}
           sx={{
             width: '100%',
-            [breakpoints.up('sm')]: {
-              width: '80%',
-            },
+            [breakpoints.only('sm')]: { width: '60%' },
+            [breakpoints.only('md')]: { width: '50%' },
+            [breakpoints.up('lg')]: { width: '50%' },
           }}
         >
           <T textKey={'about-me.part1'} html />

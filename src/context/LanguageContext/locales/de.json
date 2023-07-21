@@ -1,5 +1,8 @@
 {
-  "title": "Max Janorschke | Webentwickler",
+  "meta": {
+    "title": "Max Janorschke | Webentwickler",
+    "description": "Max Janorschke ist ein Webentwickler aus Herzogenrath. Er entwickelt Webseiten und Webanwendungen mit React und Typescript."
+  },
   "about-me": {
     "part1": "Moin<span class='wave'>✌️</span>",
     "part2": "Ich bin Max, {0} Jahre alt und MATSE-Auszubildender. Während meiner Ausbildung habe ich mich auf die Frontend-Entwicklung mit React und Typescript fokussiert.",

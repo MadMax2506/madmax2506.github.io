@@ -1,5 +1,8 @@
 {
-  "title": "Max Janorschke | Web Developer",
+  "meta": {
+    "title": "Max Janorschke | Web Developer",
+    "description": "Max Janorschke is a web developer from Herzogenrath. He develops websites and web applications with React and Typescript."
+  },
   "about-me": {
     "part1": "Moin<span class='wave'>✌️</span>",
     "part2": "I'm Max, {0} years old and a MATSE trainee. During my apprenticeship I focused on frontend development with React and Typescript.",

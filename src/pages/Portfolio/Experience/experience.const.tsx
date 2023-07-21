@@ -10,7 +10,7 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
     employmentType: 'experience.veda-gmbh.employmentType',
     projects: [
       {
-        name: 'VEDA Horizon',
+        nameTextKey: 'experience.veda-gmbh.veda-horizon.name',
         type: ProjectType.FULL_STACK,
         detailTextKeys: ['experience.veda-gmbh.veda-horizon.part1', 'experience.veda-gmbh.veda-horizon.part2'],
         skills: [
@@ -23,8 +23,9 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
           Skill.GIT_HUB,
         ],
       },
-      {
-        name: 'nuWork',
+      // TODO https://github.com/MadMax2506/madmax2506.github.io/issues/224
+      /*{
+        nameTextKey: 'experience.veda-gmbh.nuwork.name',
         type: ProjectType.FULL_STACK,
         detailTextKeys: [],
         skills: [
@@ -36,7 +37,7 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
           Skill.TAILWIND_CSS,
           Skill.GIT_LAB,
         ],
-      },
+      },*/
     ],
   },
   {
@@ -47,21 +48,21 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
     employmentType: 'experience.plagge-it.employmentType',
     projects: [
       {
-        name: 'Lagerverwaltung Uni Siegen',
+        nameTextKey: 'experience.plagge-it.stock-management.name',
         type: ProjectType.FULL_STACK,
-        detailTextKeys: ['TODO'],
+        detailTextKeys: ['experience.plagge-it.stock-management.part1', 'experience.plagge-it.stock-management.part2'],
         skills: [Skill.RUBY_ON_RAILS, Skill.VUE_JS, Skill.GIT_LAB],
       },
       {
-        name: 'Evaluationstool FH-Aachen',
+        nameTextKey: 'experience.plagge-it.evaluation-tool.name',
         type: ProjectType.FULL_STACK,
-        detailTextKeys: ['TODO'],
+        detailTextKeys: ['experience.plagge-it.evaluation-tool.part1'],
         skills: [Skill.RUBY_ON_RAILS, Skill.GIT_LAB],
       },
       {
-        name: 'Flurbeleuchtung',
+        nameTextKey: 'experience.plagge-it.roomlight.name',
         type: ProjectType.MICROCONTROLLER,
-        detailTextKeys: ['TODO'],
+        detailTextKeys: ['experience.plagge-it.roomlight.part1', 'experience.plagge-it.roomlight.part2'],
         skills: [Skill.ARDUINO, Skill.C_CPP],
       },
     ],

@@ -27,7 +27,7 @@ export const CompanyTimelineItem = (props: CompanyTimelineItemProps): JSX.Elemen
   const generateProjectItem = (project: ProjectDetails, index: number) => (
     <ProjectTimelineItem
       {...project}
-      key={`${company}-${project.name}`}
+      key={`${company}-${project.nameTextKey}`}
       variant={variant}
       lastElement={lastElement && index === projects.length - 1}
       small
@@ -64,6 +64,11 @@ export const CompanyTimelineItem = (props: CompanyTimelineItemProps): JSX.Elemen
   return (
     <Stack alignItems="center" textAlign="center" mb={lastElement ? 0 : 8}>
       <CompanyItemBody {...rest} company={company} projects={projects} imagePath={imagePath} detailed />
+
+      {/** Generate project item for a single project */}
+      {projects.length === 1 && <ProjectItemBody {...projects[0]} variant={variant} small hideName />}
+
+      {/** Generate list project list for more than one project */}
       {projects.length > 1 && projects.map(generateProjectItem)}
     </Stack>
   );

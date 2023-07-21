@@ -1,4 +1,5 @@
 {
+  "title": "Max Janorschke | Web Developer",
   "about-me": {
     "part1": "Moin<span class='wave'>✌️</span>",
     "part2": "I'm Max, {0} years old and a MATSE trainee. During my apprenticeship I focused on frontend development with React and Typescript.",
@@ -17,13 +18,31 @@
       "microcontroller": "Microcontroller development"
     },
     "plagge-it": {
-      "employmentType": "Temporary help in the area of software development"
+      "employmentType": "Temporary help in the area of software development",
+      "stock-management": {
+        "name": "Stock-management for the university Siegen",
+        "part1": "Implementation of front-end and back-end functionality for inventories, tool loans, purchase orders and material withdrawals.",
+        "part2": "Management of material withdrawals on mobile devices via the Progressive Web App (PWA) with barcode scanner and offline functionality."
+      },
+      "evaluation-tool": {
+        "name": "Evaluation-tool FH-Aachen",
+        "part1": "Development of a tool for the analysis of evaluations of the FH-Aachen, based on Mentimeter with user administration."
+      },
+      "roomlight": {
+        "name": "Roomlight",
+        "part1": "Roomlight, which is controlled by motion detectors.",
+        "part2": "Configuration of the lighting via an MQTT server."
+      }
     },
     "veda-gmbh": {
       "employmentType": "Training as mathematical-technical software developer",
       "veda-horizon": {
+        "name": "VEDA Horizon",
         "part1": "Implementation of frontend and backend functionality for personnel management software",
         "part2": "Introduction of React and Typescript, as a new frontend framework."
+      },
+      "nuwork": {
+        "name": "nuWork"
       }
     }
   },

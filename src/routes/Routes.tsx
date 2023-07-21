@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Route as ReactRoute, Routes as ReactRoutes, useLocation } from 'react-router-dom';
-import { paths } from './paths';
-import { Portfolio } from 'pages/Portfolio/Portfolio';
-import { PrivacyPolicy } from 'pages/PrivacyPolicy/PrivacyPolicy';
-import { Imprint } from 'pages/Imprint/Imprint';
-import { Navigation } from 'components/navigation/Navigation';
 import { Stack } from '@mui/material';
 import { Footer } from 'components/navigation/Footer';
+import { Navigation } from 'components/navigation/Navigation';
+import { useLanguageContext } from 'context/LanguageContext/LanguageContext';
 import { getScrollToY, scrollTo } from 'hooks/useNavigation/navigation.utils';
-import { MonoNavigationAnchors } from 'routes/types';
+import { Imprint } from 'pages/Imprint/Imprint';
+import { Portfolio } from 'pages/Portfolio/Portfolio';
+import { PrivacyPolicy } from 'pages/PrivacyPolicy/PrivacyPolicy';
 import { useEffect } from 'react';
+import { Route as ReactRoute, Routes as ReactRoutes, BrowserRouter as Router, useLocation } from 'react-router-dom';
+import { MonoNavigationAnchors } from 'routes/types';
+import { paths } from './paths';
 
 /**
  * Reset the state in the page history
@@ -25,8 +26,13 @@ const resetState = (e: BeforeUnloadEvent) => {
  */
 export function RouterBody(): JSX.Element {
   const { state } = useLocation();
-  window.requestAnimationFrame(() => scrollTo(getScrollToY(state?.anchor as MonoNavigationAnchors)));
+  const { translate } = useLanguageContext();
 
+  // Set the page title
+  document.title = translate('title');
+
+  // Scroll to the anchor
+  window.requestAnimationFrame(() => scrollTo(getScrollToY(state?.anchor as MonoNavigationAnchors)));
   useEffect(() => {
     window.addEventListener('beforeunload', resetState);
     return () => {

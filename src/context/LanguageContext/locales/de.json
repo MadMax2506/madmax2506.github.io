@@ -45,7 +45,8 @@
         "part2": "Einführung von React und Typescript, als neues Frontend-Framework, mit Material-UI als Komponenten-Bibliothek"
       },
       "nuwork": {
-        "name": "nuWork"
+        "name": "nuWork",
+        "part1": "Umsetzung von Frontend-Funktionalität für OKR und Culture-Sofware"
       }
     }
   },

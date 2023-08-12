@@ -45,7 +45,8 @@
         "part2": "Introduction of React and Typescript, as a new frontend framework."
       },
       "nuwork": {
-        "name": "nuWork"
+        "name": "nuWork",
+        "part1": "Implementation of frontend and backend functionality for okr and culture-sofware"
       }
     }
   },

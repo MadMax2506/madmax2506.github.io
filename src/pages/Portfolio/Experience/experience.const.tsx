@@ -23,21 +23,12 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
           Skill.GIT_HUB,
         ],
       },
-      // TODO https://github.com/MadMax2506/madmax2506.github.io/issues/224
-      /*{
+      {
         nameTextKey: 'experience.veda-gmbh.nuwork.name',
-        type: ProjectType.FULL_STACK,
-        detailTextKeys: [],
-        skills: [
-          Skill.JAVASCRIPT,
-          Skill.NODE_JS,
-          Skill.TYPESCRIPT,
-          Skill.REACT,
-          Skill.NEST_JS,
-          Skill.TAILWIND_CSS,
-          Skill.GIT_LAB,
-        ],
-      },*/
+        type: ProjectType.WEB,
+        detailTextKeys: ['experience.veda-gmbh.nuwork.part1'],
+        skills: [Skill.JAVASCRIPT, Skill.TYPESCRIPT, Skill.REACT, Skill.TAILWIND_CSS, Skill.GIT_LAB],
+      },
     ],
   },
   {

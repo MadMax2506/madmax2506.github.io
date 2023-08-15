@@ -76,7 +76,7 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
     case Skill.GIT_LAB:
       return {
         imageSrc,
-        name: 'GitHub',
+        name: 'GitLab',
         since: 2019,
       };
     case Skill.ARDUINO:

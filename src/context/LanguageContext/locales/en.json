@@ -53,7 +53,7 @@
   "skills": {
     "technologies": "Technologies",
     "usage": {
-      "since": "until {0}",
+      "since": "since {0}",
       "duration": {
         "zero": "less than 1 year",
         "one": "more than 1 year",

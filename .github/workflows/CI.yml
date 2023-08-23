@@ -39,6 +39,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ needs.install.outputs.pnpm-version }}
+          run_install: false
       - run: pnpm config set store-dir .pnpm-store
       - run: pnpm install --no-frozen-lockfile
 

@@ -39,8 +39,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0
   react-cookie:
-    specifier: ^6.0.1
-    version: 6.0.1(react@18.2.0)
+    specifier: ^6.1.0
+    version: 6.1.0(react@18.2.0)
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
@@ -3158,8 +3158,8 @@ packages:
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  /react-cookie@6.0.1(react@18.2.0):
-    resolution: {integrity: sha512-17Xi49dmBwuj+clFjTv9O/10zhiVWB8UvA6GxOSuwmrqr1MQ5MsiYNZnSDbYl2vKDPIfuHWIDA4ntT723Pfpgg==}
+  /react-cookie@6.1.0(react@18.2.0):
+    resolution: {integrity: sha512-j/q0kf4f8kK7zXyTdGEebtZ3IKhVCPZVL3pf6y9/KlfFThxRjb+xvgdKAvRB2VrdkXyu9Qbrb/VuiFUNK6/3+g==}
     peerDependencies:
       react: '>= 16.3.0'
     dependencies:

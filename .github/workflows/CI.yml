@@ -19,7 +19,6 @@ env:
 
 jobs:    
   install:
-    name: Install
     strategy:
       matrix:
         os: [ubuntu-latest]

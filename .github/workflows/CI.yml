@@ -28,7 +28,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node-version: [ 16.x ]
-        pnpm-version: [ 8.x ]
+        pnpm-version: [ 8 ]
     outputs:
       os: ${{ matrix.os }}
       node-version: ${{ matrix.node-version }}

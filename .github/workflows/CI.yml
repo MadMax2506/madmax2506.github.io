@@ -17,70 +17,89 @@ on:
     branches:
       - main
 
-jobs:
-  build-and-test:
-    name: Build and test
-    runs-on: ubuntu-latest
+env:
+  NODE_ENV: "development"
+  NODE_OPTIONS: "--max_old_space_size=4096"
 
-    # Configure npm env and strategies
+jobs:    
+  install:
+    name: Install
     strategy:
       matrix:
+        os: [ubuntu-latest]
         node-version: [ 16.x ]
-
-    env:
-      NODE_ENV: "development"
-      NODE_OPTIONS: "--max_old_space_size=4096"
-
-    # Checkout > Merge Conflict Check > Install > Lint > Test
+        pnpm-version: [ 8 ]
+    outputs:
+      os: ${{ matrix.os }}
+      node-version: ${{ matrix.node-version }}
+      pnpm-version: ${{ matrix.pnpm-version }}
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Merge Conflict Check
-        uses: olivernybroe/action-conflict-finder@v4.0
-
-      - name: Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        id: pnpm-install
+      - uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: ${{ matrix.pnpm-version }}
           run_install: false
+      - run: pnpm config set store-dir .pnpm-store
+      - run: pnpm install --no-frozen-lockfile
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
+  tsc:
+    needs: install
+    runs-on: ${{ needs.install.outputs.os }}
+    steps:
+      - uses: actions/checkout@v3.5.0
+      - uses: actions/cache@v3.3.1
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          path: .pnpm-store
+          key: "${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}"
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ needs.install.outputs.pnpm-version }}
+          run_install: false
+      - run: pnpm config set store-dir .pnpm-store
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm typecheck
 
-      - name: Setup
-        run: |
-          pnpm install --no-frozen-lockfile
+  lint:
+    needs: install
+    runs-on: ${{ needs.install.outputs.os }}
+    steps:
+      - uses: actions/checkout@v3.5.0
+      - uses: actions/cache@v3.3.1
+        with:
+          path: .pnpm-store
+          key: "${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}"
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ needs.install.outputs.pnpm-version }}
+          run_install: false
+      - run: pnpm config set store-dir .pnpm-store
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm lint
 
-      - name: Lint
-        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
-        run: |
-          pnpm lint
+  test:
+    needs: install
+    runs-on: ${{ needs.install.outputs.os }}
+    steps:
+      - uses: actions/checkout@v3.5.0
+      - uses: actions/cache@v3.3.1
+        with:
+          path: .pnpm-store
+          key: "${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}"
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ needs.install.outputs.pnpm-version }}
+          run_install: false
+      - run: pnpm config set store-dir .pnpm-store
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm build
+      - run: pnpm test
 
-      - name: Typecheck
-        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
-        run: |
-          pnpm typecheck
-
-      - name: Test
-        if: ${{ !contains(github.event.head_commit.message, 'WIP') }}
-        run: |
-          pnpm build
-          pnpm test
+  deploy:
+    needs: [tsc, lint, test]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Ready for deployment..."

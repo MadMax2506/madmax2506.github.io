@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout ${{ github.event.inputs.tag }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.inputs.tag }}
 

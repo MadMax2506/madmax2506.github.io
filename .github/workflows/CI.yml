@@ -30,7 +30,7 @@ jobs:
       pnpm-version: ${{ matrix.pnpm-version }}
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
@@ -44,7 +44,7 @@ jobs:
     needs: install
     runs-on: ${{ needs.install.outputs.os }}
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v4
       - uses: actions/cache@v3.3.1
         with:
           path: .pnpm-store
@@ -60,7 +60,7 @@ jobs:
     needs: install
     runs-on: ${{ needs.install.outputs.os }}
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v4
       - uses: actions/cache@v3.3.1
         with:
           path: .pnpm-store
@@ -76,7 +76,7 @@ jobs:
     needs: install
     runs-on: ${{ needs.install.outputs.os }}
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v4
       - uses: actions/cache@v3.3.1
         with:
           path: .pnpm-store

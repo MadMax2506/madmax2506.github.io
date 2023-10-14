@@ -20,4 +20,6 @@ export enum Skill {
   NODE_JS = 'nodejs',
   SPRING_BOOT = 'spring',
   MONGO_DB = 'mongodb',
+  PRISMA = 'prisma',
+  PLAYWRIGHT = 'playwright',
 }

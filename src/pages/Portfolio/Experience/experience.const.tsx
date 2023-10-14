@@ -33,6 +33,8 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
           Skill.TYPESCRIPT,
           Skill.REACT,
           Skill.TAILWIND_CSS,
+          Skill.PRISMA,
+          Skill.PLAYWRIGHT,
           Skill.NODE_JS,
           Skill.NEST_JS,
           Skill.SPRING_BOOT,

@@ -7,10 +7,6 @@ type SkillDetails = {
   imageSrc: string;
 };
 
-/**
- * @param {Skill} type of the skill
- * @return {SkillDetails} details of an skill {@link Skill}
- */
 export const getSkillDetails = (type: Skill): SkillDetails => {
   const imageSrc = `/assets/skills/${type}.svg`;
 
@@ -131,6 +127,24 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
       return {
         imageSrc,
         name: 'MongoDB',
+        since: 2023,
+      };
+    case Skill.PYTHON:
+      return {
+        imageSrc,
+        name: 'Python',
+        since: 2016,
+      };
+    case Skill.PRISMA:
+      return {
+        imageSrc,
+        name: 'Prisma',
+        since: 2023,
+      };
+    case Skill.PLAYWRIGHT:
+      return {
+        imageSrc,
+        name: 'Playwright',
         since: 2023,
       };
     default:

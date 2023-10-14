@@ -6,23 +6,21 @@ import { Imprint } from 'pages/Imprint/Imprint';
 import { Portfolio } from 'pages/Portfolio/Portfolio';
 import { PrivacyPolicy } from 'pages/PrivacyPolicy/PrivacyPolicy';
 import { useEffect } from 'react';
-import { Route as ReactRoute, Routes as ReactRoutes, BrowserRouter as Router, useLocation } from 'react-router-dom';
+import {
+  Navigate,
+  Route as ReactRoute,
+  Routes as ReactRoutes,
+  BrowserRouter as Router,
+  useLocation,
+} from 'react-router-dom';
 import { MonoNavigationAnchors } from 'routes/types';
 import { paths } from './paths';
 
-/**
- * Reset the state in the page history
- *
- * @param e {@link BeforeUnloadEvent}
- */
 const resetState = (e: BeforeUnloadEvent) => {
   e.preventDefault();
   window.history.pushState({}, '');
 };
 
-/**
- * Display all {@link ReactRoute routes} together with {@link Navigation} and {@link Footer}
- */
 export function RouterBody(): JSX.Element {
   const { state } = useLocation();
 
@@ -40,7 +38,7 @@ export function RouterBody(): JSX.Element {
       <Navigation />
       <Stack alignItems="center">
         <ReactRoutes>
-          <ReactRoute path="*" element={<h1>Page not found</h1>} />
+          <ReactRoute path="*" element={<Navigate to={paths.portfolio.pattern} />} />
           <ReactRoute index path={paths.portfolio.pattern} element={<Portfolio />} />
           <ReactRoute index path={paths.imprint.pattern} element={<Imprint />} />
           <ReactRoute index path={paths.privacyPolicy.pattern} element={<PrivacyPolicy />} />
@@ -52,9 +50,6 @@ export function RouterBody(): JSX.Element {
   );
 }
 
-/**
- * Provide the {@link Router} with the {@link RouterBody}
- */
 export function Routes(): JSX.Element {
   return (
     <Router>

@@ -84,5 +84,15 @@
     "mail": "Mail",
     "instagram": "Instagram",
     "telegram": "Telegram"
+  },
+  "errors": {
+    "generic": {
+      "title": "Opps!",
+      "message": {
+        "part1": "I am sincerely sorry that I am currently unable to show you the content you requested. I am working at full speed to make the page available again as soon as possible.",
+        "part2": "I apologize for any inconvenience this may cause you. Please try again at a later date.",
+        "part3": "If the problem persists or you need additional support, please feel free to contact me at"
+      }
+    }
   }
 }

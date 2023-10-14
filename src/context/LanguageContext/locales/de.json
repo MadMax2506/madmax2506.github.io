@@ -84,5 +84,15 @@
     "mail": "Mail",
     "instagram": "Instagram",
     "telegram": "Telegram"
+  },
+  "errors": {
+    "generic": {
+      "title": "Upps!",
+      "message": {
+        "part1": "Es tut mir aufrichtig leid, dass ich Ihnen aktuell den gewünschten Inhalt nicht anzeigen kann. Ich arbeite mit Hochdruck daran, die Seite so schnell wie möglich wieder verfügbar zu machen.",
+        "part2": "Ich entschuldige mich für jegliche Unannehmlichkeiten, die Ihnen dadurch entstehen. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.",
+        "part3": "Falls das Problem weiterhin besteht oder Sie zusätzliche Unterstützung benötigen, können Sie sich gerne an mich wenden unter"
+      }
+    }
   }
 }

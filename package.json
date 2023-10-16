@@ -55,7 +55,7 @@
     "prettier": "^2.8.8",
     "react-test-renderer": "^18.2.0",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9",
+    "vite": "^4.4.11",
     "vitest": "^0.34.5"
   }
 }

@@ -24,8 +24,8 @@ dependencies:
     specifier: ^6.18.1
     version: 6.18.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.17)(@mui/system@5.14.17)(@types/react@18.2.35)(dayjs@1.11.10)(react-dom@18.2.0)(react@18.2.0)
   '@tanstack/react-query':
-    specifier: ^5.8.2
-    version: 5.8.2(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^5.8.4
+    version: 5.8.4(react-dom@18.2.0)(react@18.2.0)
   '@types/lodash':
     specifier: ^4.14.201
     version: 4.14.201
@@ -1452,12 +1452,12 @@ packages:
       - supports-color
     dev: false
 
-  /@tanstack/query-core@5.8.2:
-    resolution: {integrity: sha512-tBTmTbBLxFQPCeKY5AcXdkTLtbQyYzak5yQohw4EKwEmFCFRqnViXjX8jkUd2pQN60Lf4RE2sD5UkzWqOw1ebw==}
+  /@tanstack/query-core@5.8.3:
+    resolution: {integrity: sha512-SWFMFtcHfttLYif6pevnnMYnBvxKf3C+MHMH7bevyYfpXpTMsLB9O6nNGBdWSoPwnZRXFNyNeVZOw25Wmdasow==}
     dev: false
 
-  /@tanstack/react-query@5.8.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-1QGZWaB0Do5CCZ2OEGlacXWeylqN3pTlJPViPqktjViygNtuacbCZWdQEVdD62cYC3ra80YOlKihKmXKKhZwLA==}
+  /@tanstack/react-query@5.8.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CD+AkXzg8J72JrE6ocmuBEJfGzEzu/bzkD6sFXFDDB5yji9N20JofXZlN6n0+CaPJuIi+e4YLCbGsyPFKkfNQA==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -1468,7 +1468,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 5.8.2
+      '@tanstack/query-core': 5.8.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false

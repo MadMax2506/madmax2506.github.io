@@ -33,7 +33,7 @@
     "static-path": "^0.0.4",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-svgr": "^4.2.0",
-    "vite-tsconfig-paths": "^4.2.2"
+    "vite-tsconfig-paths": "^4.2.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.6",

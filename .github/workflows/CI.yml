@@ -45,7 +45,7 @@ jobs:
     runs-on: ${{ needs.install.outputs.os }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/cache@v3.3.1
+      - uses: actions/cache@v4
         with:
           path: .pnpm-store
           key: "${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}"
@@ -61,7 +61,7 @@ jobs:
     runs-on: ${{ needs.install.outputs.os }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/cache@v3.3.1
+      - uses: actions/cache@v4
         with:
           path: .pnpm-store
           key: "${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}"
@@ -77,7 +77,7 @@ jobs:
     runs-on: ${{ needs.install.outputs.os }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/cache@v3.3.1
+      - uses: actions/cache@v4
         with:
           path: .pnpm-store
           key: "${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}"

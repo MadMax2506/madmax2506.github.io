@@ -1,5 +1,5 @@
 import { Close as CloseIcon, Menu as MenuIcon } from '@mui/icons-material';
-import { Box, Drawer, IconButton, Stack } from '@mui/material';
+import { Box, Drawer, IconButton, Stack, useTheme } from '@mui/material';
 import { Divider } from 'components/Divider';
 import { SidebarLinks } from 'components/navigation/MobileNavigation/SidebarLinks';
 import { PageTitle } from 'components/navigation/PageTitle';
@@ -14,6 +14,9 @@ type MobileNavigationProps = {
 
 export const MobileNavigation = (props: MobileNavigationProps): JSX.Element => {
   const { pages } = props;
+
+  const { palette } = useTheme();
+
   const [open, setOpen] = useState<boolean>(false);
 
   return (
@@ -21,7 +24,7 @@ export const MobileNavigation = (props: MobileNavigationProps): JSX.Element => {
       <PageTitle variant="h5" flexShrink={0} withLink />
 
       <Box sx={{ display: 'flex', flexGrow: 1, flexDirection: 'row-reverse' }}>
-        <IconButton size="large" onClick={() => setOpen(true)}>
+        <IconButton size="large" onClick={() => setOpen(true)} sx={{ color: palette.secondary.main }}>
           <MenuIcon />
         </IconButton>
       </Box>

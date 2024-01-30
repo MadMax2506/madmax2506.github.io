@@ -38,7 +38,7 @@ export const DesktopNavigation = (props: DesktopNavigationProps): JSX.Element =>
       <Grid item xs={2}>
         <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={2}>
           <LanguageToggle />
-          <ThemeModeToggle color="secondary" />
+          <ThemeModeToggle color={'secondary'} />
         </Stack>
       </Grid>
     </Grid>

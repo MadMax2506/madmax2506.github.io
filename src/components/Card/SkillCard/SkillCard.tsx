@@ -38,16 +38,17 @@ export const SkillCard = (props: SkillCardProps): JSX.Element => {
   })();
 
   const avatarSize = small ? 36 : 50;
+  const color = palette.mode === 'light' ? palette.text.secondary : palette.text.primary;
 
   return (
     <Tooltip
       PopperProps={{ disablePortal: true }}
       title={
         <Box>
-          <Typography variant="body1" color={palette.text.secondary}>
+          <Typography variant="body1" color={color}>
             {name}
           </Typography>
-          <Typography variant="body2" color={palette.text.secondary}>
+          <Typography variant="body2" color={color}>
             {description}
           </Typography>
         </Box>

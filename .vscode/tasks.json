@@ -3,12 +3,12 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "Start Development",
+            "label": "Start [DEV]",
             "command": "pnpm start:dev",
         },
         {
             "type": "shell",
-            "label": "Start Production",
+            "label": "Start [PROD]",
             "command": "pnpm start:prod"
         },
         {

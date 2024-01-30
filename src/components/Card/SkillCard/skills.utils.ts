@@ -6,7 +6,6 @@ type SkillDetails = {
   since: number;
   imageSrc: string;
 };
-
 export const getSkillDetails = (type: Skill): SkillDetails => {
   const imageSrc = `/assets/skills/${type}.svg`;
 
@@ -15,47 +14,29 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
   } = useTheme();
 
   switch (type) {
-    case Skill.JAVA:
+    case Skill.ARDUINO:
       return {
         imageSrc,
-        name: 'Java',
-        since: 2019,
+        name: 'Arduino',
+        since: 2017,
       };
-    case Skill.JAVASCRIPT:
+    case Skill.AWS:
       return {
         imageSrc,
-        name: 'JavaScript',
-        since: 2019,
-      };
-    case Skill.REACT:
-      return {
-        imageSrc,
-        name: 'React',
-        since: 2021,
-      };
-    case Skill.TYPESCRIPT:
-      return {
-        imageSrc,
-        name: 'TypeScript',
-        since: 2021,
-      };
-    case Skill.POSTGRESQL:
-      return {
-        imageSrc,
-        name: 'PostgreSQL',
-        since: 2021,
-      };
-    case Skill.MATERIAL_UI:
-      return {
-        imageSrc,
-        name: 'Material-UI',
-        since: 2021,
-      };
-    case Skill.TAILWIND_CSS:
-      return {
-        imageSrc,
-        name: 'Tailwind CSS',
+        name: 'Amazon Web Services (AWS)',
         since: 2023,
+      };
+    case Skill.C_CPP:
+      return {
+        imageSrc,
+        name: 'C / C++',
+        since: 2017,
+      };
+    case Skill.DOCKER:
+      return {
+        imageSrc,
+        name: 'Docker',
+        since: 2022,
       };
     case Skill.GIT:
       return {
@@ -75,35 +56,35 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         name: 'GitLab',
         since: 2019,
       };
-    case Skill.ARDUINO:
+    case Skill.JAVA:
       return {
         imageSrc,
-        name: 'Arduino',
-        since: 2017,
-      };
-    case Skill.C_CPP:
-      return {
-        imageSrc,
-        name: 'C / C++',
-        since: 2017,
-      };
-    case Skill.RUBY_ON_RAILS:
-      return {
-        imageSrc,
-        name: 'Ruby on Rails',
+        name: 'Java',
         since: 2019,
       };
-    case Skill.VUE_JS:
+    case Skill.JAVASCRIPT:
       return {
         imageSrc,
-        name: 'Vue.js',
+        name: 'JavaScript',
         since: 2019,
       };
-    case Skill.DOCKER:
+    case Skill.JENKINS:
       return {
         imageSrc,
-        name: 'Docker',
-        since: 2022,
+        name: 'Jenkins',
+        since: 2021,
+      };
+    case Skill.MATERIAL_UI:
+      return {
+        imageSrc,
+        name: 'Material-UI',
+        since: 2021,
+      };
+    case Skill.MONGO_DB:
+      return {
+        imageSrc,
+        name: 'MongoDB',
+        since: 2023,
       };
     case Skill.NEST_JS:
       return {
@@ -117,16 +98,22 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         name: 'NodeJS',
         since: 2022,
       };
-    case Skill.SPRING_BOOT:
+    case Skill.PLAYWRIGHT:
       return {
         imageSrc,
-        name: 'Spring-Boot',
-        since: 2019,
+        name: 'Playwright',
+        since: 2023,
       };
-    case Skill.MONGO_DB:
+    case Skill.POSTGRESQL:
       return {
         imageSrc,
-        name: 'MongoDB',
+        name: 'PostgreSQL',
+        since: 2021,
+      };
+    case Skill.PRISMA:
+      return {
+        imageSrc,
+        name: 'Prisma',
         since: 2023,
       };
     case Skill.PYTHON:
@@ -135,17 +122,41 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         name: 'Python',
         since: 2016,
       };
-    case Skill.PRISMA:
+    case Skill.REACT:
       return {
         imageSrc,
-        name: 'Prisma',
+        name: 'React',
+        since: 2021,
+      };
+    case Skill.RUBY_ON_RAILS:
+      return {
+        imageSrc,
+        name: 'Ruby on Rails',
+        since: 2019,
+      };
+    case Skill.SPRING_BOOT:
+      return {
+        imageSrc,
+        name: 'Spring-Boot',
+        since: 2019,
+      };
+    case Skill.TAILWIND_CSS:
+      return {
+        imageSrc,
+        name: 'Tailwind CSS',
         since: 2023,
       };
-    case Skill.PLAYWRIGHT:
+    case Skill.TYPESCRIPT:
       return {
         imageSrc,
-        name: 'Playwright',
-        since: 2023,
+        name: 'TypeScript',
+        since: 2021,
+      };
+    case Skill.VUE_JS:
+      return {
+        imageSrc,
+        name: 'Vue.js',
+        since: 2019,
       };
     default:
       throw new Error(`Invalid skill '${type}'`);

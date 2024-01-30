@@ -30,4 +30,4 @@ pnpm start:prod
 
 ## Icons
 
-[Devicons](https://github.com/devicons/devicon/tree/master/icons)
+[Devicons](https://github.com/devicons/devicon/tree/master/icons) in original size.

@@ -21,6 +21,8 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
           Skill.MATERIAL_UI,
           Skill.SPRING_BOOT,
           Skill.GIT_HUB,
+          Skill.DOCKER,
+          Skill.JENKINS,
         ],
       },
       {
@@ -38,7 +40,9 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
           Skill.NODE_JS,
           Skill.NEST_JS,
           Skill.SPRING_BOOT,
+          Skill.GIT_HUB,
           Skill.GIT_LAB,
+          Skill.AWS,
         ],
       },
     ],

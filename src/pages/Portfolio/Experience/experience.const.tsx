@@ -3,6 +3,14 @@ import { CompanyDetails, ProjectDetails, ProjectType } from './experience.types'
 
 export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
   {
+    company: 'Linear GmbH',
+    startDate: new Date('2024/10/01'),
+    imagePath: '/assets/projects/linear-gmbh.png',
+    href: 'https://www.linear.eu/de/home/',
+    employmentType: 'experience.linear-gmbh.employmentType',
+    projects: [],
+  },
+  {
     company: 'VEDA GmbH',
     startDate: new Date('2021/09/01'),
     imagePath: '/assets/projects/veda-gmbh.png',
@@ -46,6 +54,7 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
         ],
       },
     ],
+    endDate: new Date('2024/08/20'),
   },
   {
     company: 'Plagge.IT',

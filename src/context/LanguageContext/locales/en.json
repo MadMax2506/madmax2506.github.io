@@ -5,7 +5,7 @@
   },
   "about-me": {
     "part1": "Moin<span class='wave'>✌️</span>",
-    "part2": "I'm Max, {0} years old and a MATSE trainee. During my apprenticeship I focused on frontend development with React and Typescript.",
+    "part2": "I am Max, {0} years old and have successfully completed my MATSE degree at the FH Aachen. During my apprenticeship I focused on frontend development with React and Typescript.",
     "part3": "In my free time I develop my own software projects, so that I have the opportunity to try out new technologies and constantly expand my knowledge. Thereby I have focused on JavaScript and built up my knowledge in different frameworks:"
   },
   "contact": {
@@ -48,6 +48,9 @@
         "name": "nuWork",
         "part1": "Implementation of frontend and backend functionality for okr and culture-sofware"
       }
+    },
+    "linear-gmbh": {
+      "employmentType": "Web Developer"
     }
   },
   "skills": {

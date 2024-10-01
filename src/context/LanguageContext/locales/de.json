@@ -5,7 +5,7 @@
   },
   "about-me": {
     "part1": "Moin<span class='wave'>✌️</span>",
-    "part2": "Ich bin Max, {0} Jahre alt und MATSE-Auszubildender. Während meiner Ausbildung habe ich mich auf die Frontend-Entwicklung mit React und Typescript fokussiert.",
+    "part2": "Ich bin Max, {0} Jahre alt und habe mein MATSE-Studium an der FH-Aachen erfolgreich abgeschlossen. Während meiner Ausbildung habe ich mich auf die Frontend-Entwicklung mit React und Typescript fokussiert.",
     "part3": "In meiner Freizeit enwickle ich eigene Softwareprojekte, sodass ich dadurch die Möglichkeit habe, neue Technologien auszuprobieren und mein Wissen stetig zu erweitern. Dabei habe ich mich vorallen auf JavaScript eingeschossen und mein Wissen in verschiedene Frameworks aufgebaut:"
   },
   "contact": {
@@ -48,6 +48,9 @@
         "name": "nuWork",
         "part1": "Umsetzung von Frontend- und Backend-Funktionalität für OKR und Culture-Sofware"
       }
+    },
+    "linear-gmbh": {
+      "employmentType": "Webentwickler"
     }
   },
   "skills": {

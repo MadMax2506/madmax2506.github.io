@@ -21,7 +21,7 @@
     "@mui/material": "^5.16.7",
     "@mui/x-date-pickers": "^7.18.0",
     "@tanstack/react-query": "^5.56.2",
-    "@types/lodash": "^4.17.9",
+    "@types/lodash": "^4.17.10",
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
     "react": "^18.3.1",

@@ -11,9 +11,9 @@ export const SkillList = (): JSX.Element => (
       Skill.JAVASCRIPT,
       Skill.NODE_JS,
       Skill.TYPESCRIPT,
+      Skill.NEXT_JS,
       Skill.REACT,
-      Skill.VUE_JS,
-      Skill.NEST_JS,
+      Skill.MONGO_DB,
       Skill.MATERIAL_UI,
       Skill.GIT_HUB,
     ].map((value) => (

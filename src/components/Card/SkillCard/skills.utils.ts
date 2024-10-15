@@ -92,6 +92,12 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         name: 'NestJS',
         since: 2022,
       };
+    case Skill.NEXT_JS:
+      return {
+        imageSrc,
+        name: 'Next.js',
+        since: 2024,
+      };
     case Skill.NODE_JS:
       return {
         imageSrc,
@@ -127,6 +133,12 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         imageSrc,
         name: 'React',
         since: 2021,
+      };
+    case Skill.REDIS:
+      return {
+        imageSrc,
+        name: 'Redis',
+        since: 2024,
       };
     case Skill.RUBY_ON_RAILS:
       return {

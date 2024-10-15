@@ -8,7 +8,23 @@ export const EXPERIENCE: (CompanyDetails | ProjectDetails)[] = [
     imagePath: '/assets/projects/linear-gmbh.png',
     href: 'https://www.linear.eu/de/home/',
     employmentType: 'experience.linear-gmbh.employmentType',
-    projects: [],
+    projects: [
+      {
+        nameTextKey: 'experience.linear-gmbh.web-tools.name',
+        type: ProjectType.FULL_STACK,
+        detailTextKeys: ['experience.linear-gmbh.web-tools.part1'],
+        skills: [
+          Skill.JAVASCRIPT,
+          Skill.TYPESCRIPT,
+          Skill.NEXT_JS,
+          Skill.MATERIAL_UI,
+          Skill.MONGO_DB,
+          Skill.REDIS,
+          Skill.NODE_JS,
+          Skill.GIT_HUB,
+        ],
+      },
+    ],
   },
   {
     company: 'VEDA GmbH',

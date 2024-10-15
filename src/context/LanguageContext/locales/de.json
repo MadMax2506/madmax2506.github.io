@@ -50,7 +50,11 @@
       }
     },
     "linear-gmbh": {
-      "employmentType": "Webentwickler"
+      "employmentType": "Webentwickler",
+      "web-tools": {
+        "name": "Webtools",
+        "part1": "Entwicklung von Webtools für Industriepartner "
+      }
     }
   },
   "skills": {

@@ -20,7 +20,7 @@
     "@mui/lab": "5.0.0-alpha.173",
     "@mui/material": "^5.16.7",
     "@mui/x-date-pickers": "^7.22.2",
-    "@tanstack/react-query": "^5.60.5",
+    "@tanstack/react-query": "^5.61.3",
     "@types/lodash": "^4.17.13",
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",

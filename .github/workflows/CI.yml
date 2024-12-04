@@ -3,7 +3,6 @@ name: CI
 on:
   workflow_call:
   pull_request:
-    branches: [main]
   push:
     paths-ignore:
       - "public/**"
@@ -11,7 +10,6 @@ on:
       - ".gitignore"
       - "LICENSE"
       - "README.md"
-    branches: [main]
 
 env:
   NODE_ENV: "development"

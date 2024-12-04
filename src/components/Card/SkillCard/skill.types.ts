@@ -14,6 +14,7 @@ export enum Skill {
   JENKINS = 'jenkins',
   MATERIAL_UI = 'mui',
   MONGO_DB = 'mongodb',
+  NEON = 'neon',
   NEST_JS = 'nestjs',
   NEXT_JS = 'nextjs',
   NODE_JS = 'nodejs',
@@ -24,8 +25,10 @@ export enum Skill {
   REACT = 'react',
   RUBY_ON_RAILS = 'ruby-on-rails',
   REDIS = 'redis',
+  SHADCN = 'shadcn',
   SPRING_BOOT = 'spring',
   TAILWIND_CSS = 'tailwindcss',
   TYPESCRIPT = 'typescript',
+  VERCEL = 'vercel',
   VUE_JS = 'vuejs',
 }

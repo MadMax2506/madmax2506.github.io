@@ -13,9 +13,10 @@ export const SkillList = (): JSX.Element => (
       Skill.TYPESCRIPT,
       Skill.NEXT_JS,
       Skill.REACT,
-      Skill.MONGO_DB,
-      Skill.MATERIAL_UI,
+      Skill.PRISMA,
+      Skill.TAILWIND_CSS,
       Skill.GIT_HUB,
+      Skill.VERCEL,
     ].map((value) => (
       <Grid key={value} item>
         <SkillCard type={value} />

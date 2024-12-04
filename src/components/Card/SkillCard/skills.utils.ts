@@ -86,6 +86,12 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         name: 'MongoDB',
         since: 2023,
       };
+    case Skill.NEON:
+      return {
+        imageSrc,
+        name: 'Neon DB',
+        since: 2024,
+      };
     case Skill.NEST_JS:
       return {
         imageSrc,
@@ -146,6 +152,12 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         name: 'Ruby on Rails',
         since: 2019,
       };
+    case Skill.SHADCN:
+      return {
+        imageSrc,
+        name: 'Shadcn',
+        since: 2024,
+      };
     case Skill.SPRING_BOOT:
       return {
         imageSrc,
@@ -169,6 +181,12 @@ export const getSkillDetails = (type: Skill): SkillDetails => {
         imageSrc,
         name: 'Vue.js',
         since: 2019,
+      };
+    case Skill.VERCEL:
+      return {
+        imageSrc,
+        name: 'Vercel',
+        since: 2024,
       };
     default:
       throw new Error(`Invalid skill '${type}'`);

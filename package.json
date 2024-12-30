@@ -18,7 +18,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^5.16.13",
     "@mui/lab": "5.0.0-alpha.175",
-    "@mui/material": "^5.16.12",
+    "@mui/material": "^5.16.13",
     "@mui/x-date-pickers": "^7.23.3",
     "@tanstack/react-query": "^5.62.8",
     "@types/lodash": "^4.17.13",

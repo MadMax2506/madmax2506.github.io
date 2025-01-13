@@ -27,8 +27,8 @@ importers:
         specifier: ^7.23.3
         version: 7.23.3(@emotion/react@11.14.0(@types/react@18.3.12)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@18.3.12)(react@18.3.1))(@types/react@18.3.12)(react@18.3.1))(@mui/material@5.16.13(@emotion/react@11.14.0(@types/react@18.3.12)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@18.3.12)(react@18.3.1))(@types/react@18.3.12)(react@18.3.1))(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mui/system@5.16.13(@emotion/react@11.14.0(@types/react@18.3.12)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@18.3.12)(react@18.3.1))(@types/react@18.3.12)(react@18.3.1))(@types/react@18.3.12)(react@18.3.1))(@types/react@18.3.12)(dayjs@1.11.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/react-query':
-        specifier: ^5.62.15
-        version: 5.62.15(react@18.3.1)
+        specifier: ^5.64.0
+        version: 5.64.0(react@18.3.1)
       '@types/lodash':
         specifier: ^4.17.14
         version: 4.17.14
@@ -1106,11 +1106,11 @@ packages:
     peerDependencies:
       '@svgr/core': '*'
 
-  '@tanstack/query-core@5.62.15':
-    resolution: {integrity: sha512-wT20X14CxcWY8YLJ/1pnsXn/y1Q2uRJZYWW93PWRtZt+3/JlGZyiyTcO4pGnqycnP7CokCROAyatsraosqZsDA==}
+  '@tanstack/query-core@5.64.0':
+    resolution: {integrity: sha512-/MPJt/AaaMzdWJZTafgMyYhEX/lGjQrNz8+NDQSk8fNoU5PHqh05FhQaBrEQafW2PeBHsRbefEf//qKMiSAbQQ==}
 
-  '@tanstack/react-query@5.62.15':
-    resolution: {integrity: sha512-Ny3xxsOWmEQCFyHiV3CF7t6+QAV+LpBEREiXyllKR4+tStyd8smOAa98ZHmEx0ZNy36M31K8enifB5wTSYAKJw==}
+  '@tanstack/react-query@5.64.0':
+    resolution: {integrity: sha512-tBMzlROROUcTDMpDt1NC3n9ndKnJHPB3RCpa6Bf9f31TFvqhLz879x8jldtKU+6IwMSw1Pn4K1AKA+2SYyA6TA==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -3464,11 +3464,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/query-core@5.62.15': {}
+  '@tanstack/query-core@5.64.0': {}
 
-  '@tanstack/react-query@5.62.15(react@18.3.1)':
+  '@tanstack/react-query@5.64.0(react@18.3.1)':
     dependencies:
-      '@tanstack/query-core': 5.62.15
+      '@tanstack/query-core': 5.64.0
       react: 18.3.1
 
   '@testing-library/dom@10.0.0':

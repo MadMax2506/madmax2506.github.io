@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.1.0",
+    "@testing-library/react": "^16.2.0",
     "@types/node": "^22.10.10",
     "@types/react": "^18.3.12",
     "@types/react-cookies": "^0.1.4",
